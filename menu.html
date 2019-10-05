@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    
+</head>
+
+<body id="cuerpo">
+
+    <div class="liquid">
+        <div class="bola"></div>
+        <div class="bola2"></div>
+    </div>
+    <ul id="redondo">
+        <li id="quees"><!--onmouseover="gfg_Run()">-->  
+            
+                <img src="images/pato2.png" alt="pato">
+                
+            
+        </li>
+        <li id="impacto">
+            
+                <img src="images/objw1enp-900.png" alt="delfin">
+                
+            
+        </li>
+        <li id="graficas">
+            
+                <img src="images/circulo.png" alt="circulo">
+                
+            
+        </li>
+        <li id="alternativas">
+            
+                <img src="images/ricicla.png" alt="reci">
+                
+            
+        </li>
+        <li id="ayudar">
+            
+                <img src="images/like.png" alt="like">
+                
+            
+        </li>
+    </ul>
+
+    <div class="clear"></div>
+
+    <script>
+        
+            var menu1 = document.getElementById("quees"); 
+            var menu2 = document.getElementById("impacto"); 
+            var menu3 = document.getElementById("graficas"); 
+            var menu4 = document.getElementById("alternativas"); 
+            var menu5 = document.getElementById("ayudar"); 
+
+            function bgChange(bg, clist, cbord) {
+                document.body.style.background = bg;
+                
+                var itemsA = document.getElementsByTagName('LI');
+
+                itemsA[0].style.backgroundColor = clist;
+                itemsA[1].style.backgroundColor = clist;
+                itemsA[2].style.backgroundColor = clist;
+                itemsA[3].style.backgroundColor = clist;
+                itemsA[4].style.backgroundColor = clist;
+                itemsA[0].style.borderColor = cbord;
+                itemsA[1].style.borderColor = cbord;
+                itemsA[2].style.borderColor = cbord;
+                itemsA[3].style.borderColor = cbord;
+                itemsA[4].style.borderColor = cbord;
+
+                var imgM = document.getElementsByTagName('IMG');
+                imgM.style.filter = "grayscale (100%)";
+                
+            }
+
+            menu1.onmouseover = function entra(color){
+                bgChange('#e0901e', '#bece30', '#9aa626');
+            }
+            menu2.onmouseover = function entra(color){
+                bgChange('#017369', '#03c5c4', '#a7c8f3');
+            }
+            menu3.onmouseover = function entra(color){
+                bgChange('#ffd8a1', '#a76205', '#e0901e');
+            }
+            menu4.onmouseover = function entra(color){
+                bgChange('#017369', '#03c5c4', '#a7c8f3');
+            }
+            menu5.onmouseover = function entra(color){
+                bgChange('#017369', '#03c5c4', '#a7c8f3');
+            }
+            //el_up.onmouseout = function salir(){
+                //bgChange('transparent');
+            //}   
+                
+            /*       
+            ////
+            var css = 'body';
+            var scss = 'li:hover{ background-color: #00ff00 }'
+            var style = document.createElement('style');
+
+            if (style.styleSheet) {
+                 style.styleSheet.cssText = css;
+            } else {
+                style.appendChild(document.createTextNode(scss));
+            }
+            
+            document.getElementsByTagName('body')[0].appendChild(style);
+            
+            function stext() {
+            var x = document.getElementById("quees");
+            var y = document.getElementById("ayudar");
+            x.style.backgroundColor = 'red';
+            y.style.backgroundColor = 'black';
+            }
+            
+            /*
+            var howervar= document.getElementById("cas");
+            if (howervar!= null) {
+            if (howervar[0] != null) {
+            howervar[0].style.backgroundColor = "#365890";
+            howervar[0].style.color = "#000";
+            }
+            for (var i = 0; i < tbl.length; i++) { 
+            howervar[i].onmousemove = function () { this.style.backgroundColor = "#365890"; this.style.color = "#FFFFFF"; };
+            howervar[i].onmouseout = function () { this.style.backgroundColor = ""; this.style.color = ""; };
+            }
+            }*/
+
+            
+    </script>
+
+</body>
+</html>

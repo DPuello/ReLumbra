@@ -1,0 +1,51 @@
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    
+}
+h1{
+    display: none;
+    font-size: 250%;
+    font-weight: 300;
+    
+}
+h2{
+    
+    font-size: 320%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h3{
+    
+    font-size: 250%;
+    font-weight: 500;
+    
+}
+h4{
+    
+    font-size: 250%;
+    
+}
+h5{
+    
+    font-size: 180%;
+    font-weight: 400;
+    
+}
+h6{
+    
+    font-size: 150%;
+    font-weight: 700;
+    
+}
+p{
+    padding: 1rem;
+    font-size: 100%;
+    line-height: 150%;
+}
+b{
+    font-weight: 500;
+}
+*{
+    border: 1px solid blue;
+}

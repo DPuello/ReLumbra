@@ -1,0 +1,58 @@
+.card {
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 512px;
+    height: 320px;
+    transform: perspective(512px) translate3d(0, 0, 0);
+    transform-style: preserve-3d;
+    transition: all .4s cubic-bezier(.125, .625, .125, .875);
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }
+  .card__bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1504805189643-a4a5967c49b9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7edcb023316cddb2ed76e3c160dd9f31&auto=format&fit=crop&w=768&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+  .cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .card__overlay {
+    background: linear-gradient(to bottom right, #D60270, #0038A8);
+    transition: all .4s cubic-bezier(.125, .625, .125, .875);
+    opacity: 0;
+    z-index: -1;
+  }
+  .card:hover .card__overlay {
+    opacity: .625;
+  }
+  //////////////////////777
+  /// Carrusel
+  ////////////////////////77
+  .carousel {
+    margin: 0 auto;
+    width:400px;
+    height: 300px;
+    display: relative;
+  }
+  .carousel img {
+    display: hidden; /* hide images until carousel prepares them */
+    cursor: pointer; /* not needed if you wrap carousel items in links */
+  }

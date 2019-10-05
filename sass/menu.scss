@@ -1,0 +1,98 @@
+$verdeQueEs: #bece30;
+$verdeOscuro: #9aa626;
+$naranja: #e0901e;
+$azulImpacto: #03c5c4;
+$azulOscuro: #017369;
+$azulClaro: #a7c8f3;
+$naranjaClaro: #ffd8a1;
+$naranjaOscuro: #a76205;
+$fondo: $verdeQueEs;
+$borde: $verdeOscuro;
+
+@mixin colores {
+    background-color: $fondo;
+    border-color: $borde;
+}
+
+body{
+    background-color: $fondo;
+}
+
+#redondo{
+    margin-top: 3%;
+    transform: translateX(20px);
+    position: fixed;
+    z-index: 20;
+    li{
+        
+        display: flex;
+        width: 100px;
+        height: 100px;
+        border: solid 6px $borde;
+        border-radius: 90px;
+        margin: 2% 0;
+        color: rgba($color: #fff, $alpha: 0.0);
+        background-color: $fondo;
+        
+        transition: 0.3s;
+        
+        img{
+            width: 90px;
+            height: 90px;
+            margin: auto 5px auto auto;
+            filter: sepia(100%) hue-rotate(340deg) saturate(4);
+            //transform: translateY(10px) translateX(10px);
+            transition: 0.5s;
+        }
+        &:hover{
+            
+            transition-timing-function: ease-out;
+            transition: all 0.3s ease 0s;
+            width: 300px;
+            transform: translateX(-160px);
+            img{
+                transition-timing-function: ease-out;
+                transition: .3s;
+                transform: rotateZ(-20deg);   
+                filter: grayscale(0);
+            }
+            
+        }
+    } 
+}
+
+#quees:hover{
+    $fondo: red;
+    $borde: blue;
+    @include colores;
+}
+#quees:hover ~ #graficas{
+    //Para enlazar 2 id o clases
+    $fondo: green;
+}
+#impacto:hover{
+    $fondo: $azulImpacto;
+    $borde: $azulClaro;
+    @include colores();
+}
+#graficas:hover{
+    background: $naranja;
+}
+#alternativas:hover{
+    background-color: $azulImpacto;
+}
+#ayudar:hover {
+    background-color: $verdeOscuro;
+}
+
+.clear{
+    clear: both;
+}
+
+scroll-container {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }

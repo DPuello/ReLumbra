@@ -1,0 +1,460 @@
+$VerdeTitulo: #99a728;
+$NaranjaTitulo: #faa121;
+$AzulTitulo: #027368;
+$AzulFondo: #51b9c8;
+$VerdeFondo: darkolivegreen;
+$VerdeFondo2: #bece30;
+$FondoImpacto: #ffe7cb;
+$GraficasText: #02628c;
+$AlternativasText: #017369;
+$DegradaText: #707a1b;
+body{
+    background: #fff;
+}
+
+#QueEs{
+    //border: 1px solid blue;
+    
+    display: grid;
+    margin: 5% 10%;
+    //grid-template-rows: 1fr 1fr 1fr;
+    
+    
+    img{
+        justify-self: end;
+        width: 40%;
+    }
+    div{
+        display: block;
+        
+        h4{
+            color: $VerdeTitulo;
+            width: 300px;
+        }
+        h2{
+            color: $VerdeTitulo;
+            width: 300px;
+            float: left;
+        }
+        img{
+            
+            filter: opacity(.5) drop-shadow(0 0 0 $VerdeTitulo);
+            float: left;
+            width: 4%;
+            transform: translateY(-20px)
+        }
+        
+    }
+    p{
+        clear: both;
+        display: block;
+        width: 20vw;
+        height: auto;
+        //border: 1px solid red;
+        border-radius: 0 0 0 100px;
+        text-align: right;
+    }
+}
+#TiposPlastico{
+    //height: 100vh;
+
+    color: $NaranjaTitulo;
+    width: 90%;
+    //border: 1px solid blueviolet;
+    margin: auto;
+    /*ol {
+        counter-reset: item;
+        li {
+            clear: both;
+          counter-increment: item;
+          &::before {
+            content: counter(item) '.';
+            font-weight: 500;
+            font-size: 280%;
+            float: left;
+          }
+        }
+      }   */
+      
+    #nombres{
+        h2{
+            margin-left: 2%;
+        }
+    }
+
+    img{
+        width: 50%;
+        display: block;
+        margin: auto;
+        transform: translateY(90px);
+    }
+    article{
+        //margin: 0 10% 0 auto;
+        margin-left: auto;
+        width: 30%;
+        border-radius: 0 0 100px 0;
+        //border: 1px solid red;
+        
+    }
+}
+#Impacto{
+    
+    background: $FondoImpacto;
+    padding: 5%;
+    position: relative;
+    .TituloImpacto{
+        margin-left: 10%;
+        h2{
+            color: $AzulTitulo;
+            float: left;
+        }
+        img{
+            filter: opacity(.5) drop-shadow(0 0 0 $AzulTitulo);
+            width: 3%;
+            clear: both;
+        }
+        
+    }
+    p{
+        width: 70%;
+    }
+    .contenido-Impacto{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+        .ADerecha{
+            justify-self: end;
+            text-align: right;
+        }
+        .textImg{
+            position: relative;
+            h4{
+                position: absolute;
+                bottom: 10px;
+                left: 20%;
+                color: #fff;
+                font-weight: 700;
+                background-color: rgba(12, 88, 107, .6);
+                
+            }
+        
+        }
+        img{
+            width: 250px;
+
+        }
+    }
+    
+}
+#Cadena{
+    color: white;
+    background: $AzulFondo;
+    
+    p{
+        width: 400px;
+    }
+    #marino{
+        padding: 1% 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        height: 90vh;
+        h5{
+            grid-row: 2/3;
+            justify-self: center;
+            align-self: center;
+        }
+        .ballenaT{
+            text-align: right;
+            justify-self: end;
+            align-self: end;
+        }
+        .ballenaI{
+            img{
+                
+                width: 45%;
+            }
+            
+        }
+        .ave{
+            grid-row: 1/2;
+            grid-column: 3/4;
+            align-self: end;
+            
+            p{
+                float: left;
+                text-align: right;
+            }
+            
+            img{
+                clear: both;
+                width: 15%;
+            }
+        }
+        .caballo{
+            grid-row: 2/3;
+            grid-column: 2/3;
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+            img{
+                float: left;
+                width: 7%;
+            }
+            
+        }
+        .plancton{
+            grid-row: 3/4;
+            grid-column: 2/3;
+            align-self: center;
+            
+            img{
+                float: left;
+                width: 20%;;
+                display: block;
+            }
+            p{
+                text-align: center;
+            }
+            
+        }
+        .ostra{
+            grid-row: 3/4;
+            grid-column: 3/4;
+            img{
+                width: 14%;
+            }
+        }
+    }
+    
+}
+#Comida{
+    .comidas{
+        text-align: center;
+        padding: 10%;
+        color: #fff;
+    }
+    
+    background: rgb(49, 37, 27);
+}
+#Graficas{
+    //height: 100vh;
+    padding: 5% 10%;
+    color: $GraficasText;
+    .tituloGrafica{
+        h5{
+            font-weight: 700;
+        }
+        h2{
+            float: left;
+            
+        }
+        //Logo
+        img{
+            filter: invert(1);
+            width: 5%;
+            clear: both; 
+            margin-left: 5%;
+            transform: translateY(-60px);
+        }
+    }
+    .imgCentro{
+        align-self: center;
+        text-align: center;
+    }
+    article{
+        display: block;
+        width: 60%;
+        float: left;
+        text-align: right;
+        h5{
+            text-transform: uppercase;
+            width: 70%;
+            margin-left: auto;
+        }
+        p{
+            padding: 0;
+        }
+        margin: 5%;
+    }
+    .turtle{
+        position: relative;
+        display: block;
+        img{
+            position: absolute;
+            top: -50px;
+            width: 17%;
+        }
+        float: none;
+        
+        
+        //transform: translateY(-100px)
+    }
+}
+#Alternativas{
+    //height: 100vh;
+    color: $AlternativasText;
+    background-color: $FondoImpacto;
+    h2{
+        margin-left: 10%;
+    }
+    
+}
+#Ayudar{
+    //height: 100vh;
+    color: #fff;
+    background-color: $VerdeFondo2;
+    padding: 5% 10%;
+    .proponer{
+        display: grid;
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: repeat(3, 138px);
+        gap: 10px;
+        img{
+            width: 100%;
+            transition: 1s;
+        }
+        p{
+            padding: 0;
+            line-height: 120%;
+            //color: #fff;
+            opacity: 0;
+            transition: 1s;
+        }
+        #bolsa2, #bolsa, #basura, #solo1, #cepillo, #bambu{
+            background-color: #000;
+        }
+        div{
+            position: relative;
+            p{
+                position: absolute;
+                bottom: 10%;
+            }
+            &:hover{
+                p{
+                    opacity: 1;
+                    transition: .5s;
+                }
+                img{
+                    opacity: .3;
+                    transition: .5s;
+                }
+            }
+        }
+        
+    }
+}
+#degradacion{
+    color: $DegradaText;
+    background-color: $VerdeFondo2;
+    padding: 5% 10%;
+    .video{
+        display: block;
+        border: 1px solid red;
+        border-radius: 0 100px 0 100px;
+        width: 720px;
+        height: auto;
+        overflow: hidden;
+        margin: auto;
+    }
+}
+
+.clear{
+    clear: both;
+}
+
+//Horizontal
+.scroll{
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+}
+.col2{
+    display: grid;
+    grid-template-columns: 100vw 100vw;
+}
+.col3{
+    display: grid;
+    grid-template-columns: 100vw 200vw 100vw;
+    grid-template-rows: 100vh;
+}
+
+//      WAVES
+.orilla{
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    
+    transform: translateX(55vw);
+    .waves{
+        transform: rotate(90deg);
+        
+    }
+    overflow: hidden;
+}
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:50vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+    use{
+        fill: rgba($color: $FondoImpacto, $alpha: .4);
+    }
+    use:nth-child(4){
+        fill: rgba($color: $FondoImpacto, $alpha: 1);
+    }
+  }
+  
+  .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+  }
+
+//ANIMATIONS
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+  }
