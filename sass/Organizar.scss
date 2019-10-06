@@ -292,7 +292,7 @@ body{
     }
 }
 #Alternativas{
-    //height: 100vh;
+    height: 100vh;
     color: $AlternativasText;
     background-color: $FondoImpacto;
     h2{
@@ -321,25 +321,66 @@ body{
             opacity: 0;
             transition: 1s;
         }
-        #bolsa2, #bolsa, #basura, #solo1, #cepillo, #bambu{
-            background-color: #000;
+        #bolsa2, #solo1, #cepillo{
+            div{
+            transform: translateX(-105%);
+            transition: .5s;
+            }
         }
+        #basura, #bambu{
+            :nth-child(2){
+            transform: translateY(-105%);
+            transition: .5s;
+            }
+            :nth-child(3){
+            transform: translateX(105%);
+            }
+        }
+        #bolsa2, #bolsa, #basura, #solo1, #cepillo, #bambu{
+            &:hover{
+                box-shadow: 0 0 10px $VerdeTitulo;
+            }
+        }
+        
+        #bolsa:hover ~ #bolsa2,#basura:hover ~ #solo1,#bambu:hover ~ #cepillo,#bolsa2:hover ~ #basura,#solo1:hover ~ #bambu,#cepillo:hover~#bambu{
+            :nth-child(2){
+                transform: translateX(0);
+                opacity: 1;
+                transition: .5s;
+            }
+            :nth-child(3){
+                transform: translateX(0);
+                opacity: 1;
+                transition: .5s;
+            }
+            p{
+                opacity: 1;
+            }
+            img{
+                opacity: .3;
+            }
+        }
+        
         div{
             position: relative;
-            p{
+            overflow: hidden;
+            div{
                 position: absolute;
-                bottom: 10%;
-            }
-            &:hover{
+                top: 0;
+                display: table;
+                vertical-align: middle;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background: rgba(0, 0, 0, 0.8);
                 p{
-                    opacity: 1;
-                    transition: .5s;
-                }
-                img{
-                    opacity: .3;
-                    transition: .5s;
+                    display: table-cell;
+                    vertical-align: middle;
+                    margin: auto;
+                    padding: 5%;
                 }
             }
+            
         }
         
     }

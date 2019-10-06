@@ -1,0 +1,24 @@
+#noria {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  border: 1px solid #000;
+  position: relative;
+  border-radius: 50%;
+  animation: spin 10s linear infinite; }
+
+.n-item {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  background: #f00;
+  animation: spin 10s linear infinite reverse; }
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn); } }
+
+/*# sourceMappingURL=Alternativas.css.map */
