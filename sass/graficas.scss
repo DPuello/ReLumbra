@@ -1,0 +1,56 @@
+$GraficasText: #02628c;
+
+#Graficas{
+    //height: 100vh;
+    padding: 5% 10%;
+    color: $GraficasText;
+    .tituloGrafica{
+        h5{
+            font-weight: 700;
+        }
+        h2{
+            float: left;
+            
+        }
+        //Logo
+        img{
+            filter: invert(1);
+            width: 5%;
+            clear: both; 
+            margin-left: 5%;
+            transform: translateY(-60px);
+        }
+    }
+    .imgCentro{
+        align-self: center;
+        text-align: center;
+    }
+    article{
+        display: block;
+        width: 60%;
+        float: left;
+        text-align: right;
+        h5{
+            text-transform: uppercase;
+            width: 70%;
+            margin-left: auto;
+        }
+        p{
+            padding: 0;
+        }
+        margin: 5%;
+    }
+    .turtle{
+        position: relative;
+        display: block;
+        img{
+            position: absolute;
+            top: -50px;
+            width: 17%;
+        }
+        float: none;
+        
+        
+        //transform: translateY(-100px)
+    }
+}

@@ -1,0 +1,123 @@
+* {
+  border: 1px solid red; }
+
+#Impacto {
+  background: #ffe7cb;
+  padding: 2%;
+  position: relative;
+  border: 1px solid red; }
+  #Impacto .TituloImpacto {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: baseline; }
+    #Impacto .TituloImpacto h2 {
+      color: #027368;
+      padding: 1%; }
+    #Impacto .TituloImpacto img {
+      filter: opacity(0.5) drop-shadow(0 0 0 #027368);
+      width: 3%; }
+  #Impacto p {
+    width: 70%; }
+  #Impacto .contenido-Impacto {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto; }
+    #Impacto .contenido-Impacto p {
+      flex-basis: 230px;
+      align-self: center; }
+    #Impacto .contenido-Impacto #polucion, #Impacto .contenido-Impacto #suelo, #Impacto .contenido-Impacto #oceano {
+      display: flex;
+      margin: 1%; }
+    #Impacto .contenido-Impacto #suelo {
+      justify-content: center; }
+    #Impacto .contenido-Impacto #oceano {
+      justify-content: flex-end; }
+    #Impacto .contenido-Impacto .textImg_Izq {
+      border-radius: 100px 0 0 0;
+      -webkit-mask-image: -webkit-gradient(linear, left center, right bottom, from(black), to(rgba(0, 0, 0, 0)));
+      mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)); }
+    #Impacto .contenido-Impacto .textImg_Der {
+      border-radius: 0 100px 0 0; }
+    #Impacto .contenido-Impacto .textImg_Izq, #Impacto .contenido-Impacto .textImg_Der {
+      border: 1px solid red;
+      position: relative;
+      overflow: hidden;
+      width: 230px; }
+      #Impacto .contenido-Impacto .textImg_Izq h4, #Impacto .contenido-Impacto .textImg_Der h4 {
+        position: absolute;
+        bottom: 0;
+        padding: 1%;
+        color: #fff;
+        font-weight: 500;
+        background-color: rgba(12, 88, 107, 0.6);
+        width: 100%;
+        text-align: center; }
+    #Impacto .contenido-Impacto img {
+      width: 230px; }
+
+#Cadena {
+  color: white;
+  background: #51b9c8; }
+  #Cadena p {
+    width: 400px; }
+  #Cadena #marino {
+    padding: 1% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 90vh; }
+    #Cadena #marino h5 {
+      grid-row: 2/3;
+      justify-self: center;
+      align-self: center; }
+    #Cadena #marino .ballenaT {
+      text-align: right;
+      justify-self: end;
+      align-self: end; }
+    #Cadena #marino .ballenaI img {
+      width: 45%; }
+    #Cadena #marino .ave {
+      grid-row: 1/2;
+      grid-column: 3/4;
+      align-self: end; }
+      #Cadena #marino .ave p {
+        float: left;
+        text-align: right; }
+      #Cadena #marino .ave img {
+        clear: both;
+        width: 15%; }
+    #Cadena #marino .caballo {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      align-self: center;
+      justify-self: center;
+      text-align: center; }
+      #Cadena #marino .caballo img {
+        float: left;
+        width: 7%; }
+    #Cadena #marino .plancton {
+      grid-row: 3/4;
+      grid-column: 2/3;
+      align-self: center; }
+      #Cadena #marino .plancton img {
+        float: left;
+        width: 20%;
+        display: block; }
+      #Cadena #marino .plancton p {
+        text-align: center; }
+    #Cadena #marino .ostra {
+      grid-row: 3/4;
+      grid-column: 3/4; }
+      #Cadena #marino .ostra img {
+        width: 14%; }
+
+#Comida {
+  background: #31251b; }
+  #Comida .comidas {
+    text-align: center;
+    padding: 10%;
+    color: #fff; }
+
+/*# sourceMappingURL=impacto.css.map */

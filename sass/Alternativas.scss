@@ -1,4 +1,15 @@
+$AlternativasText: #017369;
+$FondoImpacto: #ffe7cb;
 
+#Alternativas{
+  height: 100vh;
+  color: $AlternativasText;
+  background-color: $FondoImpacto;
+  h2{
+      margin-left: 10%;
+  }
+  
+}
   #noria {
     width: 200px;
     height: 200px;

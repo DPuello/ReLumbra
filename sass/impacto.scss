@@ -1,0 +1,175 @@
+$AzulTitulo: #027368;
+$AzulFondo: #51b9c8;
+$FondoImpacto: #ffe7cb;
+
+*{
+    border: 1px solid red;
+}
+#Impacto{
+    
+    background: $FondoImpacto;
+    padding: 2%;
+    position: relative;
+    border: 1px solid red;
+    .TituloImpacto{
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        h2{
+            color: $AzulTitulo;
+            padding: 1%;
+        }
+        img{
+            filter: opacity(.5) drop-shadow(0 0 0 $AzulTitulo);
+            width: 3%;
+            
+        }
+        
+    }
+    p{
+        width: 70%;
+    }
+    .contenido-Impacto{
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+        p{
+        flex-basis: 230px;
+        align-self: center;
+        }
+        #polucion, #suelo, #oceano{
+            display: flex;
+            margin: 1%;
+        }
+        #suelo{justify-content: center;}
+        #oceano{justify-content: flex-end;}
+
+        .textImg_Izq{
+            border-radius: 100px 0 0 0;
+            -webkit-mask-image:-webkit-gradient(linear, left center, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+
+        }
+        .textImg_Der{
+            border-radius: 0 100px 0 0;
+            
+        }
+
+        .textImg_Izq, .textImg_Der{
+            border: 1px solid red;
+            position: relative;
+            overflow: hidden;
+            width: 230px;
+            h4{
+                position: absolute;
+                bottom: 0;
+                padding: 1%;
+                color: #fff;
+                font-weight: 500;
+                background-color: rgba(12, 88, 107, .6);
+                width: 100%;
+                text-align: center;
+            }
+        
+        }
+        img{
+            width: 230px;
+            
+        }
+    }
+    
+}
+#Cadena{
+    color: white;
+    background: $AzulFondo;
+    
+    p{
+        width: 400px;
+    }
+    #marino{
+        padding: 1% 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        height: 90vh;
+        h5{
+            grid-row: 2/3;
+            justify-self: center;
+            align-self: center;
+        }
+        .ballenaT{
+            text-align: right;
+            justify-self: end;
+            align-self: end;
+        }
+        .ballenaI{
+            img{
+                
+                width: 45%;
+            }
+            
+        }
+        .ave{
+            grid-row: 1/2;
+            grid-column: 3/4;
+            align-self: end;
+            
+            p{
+                float: left;
+                text-align: right;
+            }
+            
+            img{
+                clear: both;
+                width: 15%;
+            }
+        }
+        .caballo{
+            grid-row: 2/3;
+            grid-column: 2/3;
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+            img{
+                float: left;
+                width: 7%;
+            }
+            
+        }
+        .plancton{
+            grid-row: 3/4;
+            grid-column: 2/3;
+            align-self: center;
+            
+            img{
+                float: left;
+                width: 20%;;
+                display: block;
+            }
+            p{
+                text-align: center;
+            }
+            
+        }
+        .ostra{
+            grid-row: 3/4;
+            grid-column: 3/4;
+            img{
+                width: 14%;
+            }
+        }
+    }
+    
+}
+#Comida{
+    .comidas{
+        text-align: center;
+        padding: 10%;
+        color: #fff;
+    }
+    
+    background: rgb(49, 37, 27);
+}

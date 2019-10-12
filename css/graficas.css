@@ -1,0 +1,38 @@
+#Graficas {
+  padding: 5% 10%;
+  color: #02628c; }
+  #Graficas .tituloGrafica h5 {
+    font-weight: 700; }
+  #Graficas .tituloGrafica h2 {
+    float: left; }
+  #Graficas .tituloGrafica img {
+    filter: invert(1);
+    width: 5%;
+    clear: both;
+    margin-left: 5%;
+    transform: translateY(-60px); }
+  #Graficas .imgCentro {
+    align-self: center;
+    text-align: center; }
+  #Graficas article {
+    display: block;
+    width: 60%;
+    float: left;
+    text-align: right;
+    margin: 5%; }
+    #Graficas article h5 {
+      text-transform: uppercase;
+      width: 70%;
+      margin-left: auto; }
+    #Graficas article p {
+      padding: 0; }
+  #Graficas .turtle {
+    position: relative;
+    display: block;
+    float: none; }
+    #Graficas .turtle img {
+      position: absolute;
+      top: -50px;
+      width: 17%; }
+
+/*# sourceMappingURL=graficas.css.map */

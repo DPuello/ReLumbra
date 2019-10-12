@@ -1,0 +1,88 @@
+$VerdeTitulo: #99a728;
+$NaranjaTitulo: #faa121;
+
+#QueEs{
+    //border: 1px solid blue;
+    
+    display: grid;
+    margin: 5% 10%;
+    //grid-template-rows: 1fr 1fr 1fr;
+    
+    
+    img{
+        justify-self: end;
+        width: 40%;
+    }
+    div{
+        display: block;
+        
+        h4{
+            color: $VerdeTitulo;
+            width: 300px;
+        }
+        h2{
+            color: $VerdeTitulo;
+            width: 300px;
+            float: left;
+        }
+        img{
+            
+            filter: opacity(.5) drop-shadow(0 0 0 $VerdeTitulo);
+            float: left;
+            width: 4%;
+            transform: translateY(-20px)
+        }
+        
+    }
+    p{
+        clear: both;
+        display: block;
+        width: 20vw;
+        height: auto;
+        //border: 1px solid red;
+        border-radius: 0 0 0 100px;
+        text-align: right;
+    }
+}
+#TiposPlastico{
+    //height: 100vh;
+
+    color: $NaranjaTitulo;
+    width: 90%;
+    //border: 1px solid blueviolet;
+    margin: auto;
+    /*ol {
+        counter-reset: item;
+        li {
+            clear: both;
+          counter-increment: item;
+          &::before {
+            content: counter(item) '.';
+            font-weight: 500;
+            font-size: 280%;
+            float: left;
+          }
+        }
+      }   */
+      
+    #nombres{
+        h2{
+            margin-left: 2%;
+        }
+    }
+
+    img{
+        width: 50%;
+        display: block;
+        margin: auto;
+        transform: translateY(90px);
+    }
+    article{
+        //margin: 0 10% 0 auto;
+        margin-left: auto;
+        width: 30%;
+        border-radius: 0 0 100px 0;
+        //border: 1px solid red;
+        
+    }
+}

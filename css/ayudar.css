@@ -1,0 +1,87 @@
+#Ayudar {
+  color: #fff;
+  background-color: #bece30;
+  padding: 5% 10%; }
+  #Ayudar .proponer {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(3, 138px);
+    gap: 10px; }
+    #Ayudar .proponer img {
+      width: 100%;
+      transition: 1s; }
+    #Ayudar .proponer p {
+      padding: 0;
+      line-height: 120%;
+      opacity: 0;
+      transition: 1s; }
+    #Ayudar .proponer #bolsa2 div, #Ayudar .proponer #solo1 div, #Ayudar .proponer #cepillo div {
+      transform: translateX(-105%);
+      transition: .5s; }
+    #Ayudar .proponer #basura :nth-child(2), #Ayudar .proponer #bambu :nth-child(2) {
+      transform: translateY(-105%);
+      transition: .5s; }
+    #Ayudar .proponer #basura :nth-child(3), #Ayudar .proponer #bambu :nth-child(3) {
+      transform: translateX(105%); }
+    #Ayudar .proponer #bolsa2:hover, #Ayudar .proponer #bolsa:hover, #Ayudar .proponer #basura:hover, #Ayudar .proponer #solo1:hover, #Ayudar .proponer #cepillo:hover, #Ayudar .proponer #bambu:hover {
+      box-shadow: 0 0 10px #99a728; }
+    #Ayudar .proponer #bolsa:hover ~ #bolsa2 :nth-child(2), #Ayudar .proponer #basura:hover ~ #solo1 :nth-child(2), #Ayudar .proponer #bambu:hover ~ #cepillo :nth-child(2), #Ayudar .proponer #bolsa2:hover ~ #basura :nth-child(2), #Ayudar .proponer #solo1:hover ~ #bambu :nth-child(2), #Ayudar .proponer #cepillo:hover ~ #bambu :nth-child(2) {
+      transform: translateX(0);
+      opacity: 1;
+      transition: .5s; }
+    #Ayudar .proponer #bolsa:hover ~ #bolsa2 :nth-child(3), #Ayudar .proponer #basura:hover ~ #solo1 :nth-child(3), #Ayudar .proponer #bambu:hover ~ #cepillo :nth-child(3), #Ayudar .proponer #bolsa2:hover ~ #basura :nth-child(3), #Ayudar .proponer #solo1:hover ~ #bambu :nth-child(3), #Ayudar .proponer #cepillo:hover ~ #bambu :nth-child(3) {
+      transform: translateX(0);
+      opacity: 1;
+      transition: .5s; }
+    #Ayudar .proponer #bolsa:hover ~ #bolsa2 p, #Ayudar .proponer #basura:hover ~ #solo1 p, #Ayudar .proponer #bambu:hover ~ #cepillo p, #Ayudar .proponer #bolsa2:hover ~ #basura p, #Ayudar .proponer #solo1:hover ~ #bambu p, #Ayudar .proponer #cepillo:hover ~ #bambu p {
+      opacity: 1; }
+    #Ayudar .proponer #bolsa:hover ~ #bolsa2 img, #Ayudar .proponer #basura:hover ~ #solo1 img, #Ayudar .proponer #bambu:hover ~ #cepillo img, #Ayudar .proponer #bolsa2:hover ~ #basura img, #Ayudar .proponer #solo1:hover ~ #bambu img, #Ayudar .proponer #cepillo:hover ~ #bambu img {
+      opacity: .3; }
+    #Ayudar .proponer div {
+      position: relative;
+      overflow: hidden; }
+      #Ayudar .proponer div div {
+        position: absolute;
+        top: 0;
+        display: table;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.8); }
+        #Ayudar .proponer div div p {
+          display: table-cell;
+          vertical-align: middle;
+          margin: auto;
+          padding: 5%; }
+
+#degradacion {
+  color: #707a1b;
+  background-color: #bece30;
+  padding: 5% 10%; }
+  #degradacion .video {
+    display: block;
+    border: 1px solid red;
+    border-radius: 0 100px 0 100px;
+    width: 720px;
+    height: auto;
+    overflow: hidden;
+    margin: auto; }
+
+.clear {
+  clear: both; }
+
+.scroll {
+  overflow-x: scroll;
+  scroll-behavior: smooth; }
+
+.col2 {
+  display: grid;
+  grid-template-columns: 100vw 100vw; }
+
+.col3 {
+  display: grid;
+  grid-template-columns: 100vw 200vw 100vw;
+  grid-template-rows: 100vh; }
+
+/*# sourceMappingURL=ayudar.css.map */
