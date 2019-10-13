@@ -42,7 +42,8 @@
           float: left;
         }
       }
-    }   */ }
+    }   */ 
+    }
   #TiposPlastico #nombres h2 {
     margin-left: 2%; }
   #TiposPlastico img {
@@ -54,5 +55,7 @@
     margin-left: auto;
     width: 30%;
     border-radius: 0 0 100px 0; }
+
+
 
 /*# sourceMappingURL=quees.css.map */
