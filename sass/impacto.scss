@@ -1,12 +1,14 @@
 $AzulTitulo: #027368;
 $AzulFondo: #51b9c8;
 $FondoImpacto: #ffe7cb;
+$FondoComida: #3c423d;
 
 *{
     border: 1px solid red;
 }
 #Impacto{
     
+    //width: 80%;
     background: $FondoImpacto;
     padding: 2%;
     position: relative;
@@ -19,6 +21,7 @@ $FondoImpacto: #ffe7cb;
         h2{
             color: $AzulTitulo;
             padding: 1%;
+            font-size: 370%;
         }
         img{
             filter: opacity(.5) drop-shadow(0 0 0 $AzulTitulo);
@@ -49,13 +52,14 @@ $FondoImpacto: #ffe7cb;
 
         .textImg_Izq{
             border-radius: 100px 0 0 0;
-            -webkit-mask-image:-webkit-gradient(linear, left center, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+            -webkit-mask-image:-webkit-gradient(linear, 80% center, right center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 
         }
         .textImg_Der{
             border-radius: 0 100px 0 0;
-            
+            -webkit-mask-image:-webkit-gradient(linear, 20% center, left center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
         }
 
         .textImg_Izq, .textImg_Der{
@@ -67,6 +71,7 @@ $FondoImpacto: #ffe7cb;
                 position: absolute;
                 bottom: 0;
                 padding: 1%;
+                font-size: 200%;
                 color: #fff;
                 font-weight: 500;
                 background-color: rgba(12, 88, 107, .6);
@@ -83,9 +88,11 @@ $FondoImpacto: #ffe7cb;
     
 }
 #Cadena{
+    overflow-y: hidden;
     color: white;
     background: $AzulFondo;
-    
+    background: rgb(87,202,218);
+    background: linear-gradient(90deg, rgba(87,202,218,1) 0%, rgba(64,166,212,1) 85%, rgba(60,66,61,1) 100%);
     p{
         width: 400px;
     }
@@ -165,11 +172,13 @@ $FondoImpacto: #ffe7cb;
     
 }
 #Comida{
+    overflow-y: hidden;
     .comidas{
         text-align: center;
         padding: 10%;
         color: #fff;
+        background: $FondoComida;
+        
     }
     
-    background: rgb(49, 37, 27);
 }

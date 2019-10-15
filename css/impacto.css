@@ -13,7 +13,8 @@
     align-items: baseline; }
     #Impacto .TituloImpacto h2 {
       color: #027368;
-      padding: 1%; }
+      padding: 1%;
+      font-size: 370%; }
     #Impacto .TituloImpacto img {
       filter: opacity(0.5) drop-shadow(0 0 0 #027368);
       width: 3%; }
@@ -37,10 +38,12 @@
       justify-content: flex-end; }
     #Impacto .contenido-Impacto .textImg_Izq {
       border-radius: 100px 0 0 0;
-      -webkit-mask-image: -webkit-gradient(linear, left center, right bottom, from(black), to(rgba(0, 0, 0, 0)));
+      -webkit-mask-image: -webkit-gradient(linear, 80% center, right center, from(black), to(rgba(0, 0, 0, 0)));
       mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)); }
     #Impacto .contenido-Impacto .textImg_Der {
-      border-radius: 0 100px 0 0; }
+      border-radius: 0 100px 0 0;
+      -webkit-mask-image: -webkit-gradient(linear, 20% center, left center, from(black), to(rgba(0, 0, 0, 0)));
+      mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)); }
     #Impacto .contenido-Impacto .textImg_Izq, #Impacto .contenido-Impacto .textImg_Der {
       border: 1px solid red;
       position: relative;
@@ -50,6 +53,7 @@
         position: absolute;
         bottom: 0;
         padding: 1%;
+        font-size: 200%;
         color: #fff;
         font-weight: 500;
         background-color: rgba(12, 88, 107, 0.6);
@@ -59,8 +63,11 @@
       width: 230px; }
 
 #Cadena {
+  overflow-y: hidden;
   color: white;
-  background: #51b9c8; }
+  background: #51b9c8;
+  background: #57cada;
+  background: linear-gradient(90deg, #57cada 0%, #40a6d4 85%, #3c423d 100%); }
   #Cadena p {
     width: 400px; }
   #Cadena #marino {
@@ -114,10 +121,11 @@
         width: 14%; }
 
 #Comida {
-  background: #31251b; }
+  overflow-y: hidden; }
   #Comida .comidas {
     text-align: center;
     padding: 10%;
-    color: #fff; }
+    color: #fff;
+    background: #3c423d; }
 
 /*# sourceMappingURL=impacto.css.map */
