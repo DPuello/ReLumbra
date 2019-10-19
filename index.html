@@ -19,6 +19,12 @@
     <link rel="stylesheet" type="text/css" href="css/Carrusel1.css">
     <link rel="stylesheet" type="text/css" href="css/quees2.css">
     <link rel="stylesheet" type="text/css" href="css/Organizar.css">
+    <link rel="stylesheet" type="text/css" href="css/alternativas2.css">
+    <link rel="stylesheet" type="text/css" href="sass/alternativas-2.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
 </head>
 
 <body>
@@ -306,10 +312,113 @@
         <scroll-page id="page-4">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <section id="Alternativas" >
-                <div>
-                    <h2>Alternativas e incentivación</h2>
-                    <img src="" alt="">
+                <div class="titulo_alternativas">
+                    <div class="letra_titulo">
+                      <h2>Alternativas <br><span class="mas_peque">e incentivación</span></h2>
+                    </div>
+                    <img src="images/Logo-N.png" alt="logo_alternativas" class="logo_alternativas" id="logo_alternativas">
                 </div>
+            
+                <div class="juego" id="juego">
+                 <!-- <div class="canecas" id="basura1">
+                    <img src="images/caneca.png" alt="basura1" class="caneca_verde">
+                    <h4 class="caneca">ORGÁNICOS</h4>
+                  </div>
+                  -->
+                  <!--
+                    <ul id="objetos">
+                      <li><img src="images/banana.png" alt="garbage1"></li>
+                      <li><img src="images/bolsabasura.png" alt="garbage2"></li>
+                      <li><img src="images/botella.png" alt="garbage3"></li>
+                      <li><img src="images/bolsabasura.png" alt="garbage4"></li>
+                      <li><img src="images/lata.png" alt="garbage5"></li>
+                      <div class="centro" id="centro">
+                         <li><img src="centro" alt="garbage1"></li>
+                      </div>
+                      
+                    </ul>
+                      -->
+                      
+                      <div class="grid-container">
+                        <div class="item1">
+                          <div class="canecas" id="basura1">
+                            <img src="images/caneca.png" alt="basura1" class="caneca_verde">
+                            <h4 class="caneca">ORGÁNICOS</h4>
+                          </div>
+                        </div>
+                        <div class="item2">
+                          <ul id="list">
+                            <div class="hijo">
+                              <div class="circles">
+                                <div class="circle-with-text multi-line-text">
+                                 ¡Información que ayuda al planeta!
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--<li class="list-item" style="transform: rotate(0deg) translate(0px, -200px) rotate(0deg);">Things go here<button class="remove-item">Remove</button>
+                            </li>-->
+
+                            <li class="list-item ui-widget-content" id="draggable">
+                              <img src="images/banana.png" alt="garbage1" class="garbage gbanana">
+                            </li>
+
+                            <li class="list-item" >
+                              <img src="images/bolsabasura.png" alt="garbage1" class="garbage gbolsa">
+                            </li>
+
+                            <li class="list-item">
+                              <img src="images/botella.png" alt="garbage1" class="garbage gbotella">
+                            </li>
+                            
+                            <li class="list-item" >
+                              <img src="images/bolsabasura.png" alt="garbage1" class="garbage gbolsa">
+                            </li>
+
+                            <li class="list-item">
+                              <img src="images/lata.png" alt="garbage1" class="garbage glata">
+                            </li>
+
+                          </ul>
+                        <button id="add-item">Add item</button>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+                        </div>
+                        <div class="item3">
+                          <div class="canecas2" id="basura2">
+                            <img src="images/canecazul.png" alt="basura2" class="caneca_azul">
+                            <h4 class="caneca">INORGÁNICOS</h4>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <!-- ESTO ES LO QUE SIRVE
+                      <ul id="list">
+                        <div class="hijo">
+                          <div class="circles">
+                            <div class="circle-with-text multi-line-text">
+                              Here is some multi-line text in circle jgjhghgj gjhg kjhjh kjhkjh kjhkjhkjh
+                            </div>
+                          </div>
+                        </div>
+                      </ul>
+                        <button id="add-item">Add item</button>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                     HASTA AQUÍ-->
+
+                    <!--
+                    <div class="canecas2" id="basura2">
+                      <img src="images/canecazul.png" alt="basura2" class="caneca_azul">
+                      <h4 class="caneca">INORGÁNICOS</h4>
+                    </div>-->
+
+                </div>
+
+                <!--<div class="box" 1782, so the story runs, two brothers sat over their winter fire in the little French town of Annonay, watching the grey smoke-wreaths from the hearth curl up the wide chimney. Their names were Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted as possessing thoughtful minds and a deep interest in all scientific knowledge and new discovery. Before that night—a memorable night, as it was to prove—hundreds of millions of people had watched the rising smoke-wreaths of their fires without drawing any special inspiration from the fact.</p>
+</div>-->
                 <!--
                 <div id="noria">
                     <div class="n-item"><img src="images/botella.png" alt="bottle"></div>
@@ -447,5 +556,12 @@
 <script type="text/javascript" src="js/Alternativas.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/carrusel_vertical.js"></script>
+<script type="text/javascript" src="js/alternativas2.js"></script>
 <script type="text/javascript" src="js/scrolling.js"></script>
+
+
+<!--para que los objetos sean draggeables-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </html>
