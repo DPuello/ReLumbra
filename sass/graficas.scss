@@ -24,6 +24,23 @@ $GraficasText: #02628c;
     .imgCentro{
         align-self: center;
         text-align: center;
+
+        //display: flex;
+        
+        .car1{
+            order: 1;
+            height: 200px;
+        }
+        .car2{
+            order: 2;
+            transform: translateY(-80px);
+            height: 150px;
+        }
+        .car3{
+            order: 3;
+            transform: translateY(-200px);
+            height: 100px;
+        }
     }
     article{
         display: block;

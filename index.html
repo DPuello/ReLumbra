@@ -226,7 +226,7 @@
                       </p>
                       
                   </div>
-                  <div class="ballenaI"><img src="images/ballena.png" alt="whale"></div>
+                  <div class="ballenaI"><canvas id="azul3d"></canvas></div>
                   <div class="plancton">
                       <img src="images/krill.png" alt="plancton">
                       <p>
@@ -249,7 +249,8 @@
                               Las aves marinas confunden el alimento de los plásticos que terminan 
                               consumiendo, pueden enfermar o sentir una falsa satisfacción alimenticia.
                       </p>
-                      <img src="images/ave.png" alt="Gaviota">
+                      
+                      <canvas id="ave3d"></canvas>
                   </div>
 
                   <div class="ostra">
@@ -258,6 +259,7 @@
                               las ostras, las almejas, el camarón pardo, la cigala, las anchoas, 
                               las sardinas, los arenques del Atlántico, entre otros.
                       </p>
+                      <canvas id="concha3d"></canvas>
                       <img src="images/concha.png" alt="Ostras">
                   </div>
               </div>
@@ -266,8 +268,8 @@
 
               <section id="Comida" class="section">
                 <div class="comidas">
-                  <img src="" alt="Beer">
-                  <img src="" alt="Salt">
+                  <img class="arriba" src="images/cerveza.png" alt="Beer">
+                  <img class="arriba" src="images/sal.png" alt="Salt">
                   <p>
                       Varios alimentos pueden presentar microplásticos, entre ellos la cerveza, 
                       la miel, la sal común y principalmente los mariscos.
@@ -287,7 +289,11 @@
                     <h2>Gráficas</h2>
                     <img src="images/Logo-N.png" alt="Logo">
                 </div>
-                <div class="imgCentro"><img src="images/torta.png" alt="Stadistic"></div>
+                <div class="imgCentro">
+                    <img id="imagen1" class="car1" src="images/torta.png" alt="Stadistic">
+                    <img id="imagen2" class="car2" src="images/circulo.png" alt="Stadistic">
+                    <img id="imagen3" class="car3" src="images/pato2.png" alt="Stadistic">
+                </div>
                 <article>
                     <h5>Tasa de reciclaje en potencias industriales 2012</h5>
                     <p>
@@ -433,6 +439,12 @@
 
 </body>
 
+<!--Librerias para el 3d-->
+<script src="js/three.min.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/MTLLoader.js"></script>
+
 <!--Importando Un Jurgo de librerias-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
@@ -448,4 +460,6 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/carrusel_vertical.js"></script>
 <script type="text/javascript" src="js/scrolling.js"></script>
+<script type="text/javascript" src="js/graficas.js"></script>
+<script type="text/javascript" src="js/cargar3D.js"></script>
 </html>

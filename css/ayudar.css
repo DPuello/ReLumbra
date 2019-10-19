@@ -21,13 +21,16 @@
       border-radius: 0 80px 0 0; }
       #Ayudar .proponer #bolsa2 div, #Ayudar .proponer #solo1 div, #Ayudar .proponer #cepillo div {
         transform: translateX(-105%);
-        transition: .5s; }
+        transition: .5s;
+        border-radius: 0 80px 0 0; }
     #Ayudar .proponer #basura, #Ayudar .proponer #bambu {
       border-radius: 0 0 0 80px; }
       #Ayudar .proponer #basura :nth-child(2), #Ayudar .proponer #bambu :nth-child(2) {
+        border-radius: 0 0 0 80px;
         transform: translateY(-105%);
         transition: .5s; }
       #Ayudar .proponer #basura :nth-child(3), #Ayudar .proponer #bambu :nth-child(3) {
+        border-radius: 0 0 0 80px;
         transform: translateX(105%); }
     #Ayudar .proponer #bolsa2:hover, #Ayudar .proponer #bolsa:hover, #Ayudar .proponer #basura:hover, #Ayudar .proponer #solo1:hover, #Ayudar .proponer #cepillo:hover, #Ayudar .proponer #bambu:hover {
       box-shadow: 0 0 10px #99a728; }
@@ -35,14 +38,14 @@
       transform: translateX(0);
       opacity: 1;
       transition: .5s; }
-    #Ayudar .proponer #bolsa:hover ~ #bolsa2 :nth-child(3), #Ayudar .proponer #basura:hover ~ #solo1 :nth-child(3), #Ayudar .proponer #bambu:hover ~ #cepillo :nth-child(3), #Ayudar .proponer #bolsa2:hover ~ #basura :nth-child(3), #Ayudar .proponer #solo1:hover ~ #bambu :nth-child(3), #Ayudar .proponer #cepillo:hover ~ #bambu :nth-child(3) {
-      transform: translateX(0);
-      opacity: 1;
-      transition: .5s; }
     #Ayudar .proponer #bolsa:hover ~ #bolsa2 p, #Ayudar .proponer #basura:hover ~ #solo1 p, #Ayudar .proponer #bambu:hover ~ #cepillo p, #Ayudar .proponer #bolsa2:hover ~ #basura p, #Ayudar .proponer #solo1:hover ~ #bambu p, #Ayudar .proponer #cepillo:hover ~ #bambu p {
       opacity: 1; }
     #Ayudar .proponer #bolsa:hover ~ #bolsa2 img, #Ayudar .proponer #basura:hover ~ #solo1 img, #Ayudar .proponer #bambu:hover ~ #cepillo img, #Ayudar .proponer #bolsa2:hover ~ #basura img, #Ayudar .proponer #solo1:hover ~ #bambu img, #Ayudar .proponer #cepillo:hover ~ #bambu img {
       opacity: .3; }
+    #Ayudar .proponer #cepillo:hover ~ #bambu :nth-child(3) {
+      transform: translateX(-50%);
+      opacity: 1;
+      transition: .5s; }
     #Ayudar .proponer div {
       position: relative;
       overflow: hidden; }
@@ -76,18 +79,5 @@
 
 .clear {
   clear: both; }
-
-.scroll {
-  overflow-x: scroll;
-  scroll-behavior: smooth; }
-
-.col2 {
-  display: grid;
-  grid-template-columns: 100vw 100vw; }
-
-.col3 {
-  display: grid;
-  grid-template-columns: 100vw 200vw 100vw;
-  grid-template-rows: 100vh; }
 
 /*# sourceMappingURL=ayudar.css.map */

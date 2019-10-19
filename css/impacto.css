@@ -91,6 +91,9 @@
       #Cadena #marino .ave p {
         float: left;
         text-align: right; }
+      #Cadena #marino .ave canvas {
+        width: 15%;
+        border: 1px solid red; }
       #Cadena #marino .ave img {
         clear: both;
         width: 15%; }
@@ -116,6 +119,8 @@
     #Cadena #marino .ostra {
       grid-row: 3/4;
       grid-column: 3/4; }
+      #Cadena #marino .ostra #concha3d {
+        border: 1px solid red; }
       #Cadena #marino .ostra img {
         width: 14%; }
 
@@ -123,9 +128,11 @@
   overflow-y: hidden; }
   #Comida .comidas {
     text-align: center;
-    padding: 10%;
+    padding: 5vh 10%;
     color: #fff;
     background: #3c423d; }
+    #Comida .comidas .arriba {
+      max-height: 30vh; }
 
 #sec_2 {
   display: none; }

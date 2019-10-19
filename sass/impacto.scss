@@ -113,6 +113,7 @@ $FondoComida: #3c423d;
             align-self: end;
         }
         .ballenaI{
+            
             img{
                 
                 width: 45%;
@@ -128,7 +129,11 @@ $FondoComida: #3c423d;
                 float: left;
                 text-align: right;
             }
-            
+            canvas{
+                width: 15%;
+                
+                border: 1px solid red;
+            }
             img{
                 clear: both;
                 width: 15%;
@@ -164,6 +169,9 @@ $FondoComida: #3c423d;
         .ostra{
             grid-row: 3/4;
             grid-column: 3/4;
+            #concha3d{
+                border: 1px solid red;
+            }
             img{
                 width: 14%;
             }
@@ -175,10 +183,12 @@ $FondoComida: #3c423d;
     overflow-y: hidden;
     .comidas{
         text-align: center;
-        padding: 10%;
+        padding: 5vh 10%;
         color: #fff;
         background: $FondoComida;
-        
+        .arriba{
+            max-height: 30vh;
+        }
     }
     
 }
