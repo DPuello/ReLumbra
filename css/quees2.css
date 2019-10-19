@@ -1,0 +1,174 @@
+/*.carrusel_vertical{
+	background-color: red;
+	display: block;
+	width: 50px;
+	height: 120px;
+	padding: 0px;
+	margin: 0px;
+
+}
+
+#TiposPlastico{
+	display: inline;
+	float: left;
+}
+
+#QueEs{
+margin-right: 0px;
+}
+
+.hola{
+	background-color: blue;
+	display: block;
+	width: 50px;
+	height: 120px;
+	padding: 0px;
+	margin: 0px;
+	float: right;
+}*/
+
+#QueEs{
+margin-right: 0px;
+}
+
+#carrusel_y_tipos{/*contenedor de carrusel y tipos*/
+	display: grid;
+ 	grid-template-columns: repeat(6, 1fr);/*6 columnas*/
+  	grid-gap: 10px;
+	  grid-auto-rows: minmax(100px, auto);
+	width: 100vw;
+	height: 100vh;
+  	/*grid-column-gap:15%;*/
+}
+
+.carrusel {
+ 	grid-column: 1;
+  	grid-row: 1 / 6;
+	/*background-color: rgba(255,0,0,0.3);*/
+}
+
+.tipos { 
+  	grid-column: 2 / 7;
+  	grid-row: 1 / 6;
+  	/*background-color: rgba(255,0,0,0.3);*/
+  	color:#faa121;
+}
+
+
+.imgcarrusel{
+	width: 80%;
+	padding-top: 30px;
+	padding-bottom:30px;
+	margin: auto;
+	display: block;
+}
+
+#mis_tipos{/*contenedor de mis tipos*/
+	display: grid;
+ 	grid-template-columns: repeat(4, 1fr);/*4 columnas*/
+  	grid-gap: 10px;
+  	grid-auto-rows: minmax(100px, auto);
+}
+
+.tipo_plastico {
+ 	grid-column: 1/4;/*ancho*/
+  	grid-row: 1 / 3;/*alto*/
+	/*background-color: rgba(50,0,0,0.3);*/
+	padding-top: 10%;
+}
+
+.titulo_tipo{
+	display: inline;
+	text-align: center;
+	padding-left: 20%;
+}
+
+.dano_tipo{
+	display: inline;
+	text-align: center;
+	padding-left: 20%;
+}
+
+.parrafo_plastico{
+	padding:1rem 0px 0px 0px;
+}
+
+.cinta { 
+  	grid-column: 1 / 4;
+  	grid-row: 3/6;
+  	/*background-color: rgba(100,0,0,0.3);*/
+}
+
+.caja_control {
+ 	grid-column: 4/7;
+  	grid-row: 2/4;
+	/*background-color: rgba(200,0,0,0.3);*/
+	position:relative;
+}
+
+.titulo_plastico{
+	font-weight: bold;
+	padding-left: 20%;
+	margin:auto;
+}
+
+.texto_plastico { 
+  	grid-column: 1/ 4;
+  	grid-row: 6 / 9;
+  	/*background-color: rgba(255,0,0,0.3);*/
+}
+
+.elementos_cinta{
+	/*background-image: url("images/cinta/cinta_y_caja/cinta.png");*/
+	position: relative;
+	top: 70;
+	left: 30;
+}
+
+
+.transportadora{
+	width: 90%;
+	position: relative;
+	top: 80px;
+	left: 0;
+	padding: 0;
+}
+
+.imgcinta{
+	display: block;
+	float:left;
+	width: 30%;
+	position: absolute;
+	top: -120px;
+	left: 150px;
+}
+
+.engr{
+	display: block;
+	float:left;
+	width: 10%;
+	position: absolute;
+	top: 235px;
+	left: 650px;
+}
+
+.caja{
+	position:relative;
+	height: 80%;
+}
+
+.flecha_der{
+	position:absolute;
+	width: 10%;
+	top: 170px;
+	left: 230px;
+}
+
+
+.flecha_izq{
+	position:absolute;
+	width: 10%;
+	top: 170px;
+	left: 140px;
+}
+/*<img class="transportadora" src="images/cinta/cinta_y_caja/cinta.png" alt="First slide">*/

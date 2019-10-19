@@ -3,17 +3,20 @@ $VerdeFondo2: #bece30;
 $DegradaText: #707a1b;
 
 #Ayudar{
-    //height: 100vh;
+    height: 100vh;
+    width: 100vw;
     color: #fff;
     background-color: $VerdeFondo2;
-    padding: 5% 10%;
+    padding: 5vh 10vw;
     .proponer{
         display: grid;
         grid-template-columns: repeat(4, 250px);
         grid-template-rows: repeat(3, 138px);
         gap: 10px;
+        
         img{
             width: 100%;
+            
             transition: 1s;
         }
         p{
@@ -24,12 +27,15 @@ $DegradaText: #707a1b;
             transition: 1s;
         }
         #bolsa2, #solo1, #cepillo{
+            border-radius: 0 80px 0 0;
             div{
             transform: translateX(-105%);
             transition: .5s;
+            
             }
         }
         #basura, #bambu{
+            border-radius: 0 0 0 80px;
             :nth-child(2){
             transform: translateY(-105%);
             transition: .5s;
@@ -90,7 +96,7 @@ $DegradaText: #707a1b;
 #degradacion{
     color: $DegradaText;
     background-color: $VerdeFondo2;
-    padding: 5% 10%;
+    padding: 5vh 10vw;
     .video{
         display: block;
         border: 1px solid red;

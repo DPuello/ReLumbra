@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
@@ -16,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/Alternativas.css">
     <link rel="stylesheet" type="text/css" href="css/ayudar.css">
     <link rel="stylesheet" type="text/css" href="css/Carrusel1.css">
+    <link rel="stylesheet" type="text/css" href="css/quees2.css">
     <link rel="stylesheet" type="text/css" href="css/Organizar.css">
 </head>
 
@@ -58,181 +60,224 @@
     <scroll-container>
 
         <scroll-page id="page-1">
-            <div class="scroll col2" id="sec_1">
-                <section id="QueEs">
-                    <div>
+            <div class="wrapper" id="js-wrapper3">
+                <div class="sections" id="js-slideContainer3">
+                  <section class="section" id="QueEs">
+                      <div><!--div para el titulo-->
                         <h4>¿Qué es el</h4>
                         <h2>plástico?</h2>
                         <img src="images/Logo-N.png" alt="Logo">
                     </div>
-                    <img src="images/plastico.png" alt="plastic">
-
+                    <!--imagen de plastico
+                    <img src="images/plastico.png" alt="plastic">-->
+    
                     <article>
                         <p>
                             Es un material constituido de compuestos orgánicos y sintéticos. 
                             Su nombre viene de su plasticidad, su capacidad para ser moldeados. 
                             Es maleable, flexible, versátil, ligero, económico y muy duradero.
-
+    
                         </p>
                     </article>
-
-                    <!--   3D -->
-                    <div class="card">
-                            <div class="card__bg"></div>
-                            <div class="card__overlay cover"></div>
-                        </div>
-                    
-
-                </section>
-
-                <section id="TiposPlastico">
-                    <ol id="nombres">
-                        <li>
-                            <h2>1. PETE</h2>
-                            <h5>Daño: <b>moderado</b></h5>
-                        </li>
-                    </ol>
-                    <img src="images/cinta.png" alt="production">
-                    <article>
-                        <h5>
-                            Polietileno Tereftalato
-                        </h5>
-                        <p>
-                                Es transparente, liviano, impermeable, estable y levemente tóxico ante 
-                                componentes ácidos, resistente químicamente. Es reciclable y no es biodegradable,
-                                es usado para hacer envases y textiles.
-                        </p>
-                    </article>
-                </section>
-            </div>
+                  </section>
+                  <section class="section"id="carrusel_y_tipos">
+                          <div class="carrusel">
+                             
+                              <img class="imgcarrusel uno" src="images/carrusel/batmanCarrusel.png" alt="First slide">
+                              <img class="imgcarrusel" src="images/carrusel/botellaCarrusel.png" alt="Second slide">
+                              <img class="imgcarrusel" src="images/carrusel/canecaCarrusel.png" alt="Third slide">
+                              <img class="imgcarrusel" src="images/carrusel/cascoCarrusel.png" alt="Second slide">
+                              <img class="imgcarrusel" src="images/carrusel/caseteCarrusel.png" alt="Second slide">
+                              <img class="imgcarrusel" src="images/carrusel/kinderCarrusel.png" alt="Second slide">
+                              <img class="imgcarrusel" src="images/carrusel/patoCarrusel.png" alt="Second slide">
+                              <img class="imgcarrusel" src="images/carrusel/sillaCarrusel.png" alt="Second slide">
+                              <img class="imgcarrusel" src="images/carrusel/squirtleCarrusel.png" alt="Second slide">
+                  
+                          </div>
+    
+    
+                          <div class="tipos">
+    
+                              <div id="mis_tipos">
+                                  
+                                  <div class="tipo_plastico">
+                                      <h2 class="titulo_tipo">1. PETE</h2>
+                                      <br>
+                                       <h5 class="dano_tipo">Daño: <b>moderado</b></h5>
+                                  </div>
+    
+                                  <div class="cinta">
+                                      <div class="elementos_cinta">
+    
+                                          <img class="transportadora" src="images/cinta/cinta_y_caja/cinta.png" alt="First slide">
+    
+                                          <img class="imgcinta" src="images/cinta/cocaCinta.png" alt="First slide">
+                                          <img class="imgcinta" src="images/cinta/shampooCinta.png" alt="Second slide">
+                                          <img class="imgcinta" src="images/cinta/canecaCinta.png" alt="Third slide">
+                                          <img class="imgcinta" src="images/cinta/basuraCinta.png" alt="Second slide">
+                                          <img class="imgcinta" src="images/cinta/tarritoCinta.png" alt="Second slide">
+                                          <img class="imgcinta" src="images/cinta/vasoCinta.png" alt="Second slide">
+                                          <img class="imgcinta" src="images/cinta/jeringaCinta.png" alt="Second slide">
+                                          
+                                          <img class="engr" src="images/cinta/cinta_y_caja/engr.png" alt="Second slide">
+    
+                                      </div>                                     
+                                  </div>
+    
+                                  <div class="caja_control">
+                                      <div class="caja">
+                                          <img class="caja" src="images/cinta/cinta_y_caja/caja.png" alt="Second slide">
+                                          
+                                          <img class="flecha_der" src="images/cinta/cinta_y_caja/flecha_derecha_2.png" alt="Second slide">
+    
+                                          <img class="flecha_izq" src="images/cinta/cinta_y_caja/flecha_izquierda_2.png" alt="Second slide">
+    
+                                      </div>
+                                  </div>
+    
+                                  <div class="texto_plastico">
+                                      <h5 class="titulo_plastico">Polietileno Tereftalato</h5>
+                                      <p class="parrafo_plastico">
+                                      Es transparente, liviano, impermeable, estable y levemente tóxico ante componentes ácidos, resistente químicamente. Es reciclable y no es biodegradable, es usado para hacer envases y textiles.
+                                      </p>
+                                  </div>
+    
+                              
+    
+                              </div>
+    
+                          </div>
+                  </section>
+                </div>
+              </div>
 
         </scroll-page>
 
+
         <scroll-page id="page-2">
-            <div class="scroll col3" id="sec_2">
-                <section id="Impacto">
-                    <div class="TituloImpacto">
-                        <h2>Impacto</h2>
-                        <img src="images/Logo-N.png" alt="Logo">
-                    </div>
-                    <div class="contenido-Impacto">
-                        <div id="polucion">
-                            <div class="textImg_Izq">
-                                    <img src="images/impacto/plastico.jpg" alt="Polution">
-                                    <h4>Polución</h4>
-                            </div>
-                        
-                            <p>
-                                    Se refiere a la acumulación de plásticos en el medio ambiente y pueden afectar
-                                    a la vida silvestre y al ser humano.
-                            </p>
-                        </div>
-                        <div id="suelo">
-                            <p>
-                                    En los vertederos, el PVC puede liberar químicos dañinos al suelo que puede 
-                                    filtrarse a aguas subterráneas.
-                            </p>
-                            <div class="textImg_Der">
-                                    <img src="images/impacto/cafe.jpg" alt="Ground">
-                                    <h4>Suelo</h4>
-                            </div>
-                        </div>
-                        <div id="oceano">
-                            <div class="textImg_Izq">
-                                    <img src="images/impacto/pezplastico.jpg" alt="Sea">
-                                    <h4>Océano</h4>
-                            </div>
-                            <p>
-                                    Millones de toneladas de plásticos llegan a los océanos cada año, el 80% 
-                                    de estos proviene de tierra firme.
-                            </p>
-                        </div>
-                    </div>
+        <div class="wrapper" id="js-wrapper">
+            <div class="sections" id="js-slideContainer">
+              <section id="Impacto" class="section">
+                <div class="TituloImpacto">
+                  <h2>Impacto</h2>
+                  <img src="images/Logo-N.png" alt="Logo">
+              </div>
+              <div class="contenido-Impacto">
+                  <div id="polucion">
+                      <div class="textImg_Izq">
+                              <img src="images/impacto/plastico.jpg" alt="Polution">
+                              <h4>Polución</h4>
+                      </div>
+                  
+                      <p>
+                              Se refiere a la acumulación de plásticos en el medio ambiente y pueden afectar
+                              a la vida silvestre y al ser humano.
+                      </p>
+                  </div>
+                  <div id="suelo">
+                      <p>
+                              En los vertederos, el PVC puede liberar químicos dañinos al suelo que puede 
+                              filtrarse a aguas subterráneas.
+                      </p>
+                      <div class="textImg_Der">
+                              <img src="images/impacto/cafe.jpg" alt="Ground">
+                              <h4>Suelo</h4>
+                      </div>
+                  </div>
+                  <div id="oceano">
+                      <div class="textImg_Izq">
+                              <img src="images/impacto/pezplastico.jpg" alt="Sea">
+                              <h4>Océano</h4>
+                      </div>
+                      <p>
+                              Millones de toneladas de plásticos llegan a los océanos cada año, el 80% 
+                              de estos proviene de tierra firme.
+                      </p>
+                  </div>
+              </div>
 
-                    <!--Waves Container-->
-                    <div class="orilla">
-                        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                            <defs>
-                                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                            </defs>
-                            <g class="parallax">
-                                <use xlink:href="#gentle-wave" x="48" y="0" />
-                                <use xlink:href="#gentle-wave" x="48" y="3" />
-                                <use xlink:href="#gentle-wave" x="48" y="5" />
-                                <use xlink:href="#gentle-wave" x="48" y="7" />
-                            </g>
-                        </svg>
-                    </div>
-                    <!--Waves end-->
+              <!--Waves Container-->
+              <div class="orilla">
+                  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                      <defs>
+                          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                      </defs>
+                      <g class="parallax">
+                          <use xlink:href="#gentle-wave" x="48" y="0" />
+                          <use xlink:href="#gentle-wave" x="48" y="3" />
+                          <use xlink:href="#gentle-wave" x="48" y="5" />
+                          <use xlink:href="#gentle-wave" x="48" y="7" />
+                      </g>
+                  </svg>
+              </div>
+              <!--Waves end-->
+              </section>
+              <section id="Cadena" class="section">
+                <div id="marino">
+                  <h5>Microplástico</h5>
 
-                </section>
-                
-                <section id="Cadena">
-                    <div id="marino">
-                    <h5>Microplástico</h5>
+                  <div class="ballenaT">
+                      <p>
+                              En los océanos viven animales filtradores como ballenas barbudas, 
+                              manta rayas y algunas especies de tiburones que se ven afectados, 
+                              suelen alimentarse del plancton, cuando se alimentan pueden consumir 
+                              muchos microplásticos.
+                      </p>
+                      
+                  </div>
+                  <div class="ballenaI"><img src="images/ballena.png" alt="whale"></div>
+                  <div class="plancton">
+                      <img src="images/krill.png" alt="plancton">
+                      <p>
+                              El fitoplancton es la base de la cadena alimenticia de los océanos, 
+                              se ha observado que se llegan a alimentar de microplásticos que son 
+                              retenidos en sus estómagos hasta por 7 días.
+                      </p>
+                  </div>
 
-                    <div class="ballenaT">
-                        <p>
-                                En los océanos viven animales filtradores como ballenas barbudas, 
-                                manta rayas y algunas especies de tiburones que se ven afectados, 
-                                suelen alimentarse del plancton, cuando se alimentan pueden consumir 
-                                muchos microplásticos.
-                        </p>
-                        
-                    </div>
-                    <div class="ballenaI"><img src="images/ballena.png" alt="whale"></div>
-                    <div class="plancton">
-                        <img src="images/krill.png" alt="plancton">
-                        <p>
-                                El fitoplancton es la base de la cadena alimenticia de los océanos, 
-                                se ha observado que se llegan a alimentar de microplásticos que son 
-                                retenidos en sus estómagos hasta por 7 días.
-                        </p>
-                    </div>
+                  <div class="caballo">
+                      <img src="images/caballo.png" alt="Caballito_de_mar">
+                      <p>
+                              Los peces terminan ingiriendo microplásticos, algunas de estas partículas 
+                              pueden quedarse atrapadas en los órganos del animal.
+                      </p>
+                  </div>
 
-                    <div class="caballo">
-                        <img src="images/caballo.png" alt="Caballito_de_mar">
-                        <p>
-                                Los peces terminan ingiriendo microplásticos, algunas de estas partículas 
-                                pueden quedarse atrapadas en los órganos del animal.
-                        </p>
-                    </div>
+                  <div class="ave">
+                      <p>
+                              Las aves marinas confunden el alimento de los plásticos que terminan 
+                              consumiendo, pueden enfermar o sentir una falsa satisfacción alimenticia.
+                      </p>
+                      <img src="images/ave.png" alt="Gaviota">
+                  </div>
 
-                    <div class="ave">
-                        <p>
-                                Las aves marinas confunden el alimento de los plásticos que terminan 
-                                consumiendo, pueden enfermar o sentir una falsa satisfacción alimenticia.
-                        </p>
-                        <img src="images/ave.png" alt="Gaviota"><canvas id="ave3d" width="100px" height="100px"></canvas>
-                    </div>
+                  <div class="ostra">
+                      <p>
+                              Otros animales que pueden consumir microplásticos son los mejillones, 
+                              las ostras, las almejas, el camarón pardo, la cigala, las anchoas, 
+                              las sardinas, los arenques del Atlántico, entre otros.
+                      </p>
+                      <img src="images/concha.png" alt="Ostras">
+                  </div>
+              </div>
+              
+              </section>
 
-                    <div class="ostra">
-                        <p>
-                                Otros animales que pueden consumir microplásticos son los mejillones, 
-                                las ostras, las almejas, el camarón pardo, la cigala, las anchoas, 
-                                las sardinas, los arenques del Atlántico, entre otros.
-                        </p>
-                        <img src="images/concha.png" alt="Ostras">
-                    </div>
-                </div>
-                    
-                </section>
-
-                <section id="Comida">
-                    <div class="comidas">
-                        <img src="" alt="Beer">
-                        <img src="" alt="Salt">
-                        <p>
-                            Varios alimentos pueden presentar microplásticos, entre ellos la cerveza, 
-                            la miel, la sal común y principalmente los mariscos.
-                        </p>
-                        <img src="images/plato.png" alt="Comidas">
-                    </div>
-                </section>
-
+              <section id="Comida" class="section">
+                <div class="comidas">
+                  <img src="" alt="Beer">
+                  <img src="" alt="Salt">
+                  <p>
+                      Varios alimentos pueden presentar microplásticos, entre ellos la cerveza, 
+                      la miel, la sal común y principalmente los mariscos.
+                  </p>
+                  <img src="images/plato.png" alt="Comidas">
+              </div>
+              </section>
+              
             </div>
-
+          </div>
         </scroll-page>
 
         <scroll-page id="page-3">
@@ -281,96 +326,107 @@
 
         <scroll-page id="page-5">
 
-            <div class="col2 scroll" id="sec_5">
-                <section id="Ayudar">
-
+            <div class="wrapper" id="js-wrapper4">
+                <div class="sections" id="js-slideContainer4">
+                  <section class="section" id="Ayudar">
                     <h3>¿Cómo</h3>
-                    <h2>Ayudar?</h2>
-
-                    <div class="proponer">
-                        <div id="bolsa">
-                            <img src="images/ayuda1.png" alt="Ayudar">
-                            <div>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam sint eius 
-                                    nesciunt fugit! Nemo 
-                                </p>
-                            </div>  
-                        </div>
-                        <div id="bolsa2">
-                            <img src="images/ayuda2.png" alt="Ayudar">
-                            <div>
-                                <p>
-                                    Lleva las bolsas que se necesiten usar para evitar comprar bolsas virgenes, 
-                                    utiliza bolsas de tela.
-                                </p>
+                        <h2>Ayudar?</h2>
+    
+                        <div class="proponer">
+                            <div id="bolsa">
+                                <img src="images/ayuda/papel.jpg" alt="Ayudar">
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam sint eius 
+                                        nesciunt fugit! Nemo 
+                                    </p>
+                                </div>  
+                            </div>
+                            <div id="bolsa2">
+                                <img src="images/ayuda/plastic bags.jpg" alt="Ayudar">
+                                <div>
+                                    <p>
+                                        Lleva las bolsas que se necesiten usar para evitar comprar bolsas virgenes, 
+                                        utiliza bolsas de tela.
+                                    </p>
+                                </div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div id="basura">
+                                <img src="images/ayuda/pitillos.jpg" alt="Ayudar">
+                                <div>
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quibusdam sunt 
+                                        placeat accusantium.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="solo1">
+                                <img src="images/plastic-mar.jpg" alt="Otro">
+                                <div>
+                                    <p>
+                                        Los plásticos de un solo uso son un problema para el medio ambiente, cada minuto se 
+                                        compran un millón de botellas de plástico y se usan 500.000 millones de bolsas 
+                                        plásticas al año.
+                                    </p>
+                                </div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div id="bambu">
+                                <img src="images/ayuda/bambu.jpg" alt="Ayudar">
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis quod, sit quae 
+                                        dolor necessitatibus.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis quod, sit quae 
+                                        dolor necessitatibus.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="cepillo">
+                                <img src="images/ayuda/dientes.png" alt="Ayudar">
+                                <div>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem maxime numquam 
+                                        nihil laborum magnam dignissimos illum at?
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div id="basura">
-                            <img src="images/ayuda3.png" alt="Ayudar">
-                            <div>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quibusdam sunt 
-                                    placeat accusantium.
-                                </p>
-                            </div>
-                        </div>
-                        <div id="solo1">
-                            <img src="images/plastic-mar.jpg" alt="Otro">
-                            <div>
-                                <p>
-                                    Los plásticos de un solo uso son un problema para el medio ambiente, cada minuto se 
-                                    compran un millón de botellas de plástico y se usan 500.000 millones de bolsas 
-                                    plásticas al año.
-                                </p>
-                            </div>
-                        </div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div id="bambu">
-                            <img src="images/ayuda4.png" alt="Ayudar">
-                            <div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis quod, sit quae 
-                                    dolor necessitatibus.
-                                </p>
-                            </div>
-                            <div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis quod, sit quae 
-                                    dolor necessitatibus.
-                                </p>
-                            </div>
-                        </div>
-                        <div id="cepillo">
-                            <img src="images/ayuda5.png" alt="Ayudar">
-                            <div>
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem maxime numquam 
-                                    nihil laborum magnam dignissimos illum at?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="degradacion">
+                  </section>
+                  <section class="section" id="degradacion">
                     <h4>Degradación del</h4>
-                    <h2>Plástico</h2>
-
-                    <div class="video">
-                    <iframe width="720" height="480" 
-                        src="https://www.youtube.com/embed/Qjzqa8mVG7s" frameborder="0" 
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; loop" allowfullscreen>
-                    </iframe>
-                    </div>
-                </section>
-                
-            </div>
+                        <h2>Plástico</h2>
+    
+                        <div class="video">
+                        <iframe width="720" height="480" 
+                            src="https://www.youtube.com/embed/Qjzqa8mVG7s" frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; loop" allowfullscreen>
+                        </iframe>
+                        </div>
+                  </section>
+                  <section class="section">
+                    <span class="section__title" id="title32">Section Three</span>
+                    <span id="trigger--title32"></span>
+                  </section>
+                  <section class="section">
+                    <span class="section__title" id="title42">Section Four</span>
+                    <span id="trigger--title42"></span>
+                  </section>
+                  <section class="section">
+                    <span class="section__title" id="title52">Section Five</span>
+                    <span id="trigger--title52"></span>
+                  </section>
+                </div>
+              </div>
         </scroll-page>
 
     </scroll-container>
@@ -385,19 +441,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js" integrity="sha256-nuhNsfXzBFR6G1lKP8bK77dakkQDqdHcQ4OCFZvk6Qo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js" integrity="sha256-LBjlnpPrM6Aig8LDFc9PJctPHLGUc6RaUvnmXE4hV5Y=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/BezierPlugin.min.js" integrity="sha256-5jxCMRC1PYU02qJn+fj+DPuxcQZCh0DR8GRwi4iKoRc=" crossorigin="anonymous"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
 
-
-
-<script type="text/javascript" src="js/carrusel1.js"></script>
+<!--<script type="text/javascript" src="js/carrusel1.js"></script>-->
 <script type="text/javascript" src="js/Alternativas.js"></script>
-<script type="text/javascript" src="js/impacto.js"></script>
-<!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
-<script src="js/OrbitControls.js"></script>
-<script src="js/OBJLoader.js"></script>
-<script src="js/MTLLoader.js"></script>
-<script type="text/javascript" src="js/cargar3D.js"></script>
--->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/carrusel_vertical.js"></script>
+<script type="text/javascript" src="js/scrolling.js"></script>
 </html>

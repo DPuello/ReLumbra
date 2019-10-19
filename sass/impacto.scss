@@ -10,7 +10,7 @@ $FondoComida: #3c423d;
     
     //width: 80%;
     background: $FondoImpacto;
-    padding: 2%;
+    //padding: 2%;
     position: relative;
     border: 1px solid red;
     .TituloImpacto{
@@ -88,7 +88,7 @@ $FondoComida: #3c423d;
     
 }
 #Cadena{
-    overflow-y: hidden;
+    width: 200vw;
     color: white;
     background: $AzulFondo;
     background: rgb(87,202,218);
@@ -181,4 +181,9 @@ $FondoComida: #3c423d;
         
     }
     
+}
+
+
+#sec_2{
+    display: none;
 }

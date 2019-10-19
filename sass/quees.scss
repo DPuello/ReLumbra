@@ -3,15 +3,17 @@ $NaranjaTitulo: #faa121;
 
 #QueEs{
     //border: 1px solid blue;
-    
+    width: 80vw;
+    height: 100vh;
+    margin: 0;
     display: grid;
-    margin: 5% 10%;
+    padding: 5vh 10vw;
     //grid-template-rows: 1fr 1fr 1fr;
     
     
     img{
         justify-self: end;
-        width: 40%;
+        
     }
     div{
         display: block;
@@ -29,7 +31,7 @@ $NaranjaTitulo: #faa121;
             
             filter: opacity(.5) drop-shadow(0 0 0 $VerdeTitulo);
             float: left;
-            width: 4%;
+            height: 4px;
             transform: translateY(-20px)
         }
         
@@ -48,7 +50,7 @@ $NaranjaTitulo: #faa121;
     //height: 100vh;
 
     color: $NaranjaTitulo;
-    width: 90%;
+    //width: 90%;
     //border: 1px solid blueviolet;
     margin: auto;
     /*ol {

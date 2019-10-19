@@ -1,9 +1,11 @@
 #QueEs {
+  width: 80vw;
+  height: 100vh;
+  margin: 0;
   display: grid;
-  margin: 5% 10%; }
+  padding: 5vh 10vw; }
   #QueEs img {
-    justify-self: end;
-    width: 40%; }
+    justify-self: end; }
   #QueEs div {
     display: block; }
     #QueEs div h4 {
@@ -16,7 +18,7 @@
     #QueEs div img {
       filter: opacity(0.5) drop-shadow(0 0 0 #99a728);
       float: left;
-      width: 4%;
+      height: 4px;
       transform: translateY(-20px); }
   #QueEs p {
     clear: both;
@@ -28,7 +30,6 @@
 
 #TiposPlastico {
   color: #faa121;
-  width: 90%;
   margin: auto;
   /*ol {
       counter-reset: item;

@@ -3,7 +3,6 @@
 
 #Impacto {
   background: #ffe7cb;
-  padding: 2%;
   position: relative;
   border: 1px solid red; }
   #Impacto .TituloImpacto {
@@ -63,7 +62,7 @@
       width: 230px; }
 
 #Cadena {
-  overflow-y: hidden;
+  width: 200vw;
   color: white;
   background: #51b9c8;
   background: #57cada;
@@ -127,5 +126,8 @@
     padding: 10%;
     color: #fff;
     background: #3c423d; }
+
+#sec_2 {
+  display: none; }
 
 /*# sourceMappingURL=impacto.css.map */
