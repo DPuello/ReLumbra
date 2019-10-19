@@ -1,7 +1,8 @@
 
 
-cargarObj(ave3d, '../Modelos/','10054_Whale_v2_L3',400);
-//cargarObj(c1, '../Modelos/','10043_Seagull_v1_L3',10);
+cargarObj(azul3d, '../Modelos/','10054_Whale_v2_L3',400);
+cargarObj(ave3d, '../Modelos/','10043_Seagull_v1_L3',2);
+cargarObj(concha3d, '../Modelos/','seashell_obj',10);
 
 function cargarObj(lienzo, ruta, archivo, pos_camara){
 var scene = new THREE.Scene();
@@ -38,14 +39,14 @@ var mesh;
 //
 var mtlLoader = new THREE.MTLLoader();
 //mtlLoader.setTexturePath('/examples/3d-obj-loader/assets/');
-mtlLoader.setPath('ruta');
+mtlLoader.setPath(ruta);
 mtlLoader.load(archivo+'.mtl', function (materials) {
  
     materials.preload();
  
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
-    objLoader.setPath('ruta');
+    objLoader.setPath(ruta);
     objLoader.load(archivo+'.obj', function (object) {
  
         scene.add(object);

@@ -14,7 +14,7 @@ $(function(){
 	var listItems =$(".list-item");
 	updateLayout(listItems);
 
-
+	/**/
 
 	/*
 	$(document).on("click", "#add-item", function(){

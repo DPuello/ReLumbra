@@ -31,16 +31,18 @@ $DegradaText: #707a1b;
             div{
             transform: translateX(-105%);
             transition: .5s;
-            
+            border-radius: 0 80px 0 0;
             }
         }
         #basura, #bambu{
             border-radius: 0 0 0 80px;
             :nth-child(2){
+            border-radius: 0 0 0 80px;
             transform: translateY(-105%);
             transition: .5s;
             }
             :nth-child(3){
+            border-radius: 0 0 0 80px;
             transform: translateX(105%);
             }
         }
@@ -56,11 +58,7 @@ $DegradaText: #707a1b;
                 opacity: 1;
                 transition: .5s;
             }
-            :nth-child(3){
-                transform: translateX(0);
-                opacity: 1;
-                transition: .5s;
-            }
+            
             p{
                 opacity: 1;
             }
@@ -68,6 +66,15 @@ $DegradaText: #707a1b;
                 opacity: .3;
             }
         }
+
+        #cepillo:hover~#bambu{
+            :nth-child(3){
+                transform: translateX(-50%);
+                opacity: 1;
+                transition: .5s;
+            }
+        }
+
         
         div{
             position: relative;
@@ -110,19 +117,4 @@ $DegradaText: #707a1b;
 
 .clear{
     clear: both;
-}
-
-//Horizontal
-.scroll{
-    overflow-x: scroll; 
-    scroll-behavior: smooth;
-}
-.col2{
-    display: grid;
-    grid-template-columns: 100vw 100vw;
-}
-.col3{
-    display: grid;
-    grid-template-columns: 100vw 200vw 100vw;
-    grid-template-rows: 100vh;
 }
