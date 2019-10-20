@@ -17,6 +17,8 @@
       line-height: 120%;
       opacity: 0;
       transition: 1s; }
+    #Ayudar .proponer #bolsa {
+      border-radius: 0 0 0 80px; }
     #Ayudar .proponer #bolsa2, #Ayudar .proponer #solo1, #Ayudar .proponer #cepillo {
       border-radius: 0 80px 0 0; }
       #Ayudar .proponer #bolsa2 div, #Ayudar .proponer #solo1 div, #Ayudar .proponer #cepillo div {
@@ -34,6 +36,19 @@
         transform: translateX(105%); }
     #Ayudar .proponer #bolsa2:hover, #Ayudar .proponer #bolsa:hover, #Ayudar .proponer #basura:hover, #Ayudar .proponer #solo1:hover, #Ayudar .proponer #cepillo:hover, #Ayudar .proponer #bambu:hover {
       box-shadow: 0 0 10px #99a728; }
+    #Ayudar .proponer #cepillo:hover ~ #bambu {
+      width: 400%; }
+      #Ayudar .proponer #cepillo:hover ~ #bambu div {
+        transform: translateX(-50%);
+        opacity: 1;
+        transition: .5s; }
+      #Ayudar .proponer #cepillo:hover ~ #bambu p {
+        opacity: 1; }
+      #Ayudar .proponer #cepillo:hover ~ #bambu img {
+        opacity: .3; }
+    #Ayudar .proponer #cepillo {
+      background-color: #f0f0f0;
+      vertical-align: middle; }
     #Ayudar .proponer #bolsa:hover ~ #bolsa2 :nth-child(2), #Ayudar .proponer #basura:hover ~ #solo1 :nth-child(2), #Ayudar .proponer #bambu:hover ~ #cepillo :nth-child(2), #Ayudar .proponer #bolsa2:hover ~ #basura :nth-child(2), #Ayudar .proponer #solo1:hover ~ #bambu :nth-child(2), #Ayudar .proponer #cepillo:hover ~ #bambu :nth-child(2) {
       transform: translateX(0);
       opacity: 1;
@@ -42,10 +57,6 @@
       opacity: 1; }
     #Ayudar .proponer #bolsa:hover ~ #bolsa2 img, #Ayudar .proponer #basura:hover ~ #solo1 img, #Ayudar .proponer #bambu:hover ~ #cepillo img, #Ayudar .proponer #bolsa2:hover ~ #basura img, #Ayudar .proponer #solo1:hover ~ #bambu img, #Ayudar .proponer #cepillo:hover ~ #bambu img {
       opacity: .3; }
-    #Ayudar .proponer #cepillo:hover ~ #bambu :nth-child(3) {
-      transform: translateX(-50%);
-      opacity: 1;
-      transition: .5s; }
     #Ayudar .proponer div {
       position: relative;
       overflow: hidden; }

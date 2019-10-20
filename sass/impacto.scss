@@ -96,6 +96,11 @@ $FondoComida: #3c423d;
     p{
         width: 400px;
     }
+    #delfin{
+        position: absolute;
+        top:50%;
+        left: 5%;
+    }
     #marino{
         padding: 1% 10%;
         display: grid;
@@ -124,14 +129,14 @@ $FondoComida: #3c423d;
             grid-row: 1/2;
             grid-column: 3/4;
             align-self: end;
-            
+            border: 1px solid red;
             p{
                 float: left;
                 text-align: right;
             }
             canvas{
-                width: 15%;
-                
+                height: 100px;
+                width: 100px;
                 border: 1px solid red;
             }
             img{
@@ -140,14 +145,15 @@ $FondoComida: #3c423d;
             }
         }
         .caballo{
-            grid-row: 2/3;
-            grid-column: 2/3;
+            //grid-row: 2/3;
+            //grid-column: 2/3;
             align-self: center;
             justify-self: center;
             text-align: center;
-            img{
+            canvas{
                 float: left;
-                width: 7%;
+                height: 100px;
+                border: 1px solid red;
             }
             
         }

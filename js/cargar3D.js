@@ -1,8 +1,9 @@
 
-
+cargarObj(delfin, '../Modelos/','10014_dolphin_v2_max2011_it2',400);
 cargarObj(azul3d, '../Modelos/','10054_Whale_v2_L3',400);
-cargarObj(ave3d, '../Modelos/','10043_Seagull_v1_L3',2);
-cargarObj(concha3d, '../Modelos/','seashell_obj',10);
+cargarObj(pez2, '../Modelos/','GOLDFISH',400);
+cargarObj(ave3d, '../Modelos/','10043_Seagull_v1_L3',400);
+cargarObj(concha3d, '../Modelos/','seashell_obj',400);
 
 function cargarObj(lienzo, ruta, archivo, pos_camara){
 var scene = new THREE.Scene();

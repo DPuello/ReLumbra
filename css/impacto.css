@@ -69,6 +69,10 @@
   background: linear-gradient(90deg, #57cada 0%, #40a6d4 85%, #3c423d 100%); }
   #Cadena p {
     width: 400px; }
+  #Cadena #delfin {
+    position: absolute;
+    top: 50%;
+    left: 5%; }
   #Cadena #marino {
     padding: 1% 10%;
     display: grid;
@@ -87,25 +91,26 @@
     #Cadena #marino .ave {
       grid-row: 1/2;
       grid-column: 3/4;
-      align-self: end; }
+      align-self: end;
+      border: 1px solid red; }
       #Cadena #marino .ave p {
         float: left;
         text-align: right; }
       #Cadena #marino .ave canvas {
-        width: 15%;
+        height: 100px;
+        width: 100px;
         border: 1px solid red; }
       #Cadena #marino .ave img {
         clear: both;
         width: 15%; }
     #Cadena #marino .caballo {
-      grid-row: 2/3;
-      grid-column: 2/3;
       align-self: center;
       justify-self: center;
       text-align: center; }
-      #Cadena #marino .caballo img {
+      #Cadena #marino .caballo canvas {
         float: left;
-        width: 7%; }
+        height: 100px;
+        border: 1px solid red; }
     #Cadena #marino .plancton {
       grid-row: 3/4;
       grid-column: 2/3;

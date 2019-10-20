@@ -1,0 +1,24 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl Material.001
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 2.000000 2.000000 2.000000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\Juan\\Documents\\Presentaciones y trabajos\\Tecnologías de internet\\Proyecto\\2 - Oct\\material grafico\\modelos3d\\impacto\\limon\\textures\\Lemon.jpg
+
+newmtl Material.002
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 2.000000 2.000000 2.000000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\Juan\\Documents\\Presentaciones y trabajos\\Tecnologías de internet\\Proyecto\\2 - Oct\\material grafico\\modelos3d\\impacto\\limon\\textures\\LemonTexture.png

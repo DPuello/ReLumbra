@@ -14,6 +14,7 @@ $DegradaText: #707a1b;
         grid-template-rows: repeat(3, 138px);
         gap: 10px;
         
+        
         img{
             width: 100%;
             
@@ -25,6 +26,9 @@ $DegradaText: #707a1b;
             //color: #fff;
             opacity: 0;
             transition: 1s;
+        }
+        #bolsa{
+            border-radius: 0 0 0 80px;
         }
         #bolsa2, #solo1, #cepillo{
             border-radius: 0 80px 0 0;
@@ -51,7 +55,24 @@ $DegradaText: #707a1b;
                 box-shadow: 0 0 10px $VerdeTitulo;
             }
         }
-        
+        #cepillo:hover~#bambu{
+            width: 400%;
+            div{
+                transform: translateX(-50%);
+                opacity: 1;
+                transition: .5s;
+            }
+            p{
+                opacity: 1;
+            }
+            img{
+                opacity: .3;
+            }
+        }
+        #cepillo{
+            background-color: #f0f0f0;
+            vertical-align: middle;
+        }
         #bolsa:hover ~ #bolsa2,#basura:hover ~ #solo1,#bambu:hover ~ #cepillo,#bolsa2:hover ~ #basura,#solo1:hover ~ #bambu,#cepillo:hover~#bambu{
             :nth-child(2){
                 transform: translateX(0);
@@ -67,13 +88,7 @@ $DegradaText: #707a1b;
             }
         }
 
-        #cepillo:hover~#bambu{
-            :nth-child(3){
-                transform: translateX(-50%);
-                opacity: 1;
-                transition: .5s;
-            }
-        }
+        
 
         
         div{
