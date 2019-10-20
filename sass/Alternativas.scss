@@ -3,6 +3,7 @@ $FondoImpacto: #ffe7cb;
 
 #Alternativas{
   height: 100vh;
+  margin: 0;
   color: $AlternativasText;
   background-color: $FondoImpacto;
   h2{
@@ -34,3 +35,4 @@ $FondoImpacto: #ffe7cb;
       transform: rotate(1turn);
     }
   }
+  

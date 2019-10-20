@@ -1,0 +1,183 @@
+@import url('//fonts.googleapis.com/css?family=Playfair+Display');
+/*@import url('//fonts.googleapis.com/css?family=Lato');*/
+.titulo_alternativas{
+	display: flex;
+	padding-top:1%;
+	padding-left:10%;
+}
+
+.letra_titulo{
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 2%;
+	align-self: end;
+	margin-left: 0%;
+}
+/**/
+.mas_peque{
+	font-size:0.8em;
+}
+
+.logo_alternativas{
+	display: flex;
+	width: 5%;
+	height: 5%;
+}
+
+
+.juego{
+	padding: 0 10% 0 10%;
+	margin:0;
+	
+}
+
+
+.caneca{/*texto de caneca*/
+font-size: 1em;
+font-weight: bold;
+margin-top: 5%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.canecas{/*div de caneca y texto*/
+	display: flex;
+	flex-direction: column; 
+	float: left;
+	
+}
+
+
+.canecas2{
+	display: flex;
+	flex-direction: column;
+	float: right;
+
+}
+
+.caneca_verde{/*imagen*/
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.caneca_azul{
+	width: 48%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#objetos{
+	background-color: red;
+	display: inline-flex;
+	float: left;
+	height: 500px;
+}
+
+#objetos li{
+	display:flex;
+	float: left;
+	width: 20%;
+}
+
+.box::before {
+  content: "";
+  display: block;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50%;
+  /*background-color: red;*/
+  float: left;
+  shape-outside: border-box;
+}
+
+#list{
+	/*background-color: blue;*/
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	position: relative;
+	float: left;
+	/*margin: 50px;*/
+}
+
+.list-item{
+	list-style: none;
+	/*background-color: red;*/
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: 50%;
+	left: 43%;
+}
+
+.hijo{
+position: absolute;
+	width: 50%;
+	height: 60%;
+	top: 35%;
+	left: 27%;
+	background-color: rgba(0,0,0,0);
+	border-radius: 50%;
+}
+
+.circles {
+  display: flex;
+}
+.circle-with-text {
+  /*background-color:rgb(1, 115, 105);*/
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  text-align: center;
+  margin: 5px 20px;
+  font-size: 10px;
+  padding: 15px;
+  display: flex;
+  height: 60%;
+  width: 60%;
+  color: rgb(1, 115, 105);
+}
+.multi-line-text {
+  font-size: 1em;
+}
+
+/*PARA LA GRILLA*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;/*4 col*/
+  grid-template-rows: 30em;
+  grid-gap: 2%;
+  /*background-color: #2196F3;*/
+  padding: 2%;
+   justify-content: center;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding:0;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: end;
+}
+
+.item2 {
+	grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.item3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  align-self: end;
+}
+
+.garbage{
+	width:150%;
+}

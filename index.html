@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="css/Carrusel1.css">
     <link rel="stylesheet" type="text/css" href="css/quees2.css">
     <link rel="stylesheet" type="text/css" href="css/Organizar.css">
+    <link rel="stylesheet" type="text/css" href="css/alternativas2.css">
+    <link rel="stylesheet" type="text/css" href="sass/alternativas-2.css">
 </head>
 
 <body>
@@ -314,20 +316,88 @@
         <scroll-page id="page-4">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <section id="Alternativas" >
-                <div>
-                    <h2>Alternativas e incentivación</h2>
-                    <img src="" alt="">
-                </div>
-                <!--
-                <div id="noria">
-                    <div class="n-item"><img src="images/botella.png" alt="bottle"></div>
-                    <div class="n-item"><img src="images/lata.png" alt="can"></div>
-                    <div class="n-item"><img src="images/bolsabasura.png" alt="trash"></div>
-                    <div class="n-item"><img src="images/banana.png" alt="banana"></div>
-                    <div class="n-item"><img src="images/bolsabasura.png" alt="trash"></div>
-                    <div class="n-item">6</div>
-                  </div>
-                -->
+                    <div class="titulo_alternativas">
+                            <div class="letra_titulo">
+                              <h2>Alternativas <br><span class="mas_peque">e incentivación</span></h2>
+                            </div>
+                            <img src="images/Logo-N.png" alt="logo_alternativas" class="logo_alternativas" id="logo_alternativas">
+                        </div>
+                    
+                        <div class="juego" id="juego">
+                         <!-- <div class="canecas" id="basura1">
+                            <img src="images/caneca.png" alt="basura1" class="caneca_verde">
+                            <h4 class="caneca">ORGÁNICOS</h4>
+                          </div>
+                          -->
+                          <!--
+                            <ul id="objetos">
+                              <li><img src="images/banana.png" alt="garbage1"></li>
+                              <li><img src="images/bolsabasura.png" alt="garbage2"></li>
+                              <li><img src="images/botella.png" alt="garbage3"></li>
+                              <li><img src="images/bolsabasura.png" alt="garbage4"></li>
+                              <li><img src="images/lata.png" alt="garbage5"></li>
+                              <div class="centro" id="centro">
+                                 <li><img src="centro" alt="garbage1"></li>
+                              </div>
+                              
+                            </ul>
+                              -->
+                              
+                              <div class="grid-container">
+                                <div class="item1">
+                                  <div class="canecas" id="basura1">
+                                    <img src="images/caneca.png" alt="basura1" class="caneca_verde">
+                                    <h4 class="caneca">ORGÁNICOS</h4>
+                                  </div>
+                                </div>
+                                <div class="item2">
+                                  <ul id="list">
+                                    <div class="hijo">
+                                      <div class="circles">
+                                        <div class="circle-with-text multi-line-text">
+                                         Información que ayuda al planeta ¡Ponla en práctica!
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--cambio-->
+                                    <!--<li class="list-item" style="transform: rotate(0deg) translate(0px, -200px) rotate(0deg);">Things go here<button class="remove-item">Remove</button>
+                                    </li>-->
+        
+                                    <li class="list-item ui-widget-content" id="draggable">
+                                      <img src="images/banana.png" alt="garbage1" class="garbage gbanana">
+                                    </li>
+        
+                                    <li class="list-item" >
+                                      <img src="images/bolsabasura.png" alt="garbage1" class="garbage gbolsa">
+                                    </li>
+        
+                                    <li class="list-item">
+                                      <img src="images/botella.png" alt="garbage1" class="garbage gbotella">
+                                    </li>
+                                    
+                                    <li class="list-item" >
+                                      <img src="images/bolsabasura.png" alt="garbage1" class="garbage gbolsa">
+                                    </li>
+        
+                                    <li class="list-item">
+                                      <img src="images/lata.png" alt="garbage1" class="garbage glata">
+                                    </li>
+        
+                                  </ul>
+                                <button id="add-item">Add item</button>
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        
+                                </div>
+                                <div class="item3">
+                                  <div class="canecas2" id="basura2">
+                                    <img src="images/canecazul.png" alt="basura2" class="caneca_azul">
+                                    <h4 class="caneca">INORGÁNICOS</h4>
+                                  </div>
+                                </div>
+                              </div>
+
+                        </div>
             </section>
 
         </scroll-page>
@@ -416,18 +486,6 @@
                         </iframe>
                         </div>
                   </section>
-                  <section class="section">
-                    <span class="section__title" id="title32">Section Three</span>
-                    <span id="trigger--title32"></span>
-                  </section>
-                  <section class="section">
-                    <span class="section__title" id="title42">Section Four</span>
-                    <span id="trigger--title42"></span>
-                  </section>
-                  <section class="section">
-                    <span class="section__title" id="title52">Section Five</span>
-                    <span id="trigger--title52"></span>
-                  </section>
                 </div>
               </div>
         </scroll-page>
@@ -456,6 +514,7 @@
 <script type="text/javascript" src="js/Alternativas.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/carrusel_vertical.js"></script>
+<script type="text/javascript" src="js/alternativas2.js"></script>
 <script type="text/javascript" src="js/scrolling.js"></script>
 <script type="text/javascript" src="js/graficas.js"></script>
 <script type="text/javascript" src="js/cargar3D.js"></script>

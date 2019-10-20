@@ -12,9 +12,9 @@ $FondoComida: #3c423d;
     background: $FondoImpacto;
     //padding: 2%;
     position: relative;
-    border: 1px solid red;
+    
     .TituloImpacto{
-        border: 1px solid red;
+        
         display: flex;
         justify-content: center;
         align-items: baseline;
@@ -34,7 +34,7 @@ $FondoComida: #3c423d;
         width: 70%;
     }
     .contenido-Impacto{
-        border: 1px solid red;
+        
         display: flex;
         flex-direction: column;
         width: 50%;
@@ -63,7 +63,7 @@ $FondoComida: #3c423d;
         }
 
         .textImg_Izq, .textImg_Der{
-            border: 1px solid red;
+            
             position: relative;
             overflow: hidden;
             width: 230px;
@@ -129,7 +129,7 @@ $FondoComida: #3c423d;
             grid-row: 1/2;
             grid-column: 3/4;
             align-self: end;
-            border: 1px solid red;
+            
             p{
                 float: left;
                 text-align: right;
@@ -137,7 +137,7 @@ $FondoComida: #3c423d;
             canvas{
                 height: 100px;
                 width: 100px;
-                border: 1px solid red;
+                
             }
             img{
                 clear: both;
@@ -153,7 +153,7 @@ $FondoComida: #3c423d;
             canvas{
                 float: left;
                 height: 100px;
-                border: 1px solid red;
+                
             }
             
         }
@@ -175,9 +175,6 @@ $FondoComida: #3c423d;
         .ostra{
             grid-row: 3/4;
             grid-column: 3/4;
-            #concha3d{
-                border: 1px solid red;
-            }
             img{
                 width: 14%;
             }
