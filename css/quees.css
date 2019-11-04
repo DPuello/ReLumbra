@@ -2,10 +2,22 @@
   width: 80vw;
   height: 100vh;
   margin: 0;
-  display: grid;
-  padding: 5vh 10vw; }
-  #QueEs img {
-    justify-self: end; }
+  padding: 5vh 10vw;
+  /*img{
+      justify-self: end;
+      
+  }*/
+    /*p{
+        clear: both;
+        display: block;
+        width: 20vw;
+        height: auto;
+        //border: 1px solid red;
+        border-radius: 0 0 0 100px;
+        text-align: right;
+        //background-color:orange;
+
+    }*/ }
   #QueEs div {
     display: block; }
     #QueEs div h4 {
@@ -20,13 +32,6 @@
       float: left;
       height: 4px;
       transform: translateY(-20px); }
-  #QueEs p {
-    clear: both;
-    display: block;
-    width: 20vw;
-    height: auto;
-    border-radius: 0 0 0 100px;
-    text-align: right; }
 
 #TiposPlastico {
   color: #faa121;

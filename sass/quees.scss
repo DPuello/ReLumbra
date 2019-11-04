@@ -6,26 +6,31 @@ $NaranjaTitulo: #faa121;
     width: 80vw;
     height: 100vh;
     margin: 0;
-    display: grid;
+    //display: grid;
     padding: 5vh 10vw;
+    //background-color:red;
     //grid-template-rows: 1fr 1fr 1fr;
     
     
-    img{
+    /*img{
         justify-self: end;
         
-    }
+    }*/
     div{
         display: block;
         
         h4{
             color: $VerdeTitulo;
             width: 300px;
+           // background-color:blue;
+
         }
         h2{
             color: $VerdeTitulo;
             width: 300px;
             float: left;
+            //background-color:green;
+
         }
         img{
             
@@ -36,7 +41,7 @@ $NaranjaTitulo: #faa121;
         }
         
     }
-    p{
+    /*p{
         clear: both;
         display: block;
         width: 20vw;
@@ -44,7 +49,9 @@ $NaranjaTitulo: #faa121;
         //border: 1px solid red;
         border-radius: 0 0 0 100px;
         text-align: right;
-    }
+        //background-color:orange;
+
+    }*/
 }
 #TiposPlastico{
     //height: 100vh;
