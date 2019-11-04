@@ -41,8 +41,8 @@ $(function(){
 	            	$(nuevaimg).css({"display":"block"});//aparece
 	            	$(nuevaimg).animate({"opacity":"1"},500);//animacion a opacidad de 1
 	            	$(nuevaimg).css({"width":"80%"});//tamaño
-	           		$(nuevaimg).css({"padding-top":"30px"});
-	           		$(nuevaimg).css({"padding-bottom":"30px"});
+	           		$(nuevaimg).css({"padding-top":"2em"});
+	           		$(nuevaimg).css({"padding-bottom":"2em"});
 	           		$(".carrusel").append(nuevaimg);//añadiendo nuevaimagen a carrusel
 
 	           		imgcarrusel.push(nuevaimg);
@@ -155,14 +155,27 @@ $(function(){
 		{
 			$(imgcinta[i]).css({"display":"none"});
 			$(imgcinta[i]).css({"opacity":"0"});
+			/*$(imgcinta[i]).css({"top":"-300px"});*/
+			$(imgcinta[i]).css({"top":"-25em"});
 		}
 
 		if(i==1)
 		{
 			//$(imgcinta[i]).attr("class","imgcarrusel");//dandole a la clase
-	        $(imgcinta[i]).css({"top":"-120px"});//alto
+	        /*$(imgcinta[i]).css({"top":"-120px"});*///alto
 	        $(imgcinta[i]).css({"left":"420px"});//izq
 	        $(imgcinta[i]).css({"opacity":"0.7"});//izq
+	        $(imgcinta[i]).css({"top":"-25em"});
+
+		}
+
+		if(i==0)
+		{
+			//$(imgcinta[i]).attr("class","imgcarrusel");//dandole a la clase
+	        /*$(imgcinta[i]).css({"top":"-120px"});*///alto
+	        $(imgcinta[i]).css({"left":"150px"});//izq
+	        $(imgcinta[i]).css({"opacity":"1"});//izq
+	        $(imgcinta[i]).css({"top":"-25em"});
 
 		}
 	});
@@ -331,7 +344,7 @@ $(function(){
 	 				//$(imgcinta[conteo_click+1]).css({"display":"block"});
 					$(imgcinta[conteo_click+1]).animate({"opacity":"1"},100);	
 					$(imgcinta[conteo_click+1]).animate({"left":"150px"},500);	
-		    		
+
 		    		$('.engr').animate({ deg: grado },
 					    {
 					      duration: 500,
@@ -425,7 +438,289 @@ $(function(){
 
         console.log("conteo final "+conteo_click);
 
- 		
+        /*---------smooth scrolling ----------------------------------*/
+
+        // Scroll to specific values
+
+			// scrollTo is the same
+			window.scroll({
+			  top: 2500, 
+			  left: 2500, 
+			  behavior: 'smooth'
+			});
+
+			// Scroll certain amounts from current position 
+			window.scrollBy({ 
+			  top: 2500, // could be negative value
+			  left: 2500, 
+			  behavior: 'smooth' 
+			});
+
+			// Scroll to a certain element
+			document.querySelector('#page-1').scrollIntoView({ 
+			  behavior: 'smooth' 
+			});
+
+			document.querySelector('#page-2').scrollIntoView({ 
+			  behavior: 'smooth' 
+			});
+
+			document.querySelector('#page-3').scrollIntoView({ 
+			  behavior: 'smooth' 
+			});
+
+			document.querySelector('#page-4').scrollIntoView({ 
+			  behavior: 'smooth' 
+			});
+
+			document.querySelector('#page-5').scrollIntoView({ 
+			  behavior: 'smooth' 
+			});
+
+/*-------------cambio de color para los botones del menu -----------------*/
+
+/*
+$("#page-4").scroll(function() {
+$("#quees").css({"opacity":"0"});
+    });
+*/
+/*
+$(document).ready(function() {
+    if (window.location.hash == '#page-4') {
+        alert("hola");
+    }
+});*/
+
+
+/*------------------cambio de imagenes en el menu------------------*/
+
+$("#impacto").on({
+	mouseenter: function(){
+    $("#delfincito").attr("src", "images/menu/d3.jpg");
+	$("#impacto").css({"background-color":"#04c4c5"});
+	$("#impacto").css({"border-color":"#a7c8f2"});
+    /*border: solid 6px #bece30*/
+	/*background-color: $fondo;*/
+  },
+	  mouseleave: function(){
+	  	if (window.location.hash == '#page-2' || window.location.hash == '#page-4') {
+	    $("#delfincito").attr("src", "images/menu/d3.jpg");
+	    $("#impacto").css({"background-color":"#04c4c5"});
+	    $("#impacto").css({"border-color":"#a7c8f2"});
+		}
+		else if(window.location.hash == '#page-1' || window.location.hash == '#page-5'){
+	    $("#delfincito").attr("src", "images/menu/d1.jpg");
+	    $("#impacto").css({"background-color":"#9aa626"});
+	    $("#impacto").css({"border-color":"#faa121"});
+		}
+		else if(window.location.hash == '#page-3'){
+	    $("#delfincito").attr("src", "images/menu/d2.jpg");
+	    $("#impacto").css({"background-color":"#01638a"});
+	    $("#impacto").css({"border-color":"#faa121"});
+		}
+  }, 
+  		click: function(){
+    $("#delfincito").attr("src", "images/menu/d3.jpg");
+    $("#impacto").css({"background-color":"#04c4c5"});
+    $("#impacto").css({"border-color":"#a7c8f2"});
+    $("#patito").attr("src", "images/menu/p3.jpg");
+    $("#quees").css({"background-color":"#04c4c5"});
+    $("#quees").css({"border-color":"#a7c8f2"});
+    $("#tortica").attr("src", "images/menu/g3.jpg");
+    $("#graficas").css({"background-color":"#04c4c5"});
+    $("#graficas").css({"border-color":"#a7c8f2"});
+    $("#recicla").attr("src", "images/menu/r3.jpg");
+    $("#alternativas").css({"background-color":"#04c4c5"});
+    $("#alternativas").css({"border-color":"#a7c8f2"});
+    $("#manita").attr("src", "images/menu/m3.jpg");
+    $("#ayudar").css({"background-color":"#04c4c5"});
+    $("#ayudar").css({"border-color":"#a7c8f2"});
+  }
+});
+
+
+$("#graficas").on({
+	mouseenter: function(){
+    $("#tortica").attr("src", "images/menu/g2.jpg");
+    $("#graficas").css({"background-color":"#01638a"});
+	$("#graficas").css({"border-color":"#faa121"});
+  },
+	  mouseleave: function(){
+	  	if (window.location.hash == '#page-2' || window.location.hash == '#page-4') {
+	    $("#tortica").attr("src", "images/menu/g3.jpg");
+	    $("#graficas").css({"background-color":"#04c4c5"});
+		$("#graficas").css({"border-color":"#a7c8f2"});
+		}
+		else if(window.location.hash == '#page-1' || window.location.hash == '#page-5'){
+	    $("#tortica").attr("src", "images/menu/g1.jpg");
+	    $("#graficas").css({"background-color":"#99a626"});
+		$("#graficas").css({"border-color":"#faa121"});
+		}
+		else if(window.location.hash == '#page-3'){
+	    $("#tortica").attr("src", "images/menu/g2.jpg");
+	    $("#graficas").css({"background-color":"#01628a"});
+		$("#graficas").css({"border-color":"#faa121"});
+		}
+  }, 
+  		click: function(){
+    $("#delfincito").attr("src", "images/menu/d2.jpg");
+    $("#impacto").css({"background-color":"#01628a"});
+    $("#impacto").css({"border-color":"#faa121"});
+    $("#patito").attr("src", "images/menu/p2.jpg");
+    $("#quees").css({"background-color":"#01628a"});
+    $("#quees").css({"border-color":"#faa121"});
+    $("#tortica").attr("src", "images/menu/g2.jpg");
+    $("#graficas").css({"background-color":"#01628a"});
+    $("#graficas").css({"border-color":"#faa121"});
+    $("#recicla").attr("src", "images/menu/r2.jpg");
+    $("#alternativas").css({"background-color":"#01628a"});
+    $("#alternativas").css({"border-color":"#faa121"});
+    $("#manita").attr("src", "images/menu/m2.jpg");
+    $("#ayudar").css({"background-color":"#01628a"});
+    $("#ayudar").css({"border-color":"#faa121"});
+  }
+});
+
+
+$("#alternativas").on({
+	mouseenter: function(){
+    $("#recicla").attr("src", "images/menu/r3.jpg");
+    $("#alternativas").css({"background-color":"#04c4c5"});
+	$("#alternativas").css({"border-color":"#a7c8f2"});
+  },
+	  mouseleave: function(){
+	  	if (window.location.hash == '#page-2' || window.location.hash == '#page-4') {
+	    $("#recicla").attr("src", "images/menu/r3.jpg");
+
+	    $("#alternativas").css({"background-color":"#04c4c5"});
+	    $("#alternativas").css({"border-color":"#a7c8f2"});
+		}
+		else if(window.location.hash == '#page-1' || window.location.hash == '#page-5'){
+	    $("#recicla").attr("src", "images/menu/r1.jpg");
+
+	    $("#alternativas").css({"background-color":"#9aa626"});
+	    $("#alternativas").css({"border-color":"#faa121"});
+		}
+		else if(window.location.hash == '#page-3'){
+	    $("#recicla").attr("src", "images/menu/r2.jpg");
+
+	    $("#alternativas").css({"background-color":"#01638a"});
+	    $("#alternativas").css({"border-color":"#faa121"});
+		}
+  }, 
+  		click: function(){
+    $("#delfincito").attr("src", "images/menu/d3.jpg");
+    $("#impacto").css({"background-color":"#04c4c5"});
+    $("#impacto").css({"border-color":"#a7c8f2"});
+    $("#patito").attr("src", "images/menu/p3.jpg");
+    $("#quees").css({"background-color":"#04c4c5"});
+    $("#quees").css({"border-color":"#a7c8f2"});
+    $("#tortica").attr("src", "images/menu/g3.jpg");
+    $("#graficas").css({"background-color":"#04c4c5"});
+    $("#graficas").css({"border-color":"#a7c8f2"});
+    $("#recicla").attr("src", "images/menu/r3.jpg");
+    $("#alternativas").css({"background-color":"#04c4c5"});
+    $("#alternativas").css({"border-color":"#a7c8f2"});
+    $("#manita").attr("src", "images/menu/m3.jpg");
+    $("#ayudar").css({"background-color":"#04c4c5"});
+    $("#ayudar").css({"border-color":"#a7c8f2"});
+  }
+});
+
+$("#ayudar").on({
+	mouseenter: function(){
+    $("#manita").attr("src", "images/menu/m1.jpg");
+    $("#ayudar").css({"background-color":"#9aa626"});
+	$("#ayudar").css({"border-color":"#faa121"});
+  },
+	  mouseleave: function(){
+	  	if (window.location.hash == '#page-2' || window.location.hash == '#page-4') {
+	    $("#manita").attr("src", "images/menu/m3.jpg");
+	    $("#ayudar").css({"background-color":"#04c4c5"});
+		$("#ayudar").css({"border-color":"#a7c8f2"});
+		}
+		else if(window.location.hash == '#page-1' || window.location.hash == '#page-5'){
+	    $("#manita").attr("src", "images/menu/m1.jpg");
+	    $("#ayudar").css({"background-color":"#9aa626"});
+		$("#ayudar").css({"border-color":"#faa121"});
+		}
+		else if(window.location.hash == '#page-3'){
+	    $("#manita").attr("src", "images/menu/m2.jpg");
+	    $("#ayudar").css({"background-color":"#01638a"});
+		$("#ayudar").css({"border-color":"#faa121"});
+		}
+  }, 
+  		click: function(){
+    $("#delfincito").attr("src", "images/menu/d1.jpg");
+
+    $("#impacto").css({"background-color":"#9aa626"});
+    $("#impacto").css({"border-color":"#faa121"});
+    $("#patito").attr("src", "images/menu/p1.jpg");
+
+    $("#quees").css({"background-color":"#9aa626"});
+    $("#quees").css({"border-color":"#faa121"});
+    $("#tortica").attr("src", "images/menu/g1.jpg");
+
+    $("#graficas").css({"background-color":"#9aa626"});
+    $("#graficas").css({"border-color":"#faa121"});
+    $("#recicla").attr("src", "images/menu/r1.jpg");
+
+    $("#alternativas").css({"background-color":"#9aa626"});
+    $("#alternativas").css({"border-color":"#faa121"});
+    $("#manita").attr("src", "images/menu/m1.jpg");
+
+    $("#ayudar").css({"background-color":"#9aa626"});
+    $("#ayudar").css({"border-color":"#faa121"});
+  }
+});
+
+
+$("#quees").on({
+	mouseenter: function(){
+    $("#patito").attr("src", "images/menu/p1.jpg");
+
+    $("#quees").css({"background-color":"#9aa626"});
+	$("#quees").css({"border-color":"#faa121"});
+  },
+	  mouseleave: function(){
+	  	if (window.location.hash == '#page-2' || window.location.hash == '#page-4') {
+	    $("#patito").attr("src", "images/menu/p3.jpg");
+
+	    $("#quees").css({"background-color":"#04c4c5"});
+		$("#quees").css({"border-color":"#a7c8f2"});
+		}
+		else if(window.location.hash == '#page-1' || window.location.hash == '#page-5'){
+	    $("#patito").attr("src", "images/menu/p1.jpg");
+
+	    $("#quees").css({"background-color":"#9aa626"});
+		$("#quees").css({"border-color":"#faa121"});
+		}
+		else if(window.location.hash == '#page-3'){
+	    $("#patito").attr("src", "images/menu/p2.jpg");
+
+	    $("#quees").css({"background-color":"#01638a"});
+		$("#quees").css({"border-color":"#faa121"});
+		}
+  }, 
+  		click: function(){
+    $("#delfincito").attr("src", "images/menu/d1.jpg");
+    $("#impacto").css({"background-color":"#9aa626"});
+    $("#impacto").css({"border-color":"#faa121"});
+    $("#patito").attr("src", "images/menu/p1.jpg");
+    $("#quees").css({"background-color":"#9aa626"});
+    $("#quees").css({"border-color":"#faa121"});
+    $("#tortica").attr("src", "images/menu/g1.jpg");
+    $("#graficas").css({"background-color":"#9aa626"});
+    $("#graficas").css({"border-color":"#faa121"});
+    $("#recicla").attr("src", "images/menu/r1.jpg");
+    $("#alternativas").css({"background-color":"#9aa626"});
+    $("#alternativas").css({"border-color":"#faa121"});
+    $("#manita").attr("src", "images/menu/m1.jpg");
+    $("#ayudar").css({"background-color":"#9aa626"});
+    $("#ayudar").css({"border-color":"#faa121"});
+  }
+});
+
 //---------------------------------------------------------
 
 });

@@ -21,67 +21,76 @@
     <link rel="stylesheet" type="text/css" href="css/Organizar.css">
     <link rel="stylesheet" type="text/css" href="css/alternativas2.css">
     <link rel="stylesheet" type="text/css" href="sass/alternativas-2.css">
+
 </head>
 
 <body>
-    
-    <ul id="redondo">
+
+    <ul id="redondo" style="position: fixed;
+top: 50%;
+transform: translateY(-50%); margin-left: 3%;">
             <a href="#page-1">
             <li id="quees" href="#page-1"><!--onmouseover="gfg_Run()">-->  
-                    <img src="images/menu/p1.jpg" alt="pato" href="#page-1">
+                    <img id="patito" src="images/menu/p1.jpg" alt="pato" href="#page-1">
             </li>
             </a>
 
             <a href="#page-2">
                 <li id="impacto">
-                    <img src="images/menu/d1.jpg" alt="delfin">
+                    <img id="delfincito" src="images/menu/d1.jpg" alt="delfin">
                 </li>
             </a>
 
             <a href="#page-3">
             <li id="graficas">
-                    <img src="images/menu/g1.jpg" alt="circulo">
+                    <img id="tortica" src="images/menu/g1.jpg" alt="circulo">
             </li>
             </a>
 
             <a href="#page-4">
                 <li id="alternativas">
-                        <img src="images/menu/r1.jpg" alt="reci">
+                        <img id="recicla" src="images/menu/r1.jpg" alt="reci">
                 </li>
             </a>
 
             <a href="#page-5">
                 <li id="ayudar">
-                        <img src="images/menu/m1.jpg" alt="like">
+                        <img id="manita" src="images/menu/m1.jpg" alt="like">
                 </li>
             </a>
         </ul>
     
         <div class="clear"></div>
 
+
     <scroll-container>
 
-        <scroll-page id="page-1">
-            <div class="wrapper" id="js-wrapper3">
+        <scroll-page id="page-1" style="border:0px;border-style: hidden;">
+            <div class="wrapper" id="js-wrapper3" >
                 <div class="sections" id="js-slideContainer3">
-                  <section class="section" id="QueEs">
-                      <div><!--div para el titulo-->
-                        <h4>¿Qué es el</h4>
-                        <h2>plástico?</h2>
-                        <img src="images/Logo-N.png" alt="Logo">
-                    </div>
-                    <!--imagen de plastico
-                    <img src="images/plastico.png" alt="plastic">-->
-    
-                    <article>
-                        <p>
-                            Es un material constituido de compuestos orgánicos y sintéticos. 
-                            Su nombre viene de su plasticidad, su capacidad para ser moldeados. 
-                            Es maleable, flexible, versátil, ligero, económico y muy duradero.
-    
-                        </p>
-                    </article>
-                  </section>
+
+
+                  <!------------------desde aqui va id QueEs-------------------->
+                    <section class="section" id="QueEs">
+                        <div class="titulo_que_es"><!--div para el titulo-->
+                          <h4>¿Qué es el<br><span id="mi_plastico">plástico?</span></h4>
+                          <!--<h2>plástico?</h2>-->
+                          <img src="images/Logo-verde.png" alt="Logo" id="logo_que_es">
+                        </div>
+                      <!--imagen de plastico
+                      <img src="images/plastico.png" alt="plastic">-->
+      
+                      <article>
+                          <p>
+                              Es un material constituido de compuestos orgánicos y sintéticos. 
+                              Su nombre viene de su plasticidad, su capacidad para ser moldeados. 
+                              Es maleable, flexible, versátil, ligero, económico y muy duradero.
+      
+                          </p>
+                      </article>
+                    </section>
+                  <!----------------hasta aqui va id QueEs----------------------->
+
                   <section class="section"id="carrusel_y_tipos">
                           <div class="carrusel">
                              
@@ -107,12 +116,22 @@
                                       <br>
                                        <h5 class="dano_tipo">Daño: <b>moderado</b></h5>
                                   </div>
+
+                                  <div class="caja_control">
+                                      <!--<div class="caja">-->
+                                          <img class="caja" src="images/cinta/cinta_y_caja/caja.png" alt="Second slide" />
+                                          
+                                          <img class="flecha_der" src="images/cinta/cinta_y_caja/flecha_derecha_2.png" alt="Second slide" />
+    
+                                          <img class="flecha_izq" src="images/cinta/cinta_y_caja/flecha_izquierda_2.png" alt="Second slide" />
+    
+                                      <!--</div>-->
+                                  </div>
     
                                   <div class="cinta">
                                       <div class="elementos_cinta">
-    
-                                          <img class="transportadora" src="images/cinta/cinta_y_caja/cinta.png" alt="First slide">
-    
+                                          <img class="transportadora" src="images/cinta/cinta_y_caja/cinta2.png" alt="First slide">
+                                        
                                           <img class="imgcinta" src="images/cinta/cocaCinta.png" alt="First slide">
                                           <img class="imgcinta" src="images/cinta/shampooCinta.png" alt="Second slide">
                                           <img class="imgcinta" src="images/cinta/canecaCinta.png" alt="Third slide">
@@ -126,6 +145,7 @@
                                       </div>                                     
                                   </div>
     
+                                  <!--
                                   <div class="caja_control">
                                       <div class="caja">
                                           <img class="caja" src="images/cinta/cinta_y_caja/caja.png" alt="Second slide">
@@ -136,6 +156,7 @@
     
                                       </div>
                                   </div>
+                                  -->
     
                                   <div class="texto_plastico">
                                       <h5 class="titulo_plastico">Polietileno Tereftalato</h5>
@@ -518,4 +539,5 @@
 <script type="text/javascript" src="js/scrolling.js"></script>
 <script type="text/javascript" src="js/graficas.js"></script>
 <script type="text/javascript" src="js/cargar3D.js"></script>
+
 </html>
