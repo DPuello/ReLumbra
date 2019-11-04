@@ -9,14 +9,6 @@ $naranjaOscuro: #a76205;
 $fondo: $verdeOscuro;
 $borde: $verdeQueEs;
 
-@mixin colores {
-    background-color: $fondo;
-    border-color: $borde;
-}
-
-body{
-    background-color: $fondo;
-}
 
 #redondo{
     margin-top: 3%;

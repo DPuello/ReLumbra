@@ -2,16 +2,9 @@ body {
   background: #fff; }
 
 .orilla {
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  transform: translateX(55vw);
-  overflow: hidden; }
+  height: 100vh; }
   .orilla .waves {
-    transform: rotate(90deg); }
+    transform: rotate(-90deg) translateX(20vw) translateY(40vw); }
 
 .waves {
   position: relative;
@@ -19,12 +12,11 @@ body {
   height: 50vh;
   margin-bottom: -7px;
   /*Fix for safari gap*/
-  min-height: 100px;
-  max-height: 150px; }
+  min-height: 100px; }
   .waves use {
-    fill: rgba(255, 231, 203, 0.4); }
+    fill: rgba(87, 202, 218, 0.4); }
   .waves use:nth-child(4) {
-    fill: #ffe7cb; }
+    fill: #57cada; }
 
 .content {
   position: relative;

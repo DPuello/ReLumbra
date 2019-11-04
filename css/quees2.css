@@ -43,7 +43,7 @@ margin-right: 0px;
 
 .carrusel {
  	grid-column: 1;
-  	grid-row: 1 / 6;
+	  grid-row: 1 / 6;
 	/*background-color: rgba(255,0,0,0.3);*/
 }
 

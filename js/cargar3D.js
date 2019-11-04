@@ -9,17 +9,17 @@ function cargarObj(lienzo, ruta, archivo, pos_camara){
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, lienzo.offsetWidth/lienzo.offsetHeight, 0.1, 1000 );
  
-var renderer = new THREE.WebGLRenderer({ canvas: lienzo,alpha: true});
+var renderer = new THREE.WebGLRenderer({ canvas: lienzo,alpha: true,antialias: true});
 renderer.setClearColor( 0x000000, 0 );
 renderer.setSize( lienzo.offsetWidth, lienzo.offsetHeight);
 //document.body.appendChild( renderer.domElement );
  
 camera.position.z = pos_camara;
 
-var controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.25;
-controls.enableZoom = true;
+//var controls = new THREE.OrbitControls(camera, renderer.domElement);
+//controls.enableDamping = true;
+//controls.dampingFactor = 0.25;
+//controls.enableZoom = true;
 
 var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
 keyLight.position.set(-100, 0, 100);
@@ -54,14 +54,55 @@ mtlLoader.load(archivo+'.mtl', function (materials) {
         object.position.y -= 60;
         //mesh = new THREE.Mesh(object,materials)
     });
- 
+    mesh = objLoader;
 });
 //
+lienzo.addEventListener('mousemove', onMouseMove, false);
+function onMouseMove(event) {
+
+    mouseX = (event.clientX) - window.innerWidth/2;
+    mouseY = event.clientY - window.innerHeight/2;
+    //mouseX = $(window).$(window).scrollTop();
+    //alert(mouseX);
+    camera.position.x += (mouseX - camera.position.x) * 0.05;
+    camera.position.y += (mouseY - camera.position.y) * 0.05;
+    camera.lookAt(scene.position);
+};
+lienzo.onmouseover = function(){
+    var id = setInterval(frame, 1);
+    var pos = 0;
+    function frame() {
+        if (pos == 30) {
+            clearInterval(id);
+          } else {
+            pos++;
+            camera.position.z -=3;
+            camera.lookAt(scene.position);
+          }
+    
+    }
+};
+lienzo.onmouseout = function(){
+    var id = setInterval(frame, 1);
+    var pos = 0;
+    function frame() {
+        if (pos == 30) {
+            clearInterval(id);
+          } else {
+            pos++;
+            camera.position.z +=3;
+            camera.position.y -= camera.position.y/30
+            camera.position.x -= camera.position.x/30
+            camera.lookAt(scene.position);
+          }
+    
+    }
+};
  
 var animate = function () {
   requestAnimationFrame( animate );
   renderer.render(scene, camera);
-
+   // render();
   //scene.rotation.x+=0.01;
 }
 

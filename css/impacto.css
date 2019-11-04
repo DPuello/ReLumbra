@@ -1,6 +1,3 @@
-* {
-  border: 1px solid red; }
-
 #Impacto {
   background: #ffe7cb;
   position: relative; }
@@ -129,6 +126,17 @@
     background: #3c423d; }
     #Comida .comidas .arriba {
       max-height: 30vh; }
+
+canvas {
+  transition: all 1s ease-out; }
+
+canvas:nth-child(0) {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  opacity: 0; }
+
+canvas:hover {
+  transform: perspective(200px) translateZ(2em); }
 
 #sec_2 {
   display: none; }

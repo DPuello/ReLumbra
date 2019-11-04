@@ -11,16 +11,16 @@ $(function () { // wait for document ready
     
   
     // create scene to pin and link animation
-    new ScrollMagic.Scene({
+    impactado = new ScrollMagic.Scene({
       triggerElement: "#js-wrapper",
       triggerHook: "onLeave",
       duration: "400%"
     })
       .setPin("#js-wrapper")
       .setTween(horizontalSlide)
-      //.addIndicators() // add indicators (requires plugin)
+      .addIndicators()
       .addTo(controller);
-    
+      alert(impactado.scrollOffset());
     
     
   });
@@ -70,7 +70,7 @@ $(function () { // wait for document ready
     })
       .setPin("#js-wrapper3")
       .setTween(horizontalSlide)
-      //.addIndicators() // add indicators (requires plugin)
+      //.addIndicators()
       .addTo(controller);
     
     

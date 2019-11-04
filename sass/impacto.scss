@@ -3,9 +3,6 @@ $AzulFondo: #51b9c8;
 $FondoImpacto: #ffe7cb;
 $FondoComida: #3c423d;
 
-*{
-    border: 1px solid red;
-}
 #Impacto{
     
     //width: 80%;
@@ -195,7 +192,20 @@ $FondoComida: #3c423d;
     }
     
 }
+canvas{
+    
+    transition: all 1s ease-out;
+    
+}
+canvas:nth-child(0){
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter:         drop-shadow(5px 5px 5px #222); 
+    opacity: 0;
+}
 
+canvas:hover{
+    transform: perspective(200px) translateZ(2em);
+}
 
 #sec_2{
     display: none;
