@@ -1,17 +1,17 @@
 $VerdeTitulo: #99a728;
 $VerdeFondo2: #bece30;
-$DegradaText: #707a1b;
+$DegradaText: #a3b128;
 
 #Ayudar{
     height: 100vh;
     width: 100vw;
     color: #fff;
     background-color: $VerdeFondo2;
-    padding: 5vh 10vw;
+    /*padding: 5vh 10vw;*/
     .proponer{
         display: grid;
-        grid-template-columns: repeat(4, 250px);
-        grid-template-rows: repeat(3, 138px);
+        grid-template-columns: repeat(4, 23%);
+        grid-template-rows: repeat(3, 26%);
         gap: 10px;
         
         
@@ -107,7 +107,7 @@ $DegradaText: #707a1b;
                     display: table-cell;
                     vertical-align: middle;
                     margin: auto;
-                    padding: 5%;
+                    padding: 5% 7%;
                 }
             }
             
@@ -118,7 +118,7 @@ $DegradaText: #707a1b;
 #degradacion{
     color: $DegradaText;
     background-color: $VerdeFondo2;
-    padding: 5vh 10vw;
+    padding: 8vh 10vw;
     .video{
         display: block;
         border-radius: 0 100px 0 100px;

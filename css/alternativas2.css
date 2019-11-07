@@ -1,27 +1,36 @@
 @import url('//fonts.googleapis.com/css?family=Playfair+Display');
 /*@import url('//fonts.googleapis.com/css?family=Lato');*/
 .titulo_alternativas{
-	display: flex;
-	padding-top:1%;
-	padding-left:10%;
+	/*display: flex;*/
+	padding-top:5%;
+	padding-left:20%;
+    padding-bottom: 2%;
 }
 
 .letra_titulo{
-	display: flex;
+	/*display: flex;*/
 	justify-content: flex-end;
 	margin-right: 2%;
 	align-self: end;
 	margin-left: 0%;
 }
 /**/
+
+#Alternativas h2{
+display: inline-block;
+float: left;
+}
+
+
 .mas_peque{
 	font-size:0.8em;
 }
 
 .logo_alternativas{
-	display: flex;
+	display: inline-block;
 	width: 5%;
-	height: 5%;
+	height: 5%;	
+    padding: 0% 3%;
 }
 
 

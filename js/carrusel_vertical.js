@@ -1,4 +1,5 @@
-$(function(){
+$(function(
+){
 	"use strict";
 
 	console.log("hola");
@@ -24,11 +25,11 @@ $(function(){
 
  		$(".carrusel").on("click", function(e){//click dentro del carrusel
  			cont_click+=1;//aumentar contador+1
-            $(imgcarrusel[cont_click]).animate({"opacity":"0"},500);//quitar la opacidad
-            $(imgcarrusel[cont_click]).slideUp(500);//sale arriba
-            $(imgcarrusel[cont_click+4]).slideDown(500);//entra abajo
+            $(imgcarrusel[cont_click]).animate({"opacity":"0"},300);//quitar la opacidad
+            $(imgcarrusel[cont_click]).slideUp(300);//sale arriba
+            $(imgcarrusel[cont_click+4]).slideDown(300);//entra abajo
             $(imgcarrusel[cont_click+4]).css({"display":"block"});//se muestra el de abajo
-            $(imgcarrusel[cont_click+4]).animate({"opacity":"1"},500);//dar opacidad
+            $(imgcarrusel[cont_click+4]).animate({"opacity":"1"},300);//dar opacidad
 
           		
 	            if(cont_click>4)//si está en el 5o click y se acabaron las imagenes
@@ -39,7 +40,7 @@ $(function(){
 	            	$(nuevaimg).attr("class","imgcarrusel");//dandole a la clase
 	            	$(nuevaimg).css({"opacity":"0"});//opacidad de 0
 	            	$(nuevaimg).css({"display":"block"});//aparece
-	            	$(nuevaimg).animate({"opacity":"1"},500);//animacion a opacidad de 1
+	            	$(nuevaimg).animate({"opacity":"1"},300);//animacion a opacidad de 1
 	            	$(nuevaimg).css({"width":"80%"});//tamaño
 	           		$(nuevaimg).css({"padding-top":"2em"});
 	           		$(nuevaimg).css({"padding-bottom":"2em"});
@@ -103,41 +104,7 @@ $(function(){
 		            }
 		    }
 		     console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
-	        console.log(cont_click+" quemando tiempo con un console.log muy largo por que imprimir datos en consola demora el proceso");
+	        
 	        console.log(cont_click);
 	        cont_click-=1;
         });
@@ -156,16 +123,16 @@ $(function(){
 			$(imgcinta[i]).css({"display":"none"});
 			$(imgcinta[i]).css({"opacity":"0"});
 			/*$(imgcinta[i]).css({"top":"-300px"});*/
-			$(imgcinta[i]).css({"top":"-25em"});
+			$(imgcinta[i]).css({"top":"-50%"});
 		}
 
 		if(i==1)
 		{
 			//$(imgcinta[i]).attr("class","imgcarrusel");//dandole a la clase
 	        /*$(imgcinta[i]).css({"top":"-120px"});*///alto
-	        $(imgcinta[i]).css({"left":"420px"});//izq
+	        $(imgcinta[i]).css({"left":"35%"});//izq
 	        $(imgcinta[i]).css({"opacity":"0.7"});//izq
-	        $(imgcinta[i]).css({"top":"-25em"});
+	        $(imgcinta[i]).css({"top":"-50%"});
 
 		}
 
@@ -173,9 +140,9 @@ $(function(){
 		{
 			//$(imgcinta[i]).attr("class","imgcarrusel");//dandole a la clase
 	        /*$(imgcinta[i]).css({"top":"-120px"});*///alto
-	        $(imgcinta[i]).css({"left":"150px"});//izq
+	        $(imgcinta[i]).css({"left":"14%"});//izq
 	        $(imgcinta[i]).css({"opacity":"1"});//izq
-	        $(imgcinta[i]).css({"top":"-25em"});
+	        $(imgcinta[i]).css({"top":"-50%"});
 
 		}
 	});
@@ -224,29 +191,69 @@ $(function(){
  				 //para el elemento del centro
  				if(conteo_click>=0 && conteo_click<7)
  				{
-				$(imgcinta[conteo_click]).animate({"left":"-70px"},500);
-				$(imgcinta[conteo_click]).animate({"opacity":"0"},500);
+
+				/*$(imgcinta[conteo_click]).animate({"left":"-70px"},300);
+				$(imgcinta[conteo_click]).animate({"opacity":"0"},300);
 
  				//para el elemento de la derecha
- 				$(imgcinta[conteo_click+1]).animate({"left":"150px"},500);
-				$(imgcinta[conteo_click+1]).animate({"opacity":"1"},500);				
+ 				$(imgcinta[conteo_click+1]).animate({"left":"150px"},300);
+				$(imgcinta[conteo_click+1]).animate({"opacity":"1"},300);				
 
 				//para el que va entrando
-				$(imgcinta[conteo_click+2]).css({"opacity":"0"});
+				//$(imgcinta[conteo_click+2]).css({"opacity":"0"});
 				$(imgcinta[conteo_click+2]).css({"display":"block"});
-				$(imgcinta[conteo_click+2]).animate({"opacity":"0.5"},500);
-	        	$(imgcinta[conteo_click+2]).css({"left":"420px"});//izq
+				$(imgcinta[conteo_click+2]).animate({"opacity":"0.5"},300);
+	        	$(imgcinta[conteo_click+2]).css({"left":"420px"});//izq*/
+
+	        	$(function () {
 
 
-	        	$('.engr').animate({ deg: grado },
+					    $(imgcinta[conteo_click]).animate({
+					       left: '-70px'
+					    }, { duration: 300, queue: false });
+
+					    $(imgcinta[conteo_click]).animate({
+					       opacity: '0'
+					    }, { duration: 300, queue: false });
+
+
+
+					    $(imgcinta[conteo_click+1]).animate({
+					       left: '14%'
+					    }, { duration: 300, queue: false });
+
+					    $(imgcinta[conteo_click+1]).animate({
+					       opacity: '1'
+					    }, { duration: 300, queue: false });
+					
+
+					    $(imgcinta[conteo_click+2]).css({
+					       display: 'block'
+					    }/*, { duration: 300, queue: false }*/);
+
+					    $(imgcinta[conteo_click+2]).animate({
+					       opacity: '0.5'
+					    }, { duration: 300, queue: false });
+
+					    $(imgcinta[conteo_click+2]).css({
+					       left: '35%'
+					    }/*, { duration: 300, queue: false }*/);
+
+
+					    $('.engr').animate({ deg: grado },
 				    {
-				      duration: 500,
+				      duration: 300,
 				      step: function(now) {
 				        $(this).css({ transform: 'rotate(' + now + 'deg)' });
 				        //console.log(now);
 				      }
 				    }
 			 	);
+
+					});
+
+
+	        	
 
 	        	if(grado<=-900)
 	        		grado=-900;
@@ -329,31 +336,73 @@ $(function(){
 	 				if(conteo_click>=-1 && conteo_click<7)
 	 				{
 
-	 					//para el que esta a la derecha y desaparece
+	 				
+
+
+						//para el que esta a la derecha y desaparece
 	 				//$(imgcinta[conteo_click+3]).animate({"left":"670px"},500);
-					$(imgcinta[conteo_click+3]).animate({"opacity":"0"},500);//opacidad a 0
+					//$(imgcinta[conteo_click+3]).css({"opacity":"0"});//opacidad a 0
 					//$(imgcinta[conteo_click+3]).css({"display":"none"});//desaparece
 
-	 				 //para el elemento del centro y se va a la derecha
-					$(imgcinta[conteo_click+2]).animate({"left":"420px"},500);
-					$(imgcinta[conteo_click+2]).animate({"opacity":"0.5"},500);
+
+					//para el elemento que va entrando por la izq y se va al centro
+	 				//$(imgcinta[conteo_click+1]).css({"opacity":"0"});
+	 				//$(imgcinta[conteo_click+1]).css({"display":"block"}); 
+
+					/*$(imgcinta[conteo_click+1]).animate({"opacity":"1"},300);
+					$(imgcinta[conteo_click+1]).animate({"left":"150px"},300);*/
+
+					$(function () {
+
+
+					    $(imgcinta[conteo_click+3]).animate({
+					       opacity: '0'
+					    }, { duration: 300, queue: false });
+
+					    $(imgcinta[conteo_click+3]).animate({
+					       display: 'block'
+					    }, { duration: 300, queue: false });
+
+
+
+					    $(imgcinta[conteo_click+1]).animate({
+					       opacity: '1'
+					    }, { duration: 300, queue: false });
+
+					    $(imgcinta[conteo_click+1]).animate({
+					       left: '14%'
+					    }, { duration: 300, queue: false });
 					
 
-	 				//para el elemento que va entrando por la izq y se va al centro
-	 				//$(imgcinta[conteo_click+1]).css({"opacity":"0"});
-	 				//$(imgcinta[conteo_click+1]).css({"display":"block"});
-					$(imgcinta[conteo_click+1]).animate({"opacity":"1"},100);	
-					$(imgcinta[conteo_click+1]).animate({"left":"150px"},500);	
+					    $(imgcinta[conteo_click+2]).animate({
+					       left: '35%'
+					    }, { duration: 300, queue: false });
 
-		    		$('.engr').animate({ deg: grado },
+					    $(imgcinta[conteo_click+2]).animate({
+					       opacity: '0.5'
+					    }, { duration: 300, queue: false });
+
+
+					    $('.engr').animate({ deg: grado },
 					    {
-					      duration: 500,
+					      duration: 300,
 					      step: function(now) {
 					        $(this).css({ transform: 'rotate(' + now + 'deg)' });
 					        //console.log(now);
 					      }
 					    }
 			 		);
+
+					});
+					
+
+	 				 //para el elemento del centro y se va a la derecha
+					//$(imgcinta[conteo_click+2]).animate({"left":"420px"},300);
+					//$(imgcinta[conteo_click+2]).animate({"opacity":"0.5"},300);
+
+	 			
+
+		    		
 
 
 		    		if(n==0)
@@ -724,4 +773,3 @@ $("#quees").on({
 //---------------------------------------------------------
 
 });
-
