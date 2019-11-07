@@ -36,7 +36,6 @@ var light = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(keyLight);
 scene.add(fillLight);
 scene.add(backLight);
-var mesh;
 //
 var mtlLoader = new THREE.MTLLoader();
 //mtlLoader.setTexturePath('/examples/3d-obj-loader/assets/');
@@ -108,3 +107,139 @@ var animate = function () {
 
     animate();
 };
+//////////////////////////////Cargar gltf
+const mixers = [];
+const clock = new THREE.Clock();
+
+function init(lienzo, ruta, camaraY, camaraZ) {
+
+  container = document.querySelector( lienzo );
+
+  scene = new THREE.Scene();
+
+  createCamera(camaraY, camaraZ);
+  //createControls();
+  createLights();
+  loadModels(ruta);
+  createRenderer();
+
+  renderer.setAnimationLoop( () => {
+
+    update();
+    render();
+
+  } );
+
+}
+
+function createCamera(camaraY, camaraZ) {
+
+  camera = new THREE.PerspectiveCamera( 35, container.clientWidth / container.clientHeight, 1, 100 );
+  camera.position.set( 0, camaraY, camaraZ );
+
+}
+
+function createLights() {
+
+  const ambientLight = new THREE.HemisphereLight( 0xddeeff, 0x0f0e0d, 5 );
+
+  const mainLight = new THREE.DirectionalLight( 0xffffff, 5 );
+  mainLight.position.set( 10, 10, 10 );
+
+  scene.add( ambientLight, mainLight );
+
+  var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+keyLight.position.set(-100, 0, 100);
+ 
+var fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+fillLight.position.set(100, 0, 100);
+ 
+var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+backLight.position.set(100, 0, -100).normalize();
+
+var light = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(light);
+ 
+scene.add(keyLight);
+scene.add(fillLight);
+scene.add(backLight);
+
+}
+
+function loadModels(ruta) {
+
+  const loader = new THREE.GLTFLoader();
+
+  // A reusable function to set up the models. We're passing in a position parameter
+  // so that they can be individually placed around the scene
+  const onLoad = ( gltf, position ) => {
+
+    const model = gltf.scene.children[ 0 ];
+    model.position.copy( position );
+
+    const animation = gltf.animations[ 0 ];
+
+    const mixer = new THREE.AnimationMixer( model );
+    mixers.push( mixer );
+
+    const action = mixer.clipAction( animation );
+    action.play();
+
+    scene.add( model );
+
+  };
+
+  const parrotPosition = new THREE.Vector3( 0, 0, 2.5 );
+  loader.load( ruta, gltf => onLoad( gltf, parrotPosition ) );
+
+}
+
+function createRenderer() {
+
+  renderer = new THREE.WebGLRenderer( {alpha: true, antialias: true } );
+  renderer.setSize( container.clientWidth, container.clientHeight );
+
+  renderer.setPixelRatio( window.devicePixelRatio );
+
+  renderer.gammaFactor = 2.2;
+  renderer.gammaOutput = true;
+
+  renderer.physicallyCorrectLights = true;
+
+  container.appendChild( renderer.domElement );
+
+}
+
+function update() {
+
+  const delta = clock.getDelta();
+
+  for ( const mixer of mixers ) {
+
+    mixer.update( delta );
+
+  }
+
+}
+
+function render() {
+
+  renderer.render( scene, camera );
+
+}
+
+function onWindowResize() {
+
+  camera.aspect = container.clientWidth / container.clientHeight;
+
+  // update the camera's frustum
+  camera.updateProjectionMatrix();
+
+  renderer.setSize( container.clientWidth, container.clientHeight );
+
+}
+
+window.addEventListener( 'resize', onWindowResize );
+
+init('#banana3d','../Modelos/banana.glb', 2, 20);
+//init('#caneca3d','../Modelos/caneca.glb', 2, 20);

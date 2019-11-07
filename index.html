@@ -252,6 +252,7 @@ transform: translateY(-50%); margin-left: 3%;">
                       
                   </div>
                   <div class="ballenaI"><canvas id="azul3d"></canvas></div>
+                  
                   <div class="plancton">
                       <img src="images/krill.png" alt="plancton">
                       <p>
@@ -278,7 +279,7 @@ transform: translateY(-50%); margin-left: 3%;">
                       
                       <canvas id="ave3d"></canvas>
                   </div>
-
+                  
                   <div class="ostra">
                       <p>
                               Otros animales que pueden consumir microplásticos son los mejillones, 
@@ -368,6 +369,7 @@ transform: translateY(-50%); margin-left: 3%;">
                                 <div class="item1">
                                   <div class="canecas" id="basura1">
                                     <img src="images/caneca.png" alt="basura1" class="caneca_verde">
+                                    <div id="caneca3d" class="caneca_verde"></div>
                                     <h4 class="caneca">ORGÁNICOS</h4>
                                   </div>
                                 </div>
@@ -385,7 +387,8 @@ transform: translateY(-50%); margin-left: 3%;">
                                     </li>-->
         
                                     <li class="list-item ui-widget-content" id="draggable">
-                                      <img src="images/banana.png" alt="garbage1" class="garbage gbanana">
+                                      <!--<img src="images/banana.png" alt="garbage1" class="garbage gbanana">-->
+                                      <div id="banana3d" class="garbage gbanana"></div>
                                     </li>
         
                                     <li class="list-item" >
@@ -520,7 +523,7 @@ transform: translateY(-50%); margin-left: 3%;">
 
 <!--Librerias para el 3d-->
 <script src="js/three.min.js"></script>
-
+<script src="js/GLTFLoader.js"></script>
 <script src="js/OBJLoader.js"></script>
 <script src="js/MTLLoader.js"></script>
 
