@@ -79,13 +79,16 @@
   color: #a3b128;
   background-color: #bece30;
   padding: 8vh 10vw; }
+  #degradacion .tituloDegradacion {
+    display: block;
+    width: 60vw;
+    text-align: right; }
   #degradacion .video {
     display: block;
     border-radius: 0 100px 0 100px;
     width: 720px;
     height: auto;
-    overflow: hidden;
-    margin: auto; }
+    overflow: hidden; }
 
 .clear {
   clear: both; }

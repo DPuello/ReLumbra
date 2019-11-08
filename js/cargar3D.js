@@ -108,8 +108,8 @@ var animate = function () {
     animate();
 };
 //////////////////////////////Cargar gltf
-const mixers = [];
-const clock = new THREE.Clock();
+var mixers = [];
+var clock = new THREE.Clock();
 
 function init(lienzo, ruta, camaraY, camaraZ) {
 
@@ -141,9 +141,9 @@ function createCamera(camaraY, camaraZ) {
 
 function createLights() {
 
-  const ambientLight = new THREE.HemisphereLight( 0xddeeff, 0x0f0e0d, 5 );
+  var ambientLight = new THREE.HemisphereLight( 0xddeeff, 0x0f0e0d, 5 );
 
-  const mainLight = new THREE.DirectionalLight( 0xffffff, 5 );
+  var mainLight = new THREE.DirectionalLight( 0xffffff, 5 );
   mainLight.position.set( 10, 10, 10 );
 
   scene.add( ambientLight, mainLight );
@@ -168,28 +168,28 @@ scene.add(backLight);
 
 function loadModels(ruta) {
 
-  const loader = new THREE.GLTFLoader();
+  var loader = new THREE.GLTFLoader();
 
   // A reusable function to set up the models. We're passing in a position parameter
   // so that they can be individually placed around the scene
-  const onLoad = ( gltf, position ) => {
+  var onLoad = ( gltf, position ) => {
 
-    const model = gltf.scene.children[ 0 ];
+    var model = gltf.scene.children[ 0 ];
     model.position.copy( position );
 
-    const animation = gltf.animations[ 0 ];
+    var animation = gltf.animations[ 0 ];
 
-    const mixer = new THREE.AnimationMixer( model );
+    var mixer = new THREE.AnimationMixer( model );
     mixers.push( mixer );
 
-    const action = mixer.clipAction( animation );
+    var action = mixer.clipAction( animation );
     action.play();
 
     scene.add( model );
 
   };
 
-  const parrotPosition = new THREE.Vector3( 0, 0, 2.5 );
+  var parrotPosition = new THREE.Vector3( 0, 0, 2.5 );
   loader.load( ruta, gltf => onLoad( gltf, parrotPosition ) );
 
 }

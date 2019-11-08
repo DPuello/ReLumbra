@@ -10,6 +10,7 @@ $FondoComida: #3c423d;
     //padding: 2%;
     position: relative;
     
+    
     .TituloImpacto{
         
         display: flex;
@@ -32,9 +33,11 @@ $FondoComida: #3c423d;
     }
     .contenido-Impacto{
         
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 3;
         width: 50%;
+        height: 75%;
         margin: auto;
         p{
         flex-basis: 230px;
@@ -44,7 +47,11 @@ $FondoComida: #3c423d;
             display: flex;
             margin: 1%;
         }
-        #suelo{justify-content: center;}
+        #suelo{justify-content: center;
+        p{
+            text-align: right;
+        }
+        }
         #oceano{justify-content: flex-end;}
 
         .textImg_Izq{
@@ -181,11 +188,12 @@ $FondoComida: #3c423d;
 }
 #Comida{
     overflow-y: hidden;
+    background: $FondoComida;
     .comidas{
         text-align: center;
         padding: 5vh 10%;
         color: #fff;
-        background: $FondoComida;
+        
         .arriba{
             max-height: 30vh;
         }
@@ -209,4 +217,16 @@ canvas:hover{
 
 #sec_2{
     display: none;
+}
+
+.animation{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.paper-plane{
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 0;
 }

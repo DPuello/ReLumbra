@@ -116,6 +116,12 @@ $DegradaText: #a3b128;
     }
 }
 #degradacion{
+    .tituloDegradacion{
+        
+        display: block;
+        width: 60vw;
+        text-align: right;
+    }
     color: $DegradaText;
     background-color: $VerdeFondo2;
     padding: 8vh 10vw;
@@ -125,7 +131,7 @@ $DegradaText: #a3b128;
         width: 720px;
         height: auto;
         overflow: hidden;
-        margin: auto;
+        //margin: auto;
     }
 }
 
