@@ -1,10 +1,11 @@
 @import url('//fonts.googleapis.com/css?family=Playfair+Display');
 /*@import url('//fonts.googleapis.com/css?family=Lato');*/
 .titulo_alternativas{
-	/*display: flex;*/
+	display: inline-block;
 	padding-top:5%;
-	padding-left:20%;
+	padding-left:38%;
     padding-bottom: 2%;
+    height: 20%;
 }
 
 .letra_titulo{
@@ -19,6 +20,8 @@
 #Alternativas h2{
 display: inline-block;
 float: left;
+font-size: 3vw;
+margin-left:0px;
 }
 
 
@@ -28,8 +31,7 @@ float: left;
 
 .logo_alternativas{
 	display: inline-block;
-	width: 5%;
-	height: 5%;	
+	width: 10%;
     padding: 0% 3%;
 }
 
@@ -37,45 +39,121 @@ float: left;
 .juego{
 	padding: 0 10% 0 10%;
 	margin:0;
+	position: relative;
+	height: 80%;
 	
 }
 
 
-.caneca{/*texto de caneca*/
-font-size: 1em;
-font-weight: bold;
-margin-top: 5%;
-margin-left: auto;
-margin-right: auto;
-}
-
-.canecas{/*div de caneca y texto*/
-	display: flex;
-	flex-direction: column; 
-	float: left;
-	
+.caneca1{/*div de canecas*/
+position:absolute;
+display: inline;
+top: 35%;
+left: 20%;
 }
 
 
-.canecas2{
-	display: flex;
-	flex-direction: column;
-	float: right;
-
+.banana{
+	position: absolute;
+    display: inline;
+   top: -8%;
+    left: 46%;
 }
 
-.caneca_verde{/*imagen*/
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
+
+.lata{
+	position: absolute;
+    display: inline;
+           top: 10%;
+    left: 35%;
 }
 
-.caneca_azul{
-	width: 48%;
-	margin-left: auto;
-	margin-right: auto;
+.bolsa{
+	position: absolute;
+    display: inline;
+        top: 40%;
+    left: 40%;
 }
 
+.botella{
+	position: absolute;
+    display: inline;
+           top: 40%;
+    left: 55%;
+}
+
+.bolsa2{
+	position: absolute;
+    display: inline;
+        top: 10%;
+    left: 60%;
+}
+
+
+.multi-line-text{
+	position: absolute;
+    display: inline;
+    top: 10%;
+    left: 42%;
+    border-radius: 50%;
+    width: 15%;
+    height: 30%;
+    /*background-color: red;*/
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+        font-size: 1.5vw;
+
+    line-height: 120%;
+}
+
+.caneca2{/*div de canecas*/
+position:absolute;
+display: inline;
+top: 35%;
+left: 70%;
+}
+
+.circuloverde{
+	/*border-style: dotted;
+  border-width: 20px;
+	border-color: #8ac33e;*/
+		border-radius: 50%;
+
+	box-shadow: 2px 0px 43px 27px rgba(125,212,157,1);
+
+	background-color: #7dd49d;
+}
+
+.circuloazul{
+	/*border-style: dotted;
+  border-width: 20px;
+	border-color: #95a8ff;*/
+	border-radius: 50%;
+
+	box-shadow: 2px 0px 43px 27px rgba(125,158,212,1);	
+
+	background-color: #7d9ed4;
+}
+
+.invisible{
+	opacity: 0.3;
+}
+
+
+
+.reiniciar{
+position:absolute;
+background-color: #027368;
+    border-radius: 0% 53% 0% 50%;
+    color: white;
+    padding: 2%;
+    top: 30%;
+    left: 43%; 
+    cursor:pointer;
+display: none;
+}
+/*
 #objetos{
 	background-color: red;
 	display: inline-flex;
@@ -96,24 +174,20 @@ margin-right: auto;
   padding: 20px;
   margin: 20px;
   border-radius: 50%;
-  /*background-color: red;*/
   float: left;
   shape-outside: border-box;
 }
 
 #list{
-	/*background-color: blue;*/
 	height: 400px;
 	width: 400px;
 	border-radius: 50%;
 	position: relative;
 	float: left;
-	/*margin: 50px;*/
 }
 
 .list-item{
 	list-style: none;
-	/*background-color: red;*/
 	height: 50px;
 	width: 50px;
 	position: absolute;
@@ -135,7 +209,6 @@ position: absolute;
   display: flex;
 }
 .circle-with-text {
-  /*background-color:rgb(1, 115, 105);*/
   justify-content: center;
   align-items: center;
   border-radius: 100%;
@@ -152,20 +225,18 @@ position: absolute;
   font-size: 1em;
 }
 
-/*PARA LA GRILLA*/
+
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;/*4 col*/
+  grid-template-columns: auto auto auto auto;
   grid-template-rows: 30em;
   grid-gap: 2%;
-  /*background-color: #2196F3;*/
   padding: 2%;
    justify-content: center;
 }
 
 .grid-container > div {
-  /*background-color: rgba(255, 255, 255, 0.8);*/
   text-align: center;
   padding:0;
 }
@@ -190,7 +261,34 @@ position: absolute;
 .garbage{
 	width:150%;
 }
+
+
 #banana3d{
 	width: 10vw;
 	height: 10vh;
 }
+*/
+
+/*para el arrastre de las imágenes*/
+/*
+.fill_banana{
+}
+
+.empty_banana{
+	display: inline-block;
+}
+
+.hold_banana{
+	border: solid #7dd49d 4px;
+}
+
+.hovered_banana{
+	box-shadow: 2px 0px 43px 27px rgba(125,212,157,1);
+
+	background-color: #7dd49d;
+	border-style: dashed;
+}
+
+.invisible_banana{
+	display: none;
+}*/

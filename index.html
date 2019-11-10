@@ -8,6 +8,8 @@
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     
     <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
@@ -20,7 +22,10 @@
     <link rel="stylesheet" type="text/css" href="css/quees2.css">
     <link rel="stylesheet" type="text/css" href="css/Organizar.css">
     <link rel="stylesheet" type="text/css" href="css/alternativas2.css">
-    <link rel="stylesheet" type="text/css" href="sass/alternativas-2.css">
+    <!--<link rel="stylesheet" type="text/css" href="sass/alternativas-2.css">-->
+
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
 
 </head>
 
@@ -67,7 +72,7 @@ transform: translateY(-50%); margin-left: 3%;">
 
         <scroll-page id="page-1" style="border:0px;border-style: hidden;">
             <div class="wrapper" id="js-wrapper3" >
-                <div class="sections" id="js-slideContainer3">
+                <div class="sections" id="js-slideContainer3" style="width: 200%;">
 
 
                   <!------------------desde aqui va id QueEs-------------------->
@@ -80,7 +85,7 @@ transform: translateY(-50%); margin-left: 3%;">
                       <!--imagen de plastico
                       <img src="images/plastico.png" alt="plastic">-->
       
-                      <article>
+                      <article class="article_quees">
                           <p>
                               Es un material constituido de compuestos orgánicos y sintéticos. 
                               Su nombre viene de su plasticidad, su capacidad para ser moldeados. 
@@ -346,83 +351,88 @@ transform: translateY(-50%); margin-left: 3%;">
                             <img src="images/Logo-azul.png" alt="logo_alternativas" class="logo_alternativas" id="logo_alternativas">
                     </div>
                     
-                        <div class="juego" id="juego">
-                         <!-- <div class="canecas" id="basura1">
-                            <img src="images/caneca.png" alt="basura1" class="caneca_verde">
-                            <h4 class="caneca">ORGÁNICOS</h4>
-                          </div>
-                          -->
-                          <!--
-                            <ul id="objetos">
-                              <li><img src="images/banana.png" alt="garbage1"></li>
-                              <li><img src="images/bolsabasura.png" alt="garbage2"></li>
-                              <li><img src="images/botella.png" alt="garbage3"></li>
-                              <li><img src="images/bolsabasura.png" alt="garbage4"></li>
-                              <li><img src="images/lata.png" alt="garbage5"></li>
-                              <div class="centro" id="centro">
-                                 <li><img src="centro" alt="garbage1"></li>
-                              </div>
-                              
-                            </ul>
-                              -->
-                              
-                              <div class="grid-container">
-                                <div class="item1">
-                                  <div class="canecas" id="basura1">
-                                    <img src="images/caneca.png" alt="basura1" class="caneca_verde">
-                                    <div id="caneca3d" class="caneca_verde"></div>
-                                    <h4 class="caneca">ORGÁNICOS</h4>
-                                  </div>
-                                </div>
-                                <div class="item2">
-                                  <ul id="list">
-                                    <div class="hijo">
-                                      <div class="circles">
-                                        <div class="circle-with-text multi-line-text">
-                                         Información que ayuda al planeta ¡Ponla en práctica!
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!--cambio-->
-                                    <!--<li class="list-item" style="transform: rotate(0deg) translate(0px, -200px) rotate(0deg);">Things go here<button class="remove-item">Remove</button>
-                                    </li>-->
-        
-                                    <li class="list-item ui-widget-content" id="draggable">
-                                      <!--<img src="images/banana.png" alt="garbage1" class="garbage gbanana">-->
-                                      <div id="banana3d" class="garbage gbanana"></div>
-                                    </li>
-        
-                                    <li class="list-item" >
-                                      <img src="images/bolsabasura.png" alt="garbage1" class="garbage gbolsa">
-                                    </li>
-        
-                                    <li class="list-item">
-                                      <img src="images/botella.png" alt="garbage1" class="garbage gbotella">
-                                    </li>
-                                    
-                                    <li class="list-item" >
-                                      <img src="images/bolsabasura.png" alt="garbage1" class="garbage gbolsa">
-                                    </li>
-        
-                                    <li class="list-item">
-                                      <img src="images/lata.png" alt="garbage1" class="garbage glata">
-                                    </li>
-        
-                                  </ul>
-                                <button id="add-item">Add item</button>
-                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        
-        
-                                </div>
-                                <div class="item3">
-                                  <div class="canecas2" id="basura2">
-                                    <img src="images/canecazul.png" alt="basura2" class="caneca_azul">
-                                    <h4 class="caneca">INORGÁNICOS</h4>
-                                  </div>
-                                </div>
-                              </div>
+                    <!--
+                    <div class="juego">
+                      <div class="caneca1 empty_banana">
+                        <img src="images/caneca.png" alt="caneca1">
+                        <h3><b>ORGÁNICO</b></h3>
+                      </div>
 
-                        </div>
+                      <div class="banana garbage gbanana fill_banana" draggable="true">
+                        <img src="images/banana.png" alt="banana">
+                      </div>
+
+                      <div class="lata garbage glata fill" draggable="true">
+                        <img src="images/lata.png" alt="lata">
+                      </div>
+
+                      <div class="bolsa garbage gbolsa fill" draggable="true">
+                        <img src="images/bolsabasura.png" alt="bolsa">
+                      </div>
+
+                      <div class="botella garbage gbotella fill" draggable="true">
+                        <img src="images/botella.png" alt="botella">
+                      </div>
+
+                      <div class="bolsa2 garbage gbolsa fill" draggable="true">
+                        <img src="images/bolsabasura.png" alt="bolsa">
+                      </div>
+
+                      <div class="multi-line-text">
+                        Información que ayuda al planeta ¡Ponla en práctica!"
+                      </div>
+
+
+
+                      <div class="caneca2 empty">
+                        <img src="images/canecazul.png" alt="caneca2">
+                        <h3><b>INORGÁNICO</b></h3>
+                      </div>
+                    </div>
+                  -->
+
+                  <div class="juego">
+                      
+
+                      <div class="banana garbage gbanana ui-widget-content ui-draggable" id="draggable">
+                        <img src="images/banana.png" alt="banana">
+                      </div>
+
+                      <div class="lata garbage glata ">
+                        <img src="images/lata.png" alt="lata">
+                      </div>
+
+                      <div class="bolsa garbage gbolsa ">
+                        <img src="images/bolsabasura.png" alt="bolsa">
+                      </div>
+
+                      <div class="botella garbage gbotella " >
+                        <img src="images/botella.png" alt="botella">
+                      </div>
+
+                      <div class="bolsa2 garbage gbolsa ">
+                        <img src="images/bolsabasura.png" alt="bolsa">
+                      </div>
+
+                      <div class="multi-line-text">
+                        Información que ayuda al planeta ¡Ponla en práctica!"
+                      </div>
+
+                      <div class="reiniciar">
+                          VOLVER A JUGAR
+                      </div>
+
+                      <div class="caneca1">
+                        <img src="images/caneca.png" alt="caneca1">
+                        <h3><b>ORGÁNICO</b></h3>
+                      </div>
+
+                      <div class="caneca2">
+                        <img src="images/canecazul.png" alt="caneca2">
+                        <h3><b>INORGÁNICO</b></h3>
+                      </div>
+                    </div>
+                        
             </section>
 
         </scroll-page>
@@ -436,7 +446,8 @@ transform: translateY(-50%); margin-left: 3%;">
                         <div id="titulo_ayudar" style="padding:0% 0% 5%;">
                           <h3 style="display: inline-block; float:left;">¿Cómo
                           <br><b style="font-size: 1.8em;">Ayudar?</b></h2>
-                          <img src="images/Logo-N.png" alt="logo_ayudar" class="logo_alternativas">
+                          <img src="images/Logo-N.png" alt="logo_ayudar" class="logo_ayudar" style="    width: 5%;
+">
                         </div>
     
                         <div class="proponer">
@@ -555,5 +566,9 @@ transform: translateY(-50%); margin-left: 3%;">
 <script type="text/javascript" src="js/scrolling.js"></script>
 <script type="text/javascript" src="js/graficas.js"></script>
 <script type="text/javascript" src="js/cargar3D.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </html>
