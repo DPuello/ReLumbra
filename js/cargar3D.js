@@ -1,13 +1,14 @@
 
-cargarObj(delfin, '../Modelos/','10014_dolphin_v2_max2011_it2',400);
-cargarObj(azul3d, '../Modelos/','10054_Whale_v2_L3',400);
-cargarObj(pez2, '../Modelos/','GOLDFISH',400);
+
+cargarObj(concha3d, '../Modelos/','seashell_obj',600);
+cargarObj(delfin, '../Modelos/','10014_dolphin_v2_max2011_it2',600);
+cargarObj(azul3d, '../Modelos/','10054_Whale_v2_L3',600);
+cargarObj(pez2, '../Modelos/','GOLDFISH',600);
 cargarObj(ave3d, '../Modelos/','10043_Seagull_v1_L3',400);
-cargarObj(concha3d, '../Modelos/','seashell_obj',400);
 
 function cargarObj(lienzo, ruta, archivo, pos_camara){
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 75, lienzo.offsetWidth/lienzo.offsetHeight, 0.1, 1000 );
+var camera = new THREE.PerspectiveCamera( 75, lienzo.offsetWidth/lienzo.offsetHeight, 0.1, 8000 );
  
 var renderer = new THREE.WebGLRenderer({ canvas: lienzo,alpha: true,antialias: true});
 renderer.setClearColor( 0x000000, 0 );
@@ -56,17 +57,7 @@ mtlLoader.load(archivo+'.mtl', function (materials) {
     mesh = objLoader;
 });
 //
-lienzo.addEventListener('mousemove', onMouseMove, false);
-function onMouseMove(event) {
 
-    mouseX = (event.clientX) - window.innerWidth/2;
-    mouseY = event.clientY - window.innerHeight/2;
-    //mouseX = $(window).$(window).scrollTop();
-    //alert(mouseX);
-    camera.position.x += (mouseX - camera.position.x) * 0.05;
-    camera.position.y += (mouseY - camera.position.y) * 0.05;
-    camera.lookAt(scene.position);
-};
 lienzo.onmouseover = function(){
     var id = setInterval(frame, 1);
     var pos = 0;
@@ -78,7 +69,7 @@ lienzo.onmouseover = function(){
             camera.position.z -=3;
             camera.lookAt(scene.position);
           }
-    
+          
     }
 };
 lienzo.onmouseout = function(){
@@ -108,95 +99,61 @@ var animate = function () {
     animate();
 };
 //////////////////////////////Cargar gltf
-var mixers = [];
-var clock = new THREE.Clock();
 
-function init(lienzo, ruta, camaraY, camaraZ) {
+var MoverScena = false;
+var tiempoTranscurrido = 0;
+const mixers = [];
+const clock = new THREE.Clock();
 
-  container = document.querySelector( lienzo );
+function init(contenedorDOM, animated, path, camx, camy, camz) {
+
+  let container;
+  let camera;
+  let renderer;
+  let scene;
+
+  container = document.querySelector( contenedorDOM );
 
   scene = new THREE.Scene();
+  scene.background = new THREE.Color( 0x8FBCD4 );
 
-  createCamera(camaraY, camaraZ);
-  //createControls();
-  createLights();
-  loadModels(ruta);
-  createRenderer();
-
-  renderer.setAnimationLoop( () => {
-
-    update();
-    render();
-
-  } );
-
-}
-
-function createCamera(camaraY, camaraZ) {
-
+  //Camara
   camera = new THREE.PerspectiveCamera( 35, container.clientWidth / container.clientHeight, 1, 100 );
-  camera.position.set( 0, camaraY, camaraZ );
+  camera.position.set( camx, camy, camz);
+  //Luces
+  const ambientLight = new THREE.HemisphereLight( 0xddeeff, 0x0f0e0d, 5 );
 
-}
-
-function createLights() {
-
-  var ambientLight = new THREE.HemisphereLight( 0xddeeff, 0x0f0e0d, 5 );
-
-  var mainLight = new THREE.DirectionalLight( 0xffffff, 5 );
+  const mainLight = new THREE.DirectionalLight( 0xffffff, 5 );
   mainLight.position.set( 10, 10, 10 );
 
   scene.add( ambientLight, mainLight );
-
-  var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
-keyLight.position.set(-100, 0, 100);
- 
-var fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
-fillLight.position.set(100, 0, 100);
- 
-var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
-backLight.position.set(100, 0, -100).normalize();
-
-var light = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(light);
- 
-scene.add(keyLight);
-scene.add(fillLight);
-scene.add(backLight);
-
-}
-
-function loadModels(ruta) {
-
-  var loader = new THREE.GLTFLoader();
+  //Modelos
+  const loader = new THREE.GLTFLoader();
 
   // A reusable function to set up the models. We're passing in a position parameter
   // so that they can be individually placed around the scene
-  var onLoad = ( gltf, position ) => {
+  const onLoad = ( gltf, position ) => {
 
-    var model = gltf.scene.children[ 0 ];
+    const model = gltf.scene.children[ 0 ];
     model.position.copy( position );
+    if(animated){
+      const animation = gltf.animations[ 0 ];
 
-    var animation = gltf.animations[ 0 ];
+      const mixer = new THREE.AnimationMixer( model );
+      mixers.push( mixer );
 
-    var mixer = new THREE.AnimationMixer( model );
-    mixers.push( mixer );
-
-    var action = mixer.clipAction( animation );
-    action.play();
-
+      const action = mixer.clipAction( animation );
+      action.play();
+    }
     scene.add( model );
 
   };
 
-  var parrotPosition = new THREE.Vector3( 0, 0, 2.5 );
-  loader.load( ruta, gltf => onLoad( gltf, parrotPosition ) );
+  const parrotPosition = new THREE.Vector3( 0, 0, 2.5 );
+  loader.load( path, gltf => onLoad( gltf, parrotPosition ));
 
-}
-
-function createRenderer() {
-
-  renderer = new THREE.WebGLRenderer( {alpha: true, antialias: true } );
+  //Render
+  renderer = new THREE.WebGLRenderer( { antialias: true } );
   renderer.setSize( container.clientWidth, container.clientHeight );
 
   renderer.setPixelRatio( window.devicePixelRatio );
@@ -205,26 +162,77 @@ function createRenderer() {
   renderer.gammaOutput = true;
 
   renderer.physicallyCorrectLights = true;
+  var MovimientoScena;
+  container.onmouseover = function(){
+    var id = setInterval(frame, 1);
+    MovimientoScena = scene;
+    MoverScena = true;
+    var pos = 0;
+    function frame() {
+        if (pos > 30) {
+          //scene.rotation.x = 0.5;
+          //console.log(Math.sin(pos*0.02));
+            clearInterval(id);
+          } else {
+            pos++;
+            //camera.position.z -=1;
+            camera.lookAt(scene.position);
+          }
+          pos++;
+    }
+
+};
+container.onmouseout = function(){
+    var id = setInterval(frame, 1);
+    var pos = 0;
+    MoverScena = false;
+    function frame() {
+        if (pos > 30) {
+          //camera.position.x = camx;
+          //camera.position.y = camy;
+          //camera.position.z = -camz;
+          scene.rotation.x = 0;
+          scene.rotation.y = 0;
+          scene.rotation.z = 0;
+            clearInterval(id);
+          } else {
+            pos++;
+            //camera.position.z +=1;
+            //camera.position.y -= (camera.position.y/30) + camy;
+            //camera.position.x -= (camera.position.x/30) + camx; 
+            scene.rotation.x -= scene.rotation.x/30;
+            scene.rotation.y -= scene.rotation.y/30;
+            camera.lookAt(scene.position);
+          }
+    
+    }
+};
 
   container.appendChild( renderer.domElement );
+  renderer.setAnimationLoop( () => {
+
+    if(MoverScena){
+      MovimientoScena.rotation.x = Math.sin(1000*tiempoTranscurrido*Math.PI/180);
+      console.log(5 * Math.sin(tiempoTranscurrido*Math.PI/180))
+    }
+
+    update();
+    renderer.render( scene, camera );
+
+  } );
 
 }
+
 
 function update() {
 
   const delta = clock.getDelta();
-
+  tiempoTranscurrido += delta;
   for ( const mixer of mixers ) {
 
     mixer.update( delta );
 
   }
-
-}
-
-function render() {
-
-  renderer.render( scene, camera );
 
 }
 
@@ -239,7 +247,13 @@ function onWindowResize() {
 
 }
 
-window.addEventListener( 'resize', onWindowResize );
+//window.addEventListener( 'resize', onWindowResize );
 
-init('#banana3d','../Modelos/banana.glb', 2, 20);
+init('#banana3d', true, '../Modelos/banana.glb', 1.5, 1.5, 6.5);
+init('#bolsa3d', false, '../Modelos/bolsa.glb',1.5, 1.5, 6.5);
+init('#botella3d', false, '../Modelos/botella.glb',1.5, 1.5, 6.5);
+init('#lata3d', false, '../Modelos/lata.glb',1.5, 1.5, 6.5);
+init('#caneca3d', false, '../Modelos/caneca.glb',1.5, 1.5, 6.5);
+
+//init('#banana3d','../Modelos/banana.glb', 2, 20);
 //init('#caneca3d','../Modelos/caneca.glb', 2, 20);

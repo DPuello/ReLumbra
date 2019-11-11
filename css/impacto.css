@@ -131,17 +131,6 @@
     #Comida .comidas .arriba {
       max-height: 30vh; }
 
-canvas {
-  transition: all 1s ease-out; }
-
-canvas:nth-child(0) {
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
-  opacity: 0; }
-
-canvas:hover {
-  transform: perspective(200px) translateZ(2em); }
-
 #sec_2 {
   display: none; }
 
@@ -155,5 +144,9 @@ canvas:hover {
   position: absolute;
   top: 50%;
   left: 0; }
+
+.models3d {
+  transform: scale(1.5);
+  background: green; }
 
 /*# sourceMappingURL=impacto.css.map */
