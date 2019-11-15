@@ -99,11 +99,12 @@ var animate = function () {
     animate();
 };
 //////////////////////////////Cargar gltf
-
+var MovimientoScena;
 var MoverScena = false;
 var tiempoTranscurrido = 0;
 const mixers = [];
 const clock = new THREE.Clock();
+var animacion, animacion2, modelito;
 
 function init(contenedorDOM, animated, path, camx, camy, camz) {
 
@@ -115,7 +116,7 @@ function init(contenedorDOM, animated, path, camx, camy, camz) {
   container = document.querySelector( contenedorDOM );
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color( 0x8FBCD4 );
+  //scene.background = new THREE.Color( 0x8FBCD4 );
 
   //Camara
   camera = new THREE.PerspectiveCamera( 35, container.clientWidth / container.clientHeight, 1, 100 );
@@ -143,7 +144,14 @@ function init(contenedorDOM, animated, path, camx, camy, camz) {
       mixers.push( mixer );
 
       const action = mixer.clipAction( animation );
+      const action2 = mixer.clipAction( gltf.animations[ 1 ] );
+      
       action.play();
+      action2.play();
+      //action.clampWhenFinished = true;
+      //action.loop = THREE.LoopOnce;
+      animacion = action;
+      animacion2 = action2;
     }
     scene.add( model );
 
@@ -153,7 +161,7 @@ function init(contenedorDOM, animated, path, camx, camy, camz) {
   loader.load( path, gltf => onLoad( gltf, parrotPosition ));
 
   //Render
-  renderer = new THREE.WebGLRenderer( { antialias: true } );
+  renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
   renderer.setSize( container.clientWidth, container.clientHeight );
 
   renderer.setPixelRatio( window.devicePixelRatio );
@@ -162,8 +170,14 @@ function init(contenedorDOM, animated, path, camx, camy, camz) {
   renderer.gammaOutput = true;
 
   renderer.physicallyCorrectLights = true;
-  var MovimientoScena;
+
+  container.onmouseenter = function(){
+    //animacion.reset();
+    animacion.crossFadeTo(animacion2, 1);
+  }
+  
   container.onmouseover = function(){
+    /*
     var id = setInterval(frame, 1);
     MovimientoScena = scene;
     MoverScena = true;
@@ -180,11 +194,13 @@ function init(contenedorDOM, animated, path, camx, camy, camz) {
           }
           pos++;
     }
-
+*/
 };
 container.onmouseout = function(){
+    animacion2.crossFadeTo(animacion1, 1);
     var id = setInterval(frame, 1);
     var pos = 0;
+    
     MoverScena = false;
     function frame() {
         if (pos > 30) {
@@ -212,8 +228,7 @@ container.onmouseout = function(){
   renderer.setAnimationLoop( () => {
 
     if(MoverScena){
-      MovimientoScena.rotation.x = Math.sin(1000*tiempoTranscurrido*Math.PI/180);
-      console.log(5 * Math.sin(tiempoTranscurrido*Math.PI/180))
+      MovimientoScena.rotation.x = 0.5 * Math.sin(1000*tiempoTranscurrido*Math.PI/180);
     }
 
     update();
@@ -249,11 +264,11 @@ function onWindowResize() {
 
 //window.addEventListener( 'resize', onWindowResize );
 
-init('#banana3d', true, '../Modelos/banana.glb', 1.5, 1.5, 6.5);
-init('#bolsa3d', false, '../Modelos/bolsa.glb',1.5, 1.5, 6.5);
-init('#botella3d', false, '../Modelos/botella.glb',1.5, 1.5, 6.5);
-init('#lata3d', false, '../Modelos/lata.glb',1.5, 1.5, 6.5);
-init('#caneca3d', false, '../Modelos/caneca.glb',1.5, 1.5, 6.5);
+init('#banana3d', true, '../Modelos/banana.glb', 0, 3, 35);
+init('#bolsa3d', false, '../Modelos/bolsa.glb',0, 1, 15);
+init('#botella3d', false, '../Modelos/botella.glb',0, 1, 10);
+init('#lata3d', true, '../Modelos/lata2.glb',0,1.5, 10);
+init('#caneca3d', false, '../Modelos/caneca.glb',0, 4, 15);
 
 //init('#banana3d','../Modelos/banana.glb', 2, 20);
 //init('#caneca3d','../Modelos/caneca.glb', 2, 20);
