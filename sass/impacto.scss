@@ -12,19 +12,27 @@ $FondoComida: #3c423d;
     
     
     .TituloImpacto{
+        margin-top: 6%;
+        margin-bottom: 1%;
         
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: baseline;
+        position: relative;
         h2{
             color: $AzulTitulo;
             padding: 1%;
-            font-size: 370%;
+            font-size: 6em;
+            
         }
         img{
-            filter: opacity(.5) drop-shadow(0 0 0 $AzulTitulo);
-            width: 3%;
             
+            height: 9em;
+            margin-left: 5em;
+            transform: translateY(1em);
         }
         
     }
@@ -37,15 +45,20 @@ $FondoComida: #3c423d;
         grid-template-columns: 1;
         grid-template-rows: 3;
         width: 50%;
-        height: 75%;
+        height: 60%;
         margin: auto;
+        
+
         p{
-        flex-basis: 230px;
+        flex-basis: 40%;
         align-self: center;
+        font-size: 150%;
         }
         #polucion, #suelo, #oceano{
             display: flex;
             margin: 1%;
+            
+            
         }
         #suelo{justify-content: center;
         p{
@@ -55,13 +68,13 @@ $FondoComida: #3c423d;
         #oceano{justify-content: flex-end;}
 
         .textImg_Izq{
-            border-radius: 100px 0 0 0;
+            border-radius: 10em 0 0 0;
             -webkit-mask-image:-webkit-gradient(linear, 80% center, right center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-
+            
         }
         .textImg_Der{
-            border-radius: 0 100px 0 0;
+            border-radius: 0 10em 0 0;
             -webkit-mask-image:-webkit-gradient(linear, 20% center, left center, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
         }
@@ -70,12 +83,12 @@ $FondoComida: #3c423d;
             
             position: relative;
             overflow: hidden;
-            width: 230px;
+            width: 25em;
             h4{
                 position: absolute;
                 bottom: 0;
                 padding: 1%;
-                font-size: 200%;
+                font-size: 320%;
                 color: #fff;
                 font-weight: 500;
                 background-color: rgba(12, 88, 107, .6);
@@ -85,8 +98,9 @@ $FondoComida: #3c423d;
         
         }
         img{
-            width: 230px;
-            
+            width: 100%;
+            position: absolute;
+            bottom:0;
         }
     }
     
@@ -218,5 +232,10 @@ $FondoComida: #3c423d;
 }
 .models3d{
     transform: scale(1.5);
-    //background: green;
+    background: green;
+}
+#tortuga3d{
+    width: 20vw;
+    height: 20vh;
+    background: black;
 }

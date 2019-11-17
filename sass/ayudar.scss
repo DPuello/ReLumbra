@@ -126,12 +126,16 @@ $DegradaText: #a3b128;
     background-color: $VerdeFondo2;
     padding: 8vh 10vw;
     .video{
-        display: block;
+        
         border-radius: 0 100px 0 100px;
-        width: 720px;
-        height: auto;
+        width: 70%;
+        
         overflow: hidden;
         //margin: auto;
+        img{
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 

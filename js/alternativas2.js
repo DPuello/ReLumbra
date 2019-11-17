@@ -172,7 +172,7 @@ $(function(){
 	        			$(".banana").css("display","none");
 	        			puntos++;
 	        			console.log("puntos "+puntos);
-
+						rarar();
 	        			if(puntos==5)
 	        			{
 	        				$(".multi-line-text").text("FELICIDADES, TERMINASTE EL JUEGO SATISFACTORIAMENTE");
@@ -233,7 +233,7 @@ $(function(){
 
 	 	
 	  	$(".caneca1").on("mouseleave",function(){
-	 	$(this).removeClass( "circuloverde invisible" );
+		 $(this).removeClass( "circuloverde invisible" );
 	 	});
 	 			
 	 			/*---------para arrastrar la lata-----------*/
@@ -259,7 +259,8 @@ $(function(){
 	        			$(".lata").animate({opacity: "0", display:"none"},500);
 	        			$(".lata").css("display","none");
 	        			puntos++;
-	        			console.log("puntos "+puntos);
+						console.log("puntos "+puntos);
+						rarar2();
 	        			if(puntos==5)
 	        			{
 	        				$(".multi-line-text").text("FELICIDADES, TERMINASTE EL JUEGO SATISFACTORIAMENTE");
@@ -344,7 +345,8 @@ $(function(){
 	        			$(".bolsa").animate({opacity: "0", display:"none"},500);
 	        			$(".bolsa").css("display","none");
 	        			puntos++;
-	        			console.log("puntos "+puntos);
+						console.log("puntos "+puntos);
+						rarar2();
 	        			if(puntos==5)
 	        			{
 	        				$(".multi-line-text").text("FELICIDADES, TERMINASTE EL JUEGO SATISFACTORIAMENTE");
@@ -431,7 +433,8 @@ $(function(){
 	        			$(".botella").animate({opacity: "0", display:"none"},500);
 	        			$(".botella").css("display","none");
 	        			puntos++;
-	        			console.log("puntos "+puntos);
+						console.log("puntos "+puntos);
+						rarar2();
 	        			if(puntos==5)
 	        			{
 	        				$(".multi-line-text").text("FELICIDADES, TERMINASTE EL JUEGO SATISFACTORIAMENTE");
@@ -518,7 +521,8 @@ $(function(){
 	        			$(".bolsa2").animate({opacity: "0", display:"none"},500);
 	        			$(".bolsa2").css("display","none");
 	        			puntos++;
-	        			console.log("puntos "+puntos);
+						console.log("puntos "+puntos);
+						rarar2();
 	        			if(puntos==5)
 	        			{
 	        				$(".multi-line-text").text("FELICIDADES, TERMINASTE EL JUEGO SATISFACTORIAMENTE");

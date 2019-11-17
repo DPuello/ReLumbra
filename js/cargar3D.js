@@ -104,19 +104,20 @@ var MoverScena = false;
 var tiempoTranscurrido = 0;
 const mixers = [];
 const clock = new THREE.Clock();
-var animacion, animacion2, modelito;
+var animacion = [], animacion2 = [], modelito;
 
-function init(contenedorDOM, animated, path, camx, camy, camz) {
+function init(contenedorDOM, animated, path, camx, camy, camz, loop0, loop1) {
 
   let container;
   let camera;
   let renderer;
   let scene;
+  var Multiplicador = 0.5;
 
   container = document.querySelector( contenedorDOM );
 
   scene = new THREE.Scene();
-  //scene.background = new THREE.Color( 0x8FBCD4 );
+  scene.background = new THREE.Color( 0x8FBCD4 );
 
   //Camara
   camera = new THREE.PerspectiveCamera( 35, container.clientWidth / container.clientHeight, 1, 100 );
@@ -138,22 +139,28 @@ function init(contenedorDOM, animated, path, camx, camy, camz) {
     const model = gltf.scene.children[ 0 ];
     model.position.copy( position );
     if(animated){
-      const animation = gltf.animations[ 0 ];
+      const animation = gltf.animations[ loop0 ];
 
       const mixer = new THREE.AnimationMixer( model );
       mixers.push( mixer );
 
       const action = mixer.clipAction( animation );
-      const action2 = mixer.clipAction( gltf.animations[ 1 ] );
-      
-      action.play();
+      const action2 = mixer.clipAction( gltf.animations[ loop1 ] );
+      action.setDuration(0.5);
       action2.play();
-      //action.clampWhenFinished = true;
-      //action.loop = THREE.LoopOnce;
-      animacion = action;
-      animacion2 = action2;
+      action.play();
+      action.clampWhenFinished = true;
+      action.loop = THREE.LoopOnce;
+      animacion.push(action);
+      animacion2.push(action2);
     }
     scene.add( model );
+
+    if(contenedorDOM == '#caneca3d' || contenedorDOM == '#caneca3d2'){
+      camera.lookAt(scene.position);
+      camera.position.y+=1;
+      camera.position.z-=1;
+    }
 
   };
 
@@ -170,14 +177,65 @@ function init(contenedorDOM, animated, path, camx, camy, camz) {
   renderer.gammaOutput = true;
 
   renderer.physicallyCorrectLights = true;
-
+  /*
   container.onmouseenter = function(){
     //animacion.reset();
-    animacion.crossFadeTo(animacion2, 1);
-  }
+    //MovimientoScena = scene;
+    animacion[MovimientoScena].reset();
+    //animacion2[0].crossFadeTo(animacion[0], 0);
+    
+  }*/
+  $( "#bolsa3d" ).mouseenter(function() {
+    Multiplicador = 0.1;
+    animacion[0].reset();
+    animacion2[0].crossFadeTo(animacion[0], 0.1);
+  })
+  .mouseout(function() {
+    Multiplicador = 0.5;
+    animacion2[0].reset();
+    animacion[0].crossFadeTo(animacion2[0], 1);
+  });
+  $( "#bolsa3d2" ).mouseenter(function() {
+    Multiplicador = 0.1;
+    animacion[1].reset();
+    animacion2[1].crossFadeTo(animacion[1], 0.1);
+  })
+  .mouseout(function() {
+    Multiplicador = 0.5;
+    animacion2[1].reset();
+    animacion[1].crossFadeTo(animacion2[1], 1);
+  });
+  $( "#lata3d" ).mouseenter(function() {
+    Multiplicador = 0.05;
+    animacion[4].reset();
+    animacion2[4].crossFadeTo(animacion[4], 0.1);
+  })
+  .mouseout(function() {
+    Multiplicador = 0.5;
+    animacion2[4].reset();
+    animacion[4].crossFadeTo(animacion2[4], 3);
+  });
+  $( "#botella3d" ).mouseenter(function() {
+    animacion[5].reset();
+    animacion2[5].crossFadeTo(animacion[5], 0.1);
+  })
+  .mouseout(function() {
+    animacion2[5].reset();
+    animacion[5].crossFadeTo(animacion2[5], 1);
+  });
+  $( "#banana3d" ).mouseenter(function() {
+    animacion[6].reset();
+    animacion2[6].crossFadeTo(animacion[6], 0.1);
+  })
+  .mouseout(function() {
+    animacion2[6].reset();
+    animacion[6].crossFadeTo(animacion2[6], 4);
+  });
+
+
   
   container.onmouseover = function(){
-    /*
+    if(contenedorDOM != '#caneca3d' && contenedorDOM != '#caneca3d2'){
     var id = setInterval(frame, 1);
     MovimientoScena = scene;
     MoverScena = true;
@@ -189,46 +247,48 @@ function init(contenedorDOM, animated, path, camx, camy, camz) {
             clearInterval(id);
           } else {
             pos++;
-            //camera.position.z -=1;
-            camera.lookAt(scene.position);
+            camera.position.z -=0.05;
+            //camera.lookAt(scene.position);
           }
           pos++;
     }
-*/
+  }
 };
 container.onmouseout = function(){
-    animacion2.crossFadeTo(animacion1, 1);
+  if(contenedorDOM != '#caneca3d' && contenedorDOM != '#caneca3d2'){
     var id = setInterval(frame, 1);
     var pos = 0;
     
     MoverScena = false;
     function frame() {
         if (pos > 30) {
-          //camera.position.x = camx;
-          //camera.position.y = camy;
-          //camera.position.z = -camz;
+          camera.position.x = camx;
+          camera.position.y = camy;
+          camera.position.z = camz;
           scene.rotation.x = 0;
           scene.rotation.y = 0;
           scene.rotation.z = 0;
             clearInterval(id);
           } else {
             pos++;
-            //camera.position.z +=1;
+            camera.position.z +=0.05;
             //camera.position.y -= (camera.position.y/30) + camy;
             //camera.position.x -= (camera.position.x/30) + camx; 
             scene.rotation.x -= scene.rotation.x/30;
             scene.rotation.y -= scene.rotation.y/30;
-            camera.lookAt(scene.position);
+            //camera.lookAt(scene.position);
           }
     
     }
+  }
 };
 
   container.appendChild( renderer.domElement );
   renderer.setAnimationLoop( () => {
 
     if(MoverScena){
-      MovimientoScena.rotation.x = 0.5 * Math.sin(1000*tiempoTranscurrido*Math.PI/180);
+      MovimientoScena.rotation.x = Multiplicador * Math.sin(10*tiempoTranscurrido*Math.PI/180);
+      MovimientoScena.rotation.y = Multiplicador * Math.sin(50 + 100*tiempoTranscurrido*Math.PI/180);
     }
 
     update();
@@ -264,11 +324,21 @@ function onWindowResize() {
 
 //window.addEventListener( 'resize', onWindowResize );
 
-init('#banana3d', true, '../Modelos/banana.glb', 0, 3, 35);
-init('#bolsa3d', false, '../Modelos/bolsa.glb',0, 1, 15);
-init('#botella3d', false, '../Modelos/botella.glb',0, 1, 10);
-init('#lata3d', true, '../Modelos/lata2.glb',0,1.5, 10);
-init('#caneca3d', false, '../Modelos/caneca.glb',0, 4, 15);
+init('#banana3d', true, '../Modelos/banana.glb', 0, 3, 30,1, 0);
+init('#bolsa3d', true, '../Modelos/bolsa.glb',0, .5, 15,1, 0);
 
+init('#botella3d', true, '../Modelos/botella.glb',0, 1.2, 6.1,0, 1);
+init('#lata3d', true, '../Modelos/lata.glb',0,.6, 10,0, 3);
+init('#bolsa3d2', true, '../Modelos/bolsa.glb',0, .5, 15,1, 0);
+init('#caneca3d', true, '../Modelos/caneca.glb',-4, 3, 7,0, 0);
+init('#caneca3d2', true, '../Modelos/caneca2.glb',4, 3, 7,0, 0);
+
+function rarar(){
+  animacion[2].reset();
+}
+function rarar2(){
+  animacion[3].reset();
+}
+//init('#tortuga3d', false, '../Modelos/tortuga.glb',0, 1, 7,0, 0);
 //init('#banana3d','../Modelos/banana.glb', 2, 20);
 //init('#caneca3d','../Modelos/caneca.glb', 2, 20);

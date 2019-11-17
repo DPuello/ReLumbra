@@ -2,14 +2,23 @@ body {
   background: #fff; }
 
 .orilla {
-  height: 100vh; }
+  height: 100vh;
+  transform: skew(15deg, -15deg); }
   .orilla .waves {
-    transform: rotate(-90deg) translateX(20vw) translateY(40vw); }
+    transform: rotate(-90deg) translateX(20vw) translateY(43vw); }
+  .orilla .Agua {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    background: #57cada;
+    transform: rotate(-90deg) translateX(40vw) translateY(69vw); }
 
 .waves {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 35vh;
   margin-bottom: -7px;
   /*Fix for safari gap*/
   min-height: 100px; }

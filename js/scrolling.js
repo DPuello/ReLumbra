@@ -73,7 +73,7 @@ $(function () { // Seccion Impacto
     })
       .setPin("#js-wrapper")
       .setTween(horizontalSlide)
-      .addIndicators()
+      //.addIndicators()
       .addTo(controller);
 
     
@@ -84,7 +84,25 @@ $(function () { // Seccion Impacto
     })
     .on('enter', function () { // Para modificar el borde //
       // Distancia superior
+      $(".cls-1").css({"fill":"#027368"});
+      $(".cls-2").css({"fill":"#027368"});
+      //$(".cls-3").css({"fill":"#027368"});
       AjusteBorde("delfincito", "Capa_1", "Capa_2");
+      $("#delfincito").attr("src", "images/menu/d3.jpg");
+    $("#impacto").css({"background-color":"#04c4c5"});
+    $("#impacto").css({"border-color":"#a7c8f2"});
+    $("#patito").attr("src", "images/menu/p3.jpg");
+    $("#quees").css({"background-color":"#04c4c5"});
+    $("#quees").css({"border-color":"#a7c8f2"});
+    $("#tortica").attr("src", "images/menu/g3.jpg");
+    $("#graficas").css({"background-color":"#04c4c5"});
+    $("#graficas").css({"border-color":"#a7c8f2"});
+    $("#recicla").attr("src", "images/menu/r3.jpg");
+    $("#alternativas").css({"background-color":"#04c4c5"});
+    $("#alternativas").css({"border-color":"#a7c8f2"});
+    $("#manita").attr("src", "images/menu/m3.jpg");
+    $("#ayudar").css({"background-color":"#04c4c5"});
+    $("#ayudar").css({"border-color":"#a7c8f2"});
     })
     .setClassToggle('.cls-1', 'amarillo')
       //.setTween(color)
@@ -151,7 +169,25 @@ $(function () { // Seccion Impacto
     })
     .on('enter', function () { // Para modificar el borde //
       // Distancia superior
+      $(".cls-1").css({"fill":"#027368"});
+      $(".cls-2").css({"fill":"#027368"});
+      //$(".cls-1").css({"fill":"red"});
       AjusteBorde("recicla", "Capa_1", "Capa_2");
+      $("#delfincito").attr("src", "images/menu/d3.jpg");
+    $("#impacto").css({"background-color":"#04c4c5"});
+    $("#impacto").css({"border-color":"#a7c8f2"});
+    $("#patito").attr("src", "images/menu/p3.jpg");
+    $("#quees").css({"background-color":"#04c4c5"});
+    $("#quees").css({"border-color":"#a7c8f2"});
+    $("#tortica").attr("src", "images/menu/g3.jpg");
+    $("#graficas").css({"background-color":"#04c4c5"});
+    $("#graficas").css({"border-color":"#a7c8f2"});
+    $("#recicla").attr("src", "images/menu/r3.jpg");
+    $("#alternativas").css({"background-color":"#04c4c5"});
+    $("#alternativas").css({"border-color":"#a7c8f2"});
+    $("#manita").attr("src", "images/menu/m3.jpg");
+    $("#ayudar").css({"background-color":"#04c4c5"});
+    $("#ayudar").css({"border-color":"#a7c8f2"});
     })
     .setClassToggle('.cls-1', 'amarillo')
       //.setTween(color)
@@ -166,7 +202,25 @@ $(function () { // Seccion Impacto
       })
       .on('enter', function () { // Para modificar el borde //
         // Distancia superior
+        $(".cls-1").css({"fill":"#02628c"});
+      $(".cls-2").css({"fill":"#02628c"});
+      //$(".cls-1").css({"fill":"red"});
         AjusteBorde("tortica", "Capa_1", "Capa_2");
+        $("#delfincito").attr("src", "images/menu/d2.jpg");
+    $("#impacto").css({"background-color":"#01628a"});
+    $("#impacto").css({"border-color":"#faa121"});
+    $("#patito").attr("src", "images/menu/p2.jpg");
+    $("#quees").css({"background-color":"#01628a"});
+    $("#quees").css({"border-color":"#faa121"});
+    $("#tortica").attr("src", "images/menu/g2.jpg");
+    $("#graficas").css({"background-color":"#01628a"});
+    $("#graficas").css({"border-color":"#faa121"});
+    $("#recicla").attr("src", "images/menu/r2.jpg");
+    $("#alternativas").css({"background-color":"#01628a"});
+    $("#alternativas").css({"border-color":"#faa121"});
+    $("#manita").attr("src", "images/menu/m2.jpg");
+    $("#ayudar").css({"background-color":"#01628a"});
+    $("#ayudar").css({"border-color":"#faa121"});
       })
       .setClassToggle('.cls-1', 'amarillo')
         //.setTween(color)
@@ -181,7 +235,30 @@ $(function () { // Seccion Impacto
     })
     .on('enter', function () { // Para modificar el borde //
       // Distancia superior
+      $(".cls-1").css({"fill":"#faa121"});
+      $(".cls-2").css({"fill":"#faa121"});
+      //$(".cls-1").css({"fill":"red"});
       AjusteBorde("ayudar", "Capa_1", "Capa_2");
+      $("#delfincito").attr("src", "images/menu/d1.jpg");
+
+    $("#impacto").css({"background-color":"#9aa626"});
+    $("#impacto").css({"border-color":"#bece30"});
+    $("#patito").attr("src", "images/menu/p1.jpg");
+
+    $("#quees").css({"background-color":"#9aa626"});
+    $("#quees").css({"border-color":"#bece30"});
+    $("#tortica").attr("src", "images/menu/g1.jpg");
+
+    $("#graficas").css({"background-color":"#9aa626"});
+    $("#graficas").css({"border-color":"#bece30"});
+    $("#recicla").attr("src", "images/menu/r1.jpg");
+
+    $("#alternativas").css({"background-color":"#9aa626"});
+    $("#alternativas").css({"border-color":"#bece30"});
+    $("#manita").attr("src", "images/menu/m1.jpg");
+
+    $("#ayudar").css({"background-color":"#9aa626"});
+    $("#ayudar").css({"border-color":"#bece30"});
     })
     .setClassToggle('.cls-1', 'amarillo')
       //.setTween(color)
@@ -195,9 +272,27 @@ $(function () { // Seccion Impacto
     })
     .on('enter', function () { // Para modificar el borde //
       // Distancia superior
+      $(".cls-1").css({"fill":"#faa121"});
+      $(".cls-2").css({"fill":"#faa121"});
+      //$(".cls-1").css({"fill":"red"});
       AjusteBorde("patito", "Capa_1", "Capa_2");
+      $("#delfincito").attr("src", "images/menu/d1.jpg");
+    $("#impacto").css({"background-color":"#9aa626"});
+    $("#impacto").css({"border-color":"#bece30"});
+    $("#patito").attr("src", "images/menu/p1.jpg");
+    $("#quees").css({"background-color":"#9aa626"});
+    $("#quees").css({"border-color":"#bece30"});
+    $("#tortica").attr("src", "images/menu/g1.jpg");
+    $("#graficas").css({"background-color":"#9aa626"});
+    $("#graficas").css({"border-color":"#bece30"});
+    $("#recicla").attr("src", "images/menu/r1.jpg");
+    $("#alternativas").css({"background-color":"#9aa626"});
+    $("#alternativas").css({"border-color":"#bece30"});
+    $("#manita").attr("src", "images/menu/m1.jpg");
+    $("#ayudar").css({"background-color":"#9aa626"});
+    $("#ayudar").css({"border-color":"#bece30"});
     })
-    .setClassToggle('.cls-1', 'amarillo')
+    //.setClassToggle('.cls-1', 'amarillo')
       //.setTween(color)
       .addTo(controller);
     

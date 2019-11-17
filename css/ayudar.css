@@ -84,11 +84,12 @@
     width: 60vw;
     text-align: right; }
   #degradacion .video {
-    display: block;
     border-radius: 0 100px 0 100px;
-    width: 720px;
-    height: auto;
+    width: 70%;
     overflow: hidden; }
+    #degradacion .video img {
+      width: 100%;
+      height: 100%; }
 
 .clear {
   clear: both; }

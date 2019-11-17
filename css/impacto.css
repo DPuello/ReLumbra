@@ -2,16 +2,23 @@
   background: #ffe7cb;
   position: relative; }
   #Impacto .TituloImpacto {
+    margin-top: 6%;
+    margin-bottom: 1%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    justify-content: center;
-    align-items: baseline; }
+    justify-content: left;
+    align-items: baseline;
+    position: relative; }
     #Impacto .TituloImpacto h2 {
       color: #027368;
       padding: 1%;
-      font-size: 370%; }
+      font-size: 6em; }
     #Impacto .TituloImpacto img {
-      filter: opacity(0.5) drop-shadow(0 0 0 #027368);
-      width: 3%; }
+      height: 9em;
+      margin-left: 5em;
+      transform: translateY(1em); }
   #Impacto p {
     width: 70%; }
   #Impacto .contenido-Impacto {
@@ -19,11 +26,12 @@
     grid-template-columns: 1;
     grid-template-rows: 3;
     width: 50%;
-    height: 75%;
+    height: 60%;
     margin: auto; }
     #Impacto .contenido-Impacto p {
-      flex-basis: 230px;
-      align-self: center; }
+      flex-basis: 40%;
+      align-self: center;
+      font-size: 150%; }
     #Impacto .contenido-Impacto #polucion, #Impacto .contenido-Impacto #suelo, #Impacto .contenido-Impacto #oceano {
       display: flex;
       margin: 1%; }
@@ -34,29 +42,31 @@
     #Impacto .contenido-Impacto #oceano {
       justify-content: flex-end; }
     #Impacto .contenido-Impacto .textImg_Izq {
-      border-radius: 100px 0 0 0;
+      border-radius: 10em 0 0 0;
       -webkit-mask-image: -webkit-gradient(linear, 80% center, right center, from(black), to(rgba(0, 0, 0, 0)));
       mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)); }
     #Impacto .contenido-Impacto .textImg_Der {
-      border-radius: 0 100px 0 0;
+      border-radius: 0 10em 0 0;
       -webkit-mask-image: -webkit-gradient(linear, 20% center, left center, from(black), to(rgba(0, 0, 0, 0)));
       mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)); }
     #Impacto .contenido-Impacto .textImg_Izq, #Impacto .contenido-Impacto .textImg_Der {
       position: relative;
       overflow: hidden;
-      width: 230px; }
+      width: 25em; }
       #Impacto .contenido-Impacto .textImg_Izq h4, #Impacto .contenido-Impacto .textImg_Der h4 {
         position: absolute;
         bottom: 0;
         padding: 1%;
-        font-size: 200%;
+        font-size: 320%;
         color: #fff;
         font-weight: 500;
         background-color: rgba(12, 88, 107, 0.6);
         width: 100%;
         text-align: center; }
     #Impacto .contenido-Impacto img {
-      width: 230px; }
+      width: 100%;
+      position: absolute;
+      bottom: 0; }
 
 #Cadena {
   width: 200vw;
@@ -146,6 +156,12 @@
   left: 0; }
 
 .models3d {
-  transform: scale(1.5); }
+  transform: scale(1.5);
+  background: green; }
+
+#tortuga3d {
+  width: 20vw;
+  height: 20vh;
+  background: black; }
 
 /*# sourceMappingURL=impacto.css.map */
