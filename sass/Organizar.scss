@@ -152,14 +152,11 @@ body{
   transform-origin: left;
   }
   .cls-1{
-    stroke-width: 2;
-    fill:#3f7bff;
+    
+    fill:#faa121;
     transition: fill 1s;
   }
-  .amarillo{
-    fill:yellow;
-    //transition: fill 3s;
-  }
+  
   #Capa_2{
     width: 20%;
     height: 25vh;
@@ -172,13 +169,19 @@ body{
     transform-origin: left;
   }
   .cls-2{
-    fill:#3f7bff;
+    fill:#faa121;
+    transition: fill 1s;
   }
   #Capa_3{
     height: 50vh;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
+    z-index: 4;
     transition: all 1s;
+    transform: scaleX(1.3);
+    transform-origin: right;
   }
-  .cls-3{fill:#3f7bff;}
+  .cls-3{
+    fill:#faa121;
+    transition: fill 1s;}

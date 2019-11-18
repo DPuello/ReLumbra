@@ -25,7 +25,14 @@ $FondoComida: #3c423d;
         h2{
             color: $AzulTitulo;
             padding: 1%;
-            font-size: 6em;
+            font-size: 600%;
+
+            @media (min-width: 768px) {
+                font-size: 300%;
+            }
+            @media (min-width: 1000px) {
+                font-size: 600%;
+            }
             
         }
         img{
@@ -33,6 +40,12 @@ $FondoComida: #3c423d;
             height: 9em;
             margin-left: 5em;
             transform: translateY(1em);
+            @media (min-width: 768px) {
+                height: 4em;
+            }
+            @media (min-width: 1000px) {
+                height: 9em;
+            }
         }
         
     }
@@ -43,16 +56,18 @@ $FondoComida: #3c423d;
         
         display: grid;
         grid-template-columns: 1;
-        grid-template-rows: 3;
+        grid-template-rows: 1fr 1fr 1fr;
         width: 50%;
         height: 60%;
         margin: auto;
-        
+        @media (min-width: 768px) {
+            //height: 30%;
+        }
 
         p{
         flex-basis: 40%;
         align-self: center;
-        font-size: 150%;
+        //font-size: 150%;
         }
         #polucion, #suelo, #oceano{
             display: flex;
@@ -112,17 +127,30 @@ $FondoComida: #3c423d;
     background: rgb(87,202,218);
     background: linear-gradient(90deg, rgba(87,202,218,1) 0%, rgba(64,166,212,1) 85%, rgba(60,66,61,1) 100%);
     p{
-        width: 400px;
+        width: 50%;
+    }
+    #tortuga{
+        position: absolute;
+        top:15%;
+        left: 5%;
+    }
+    #micro{
+        position: absolute;
+        bottom: 20%;
+        left: 15%;
+        height: 15em;
     }
     #delfin{
         position: absolute;
+        height: 30%;
+        width: 13%;
         top:50%;
         left: 5%;
     }
     #marino{
         padding: 1% 10%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 33% 33% 33%;
         
         height: 90vh;
         h5{
@@ -133,28 +161,41 @@ $FondoComida: #3c423d;
         .ballenaT{
             text-align: right;
             justify-self: end;
-            align-self: end;
+            align-self: center;
+            
+            p{
+                margin: 0;
+                text-align: right;
+                margin-left: auto;
+            }
         }
         .ballenaI{
-            
-            img{
-                
-                width: 45%;
+            height: 100%;
+            padding: 0;
+            canvas{
+                margin: 0;
+                padding: 0;
+                height: 100%;
             }
             
         }
         .ave{
             grid-row: 1/2;
             grid-column: 3/4;
-            align-self: end;
             
+            position: relative;
+            height: 100%;
+            align-self: end;
+            justify-self: end;
             p{
+                
                 float: left;
                 text-align: right;
             }
             canvas{
-                height: 100px;
-                width: 100px;
+                
+                height: 100%;
+                width: 30%;
                 
             }
             img{
@@ -168,10 +209,15 @@ $FondoComida: #3c423d;
             align-self: center;
             justify-self: center;
             text-align: center;
+            height: 100%;
+            p{
+                
+                width: 50%;
+            }
             canvas{
                 float: left;
-                height: 100px;
-                
+                height: 100%;
+                width: 30%;
             }
             
         }
@@ -193,8 +239,10 @@ $FondoComida: #3c423d;
         .ostra{
             grid-row: 3/4;
             grid-column: 3/4;
-            img{
-                width: 14%;
+            
+            canvas{
+                height: 70%;
+                
             }
         }
     }
@@ -230,10 +278,7 @@ $FondoComida: #3c423d;
     top: 50%;
     left: 0;
 }
-.models3d{
-    transform: scale(1.5);
-    background: green;
-}
+
 #tortuga3d{
     width: 20vw;
     height: 20vh;

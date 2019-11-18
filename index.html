@@ -33,13 +33,19 @@
 
     <!--Los bordes de la página-->
     <div id="Bordes">
-        <svg id="Capa_1" viewBox="0 0 310.2 859.41" preserveAspectRatio="none">
-        <path class="cls-1" d="M310.2,1200H0V340.59c16.46,0,88.93,21.36,123.36,101,42,97,50.23,345.2,46,450.06C165.31,993.65,210.2,1146.71,310.2,1200Z" 
-        transform="translate(0 -340.59)"/></svg>
+        <svg id="Capa_1"viewBox="0 0 375 683.91"  preserveAspectRatio="none">
+            <path class="cls-1" 
+            d="M0,516.09V1200H375c-41.62-11-167.61,22.7-200-107C133,924.8,187.5,575,0,516.09Z" 
+            transform="translate(0 -516.09)"/></svg>
 
-        <svg id="Capa_2" viewBox="0 0 469.61 547" preserveAspectRatio="none">
+        <svg id="Capa_2" viewBox="0 0 375 410.8" preserveAspectRatio="none">
             <path class="cls-2" 
-            d="M0,547V0H469.61c-205.49,22.62-242.15,329.33-273,418.6C168.13,501.1,106.63,547,0,547Z"/>
+            d="M0,410.8V0H375C333.38,6.59,207.39-13.64,175,64.27,133,165.3,187.5,375.42,0,410.8Z"/>
+        </svg>
+        <svg id="Capa_3" viewBox="0 0 145 513" preserveAspectRatio="none">
+            <path class="cls-3" 
+            d="M1920,687v513H1775C1883.1,1200,1907,975,1920,687Z"
+            transform="translate(-1775 -687)"/>
         </svg>
     </div>
 
@@ -257,8 +263,9 @@
               <!--Waves end-->
               </section>
               <section id="Cadena" class="section">
-                  <img src="images/tortuga.png" alt="tortuga">
-                    <canvas class="models3d" id="delfin"></canvas>
+                <img id="tortuga" src="images/tortuga.png" alt="tortuga">
+                <img id="micro" src="images/microplasticos.jpg" alt="microplasticos">
+                <canvas class="models3d" id="delfin"></canvas>
                 <div id="marino">
                     
                   <h5>Microplástico</h5>
@@ -334,7 +341,7 @@
                 <div class="tituloGrafica">
                     <h5>Impacto en</h5>
                     <h2>Gráficas</h2>
-                    <img src="images/Logo-N.png" alt="Logo">
+                    <img src="images/Logo-azul2.png" alt="Logo">
                 </div>
                 <div class="imgCentro">
                     <img id="imagen1" class="car1" src="images/torta.png" alt="Stadistic">
@@ -519,10 +526,10 @@
                                         Los plásticos de un solo uso son un problema para el medio ambiente, puedes participar en campañas de limpieza de plástico
                                     </p>
                                 </div>
-                                <div>
+                                <div class="textCepillo">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis quod, sit quae 
-                                        dolor necessitatibus.
+                                        Adquiere los mismos productos, elaborados con materiales alternativos, muchos de estos
+                                        son amigables con el medio ambiente
                                     </p>
                                 </div>
                             </div>
@@ -576,7 +583,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-
+<script src="https://rawgit.com/tweenjs/tween.js/r14/src/Tween.js"></script>
 <!--<script type="text/javascript" src="js/carrusel1.js"></script>-->
 <script type="text/javascript" src="js/Alternativas.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>

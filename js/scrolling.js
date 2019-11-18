@@ -1,12 +1,12 @@
 var shapes1 = [
   {
-      d: "M310.2,1200H0V340.59c16.46,0,114.29,26.53,123.36,101,12.78,104.91,42.34,347.66,46,450.06C173.07,993.67,226.53,1136.51,310.2,1200Z"
+      d: "M0,516.09V1200H375c-41.62-11-156.33,19.35-200-107C117.13,925.57,187.5,575,0,516.09Z"
   },
   {
-      d: "M310.2,1200H0V340.59c16.46,0,100,0,123.36,101,23.82,103,31.75,343.94,46,450.06C183,992.82,240.22,1115.53,310.2,1200Z"
+      d: "M0,516.09V1200H375c-41.62-11-156.33,19.35-200-107C117.13,925.57,187.5,552.09,0,516.09Z"
   },
   {
-      d: "M310.2,1200H0V340.59c16.46,0,77.55,0,123.36,101,43.66,96.24,42,343.94,56.24,443.94C194,986.59,224.49,1136.51,310.2,1200Z"
+      d: "M0,516.09V1200H375c-46.38-25.44-156.33,19.35-200-107C117.13,925.57,187.5,552.09,0,516.09Z"
   }
 ];
 var morph1 = anime({
@@ -27,21 +27,48 @@ var morph1 = anime({
 // SVG 2
 var shapes2 = [
   {
-      d: "M0,547V0H469.61c-207,12.12-253.49,289.61-273,418.6C183.58,504.9,106.63,547,0,547Z"
-  },
-  {
-      d: "M0,547V0H456.12c-166.49,64.62-198,309.1-259.49,418.6C153.89,494.7,106.63,547,0,547Z"
-  },
-  {
-      d: "M0,547V0H469.61c-195,22.62-253.49,204.11-273,418.6C188.73,505.52,106.63,547,0,547Z"
-  }
+    d: "M0,410.8V0H375C333.38,6.59,198.24-16.84,175,64.27,147,162,187.5,375.42,0,410.8Z"
+},
+{
+    d: "M0,410.8V0H375C333.38,6.59,198.24-16.84,175,64.27,147,162,193,392,0,410.8Z"
+},
+{
+    d: "M0,410.8V0H375C365,13,198.24-16.84,175,64.27,147,162,193,392,0,410.8Z"
+}
 ];
 var morph2 = anime({
   targets: '.cls-2',
   d: [
-      //{value: shapes2[0].d},
+      {value: shapes2[0].d},
       {value: shapes2[1].d},
       {value: shapes2[2].d}
+  ],
+  duration: 5000,
+  direction: 'alternate',
+  autoplay: true,
+  easing: 'easeInOutQuad',
+  elasticity: 100,
+  loop: true
+});
+
+// SVG 3
+var shapes3 = [
+  {
+    d: "M1920,687v513H1775C1881,1173,1907,975,1920,687Z"
+},
+{
+    d: "M1920,687v513H1775C1881,1173,1887,956,1920,687Z"
+},
+{
+    d: "M1920,687v513H1775C1907,1185,1887,956,1920,687Z"
+}
+];
+var morph3 = anime({
+  targets: '.cls-3',
+  d: [
+      {value: shapes3[0].d},
+      {value: shapes3[1].d},
+      {value: shapes3[2].d}
   ],
   duration: 5000,
   direction: 'alternate',
@@ -86,8 +113,8 @@ $(function () { // Seccion Impacto
       // Distancia superior
       $(".cls-1").css({"fill":"#027368"});
       $(".cls-2").css({"fill":"#027368"});
-      //$(".cls-3").css({"fill":"#027368"});
-      AjusteBorde("delfincito", "Capa_1", "Capa_2");
+      $(".cls-3").css({"fill":"#027368"});
+      //AjusteBorde("delfincito", "Capa_1", "Capa_2");
       $("#delfincito").attr("src", "images/menu/d3.jpg");
     $("#impacto").css({"background-color":"#04c4c5"});
     $("#impacto").css({"border-color":"#a7c8f2"});
@@ -104,7 +131,7 @@ $(function () { // Seccion Impacto
     $("#ayudar").css({"background-color":"#04c4c5"});
     $("#ayudar").css({"border-color":"#a7c8f2"});
     })
-    .setClassToggle('.cls-1', 'amarillo')
+    //.addIndicators()
       //.setTween(color)
       .addTo(controller);
     
@@ -165,14 +192,14 @@ $(function () { // Seccion Impacto
     new ScrollMagic.Scene({
       triggerElement: "#Alternativas",
       triggerHook: 0.5,
-      duration: $("#Alternativas").height()
+      duration: "100%"
     })
     .on('enter', function () { // Para modificar el borde //
       // Distancia superior
       $(".cls-1").css({"fill":"#027368"});
       $(".cls-2").css({"fill":"#027368"});
-      //$(".cls-1").css({"fill":"red"});
-      AjusteBorde("recicla", "Capa_1", "Capa_2");
+      $(".cls-3").css({"fill":"#027368"});
+      //AjusteBorde("recicla", "Capa_1", "Capa_2");
       $("#delfincito").attr("src", "images/menu/d3.jpg");
     $("#impacto").css({"background-color":"#04c4c5"});
     $("#impacto").css({"border-color":"#a7c8f2"});
@@ -189,7 +216,7 @@ $(function () { // Seccion Impacto
     $("#ayudar").css({"background-color":"#04c4c5"});
     $("#ayudar").css({"border-color":"#a7c8f2"});
     })
-    .setClassToggle('.cls-1', 'amarillo')
+    
       //.setTween(color)
       .addTo(controller);
 
@@ -198,14 +225,14 @@ $(function () { // Seccion Impacto
       new ScrollMagic.Scene({
         triggerElement: "#Graficas",
         triggerHook: 0.5,
-        duration: $("#Graficas").height()
+        duration: "100%"
       })
       .on('enter', function () { // Para modificar el borde //
         // Distancia superior
         $(".cls-1").css({"fill":"#02628c"});
       $(".cls-2").css({"fill":"#02628c"});
-      //$(".cls-1").css({"fill":"red"});
-        AjusteBorde("tortica", "Capa_1", "Capa_2");
+      $(".cls-3").css({"fill":"#02628c"});
+        //AjusteBorde("tortica", "Capa_1", "Capa_2");
         $("#delfincito").attr("src", "images/menu/d2.jpg");
     $("#impacto").css({"background-color":"#01628a"});
     $("#impacto").css({"border-color":"#faa121"});
@@ -222,9 +249,10 @@ $(function () { // Seccion Impacto
     $("#ayudar").css({"background-color":"#01628a"});
     $("#ayudar").css({"border-color":"#faa121"});
       })
-      .setClassToggle('.cls-1', 'amarillo')
+      
         //.setTween(color)
         .addTo(controller);
+
 
 
     /// Seccion Como Ayudar ///
@@ -237,7 +265,7 @@ $(function () { // Seccion Impacto
       // Distancia superior
       $(".cls-1").css({"fill":"#faa121"});
       $(".cls-2").css({"fill":"#faa121"});
-      //$(".cls-1").css({"fill":"red"});
+      $(".cls-3").css({"fill":"#faa121"});
       AjusteBorde("ayudar", "Capa_1", "Capa_2");
       $("#delfincito").attr("src", "images/menu/d1.jpg");
 
@@ -260,7 +288,7 @@ $(function () { // Seccion Impacto
     $("#ayudar").css({"background-color":"#9aa626"});
     $("#ayudar").css({"border-color":"#bece30"});
     })
-    .setClassToggle('.cls-1', 'amarillo')
+    
       //.setTween(color)
       .addTo(controller);
 
@@ -274,7 +302,7 @@ $(function () { // Seccion Impacto
       // Distancia superior
       $(".cls-1").css({"fill":"#faa121"});
       $(".cls-2").css({"fill":"#faa121"});
-      //$(".cls-1").css({"fill":"red"});
+      $(".cls-3").css({"fill":"#faa121"});
       AjusteBorde("patito", "Capa_1", "Capa_2");
       $("#delfincito").attr("src", "images/menu/d1.jpg");
     $("#impacto").css({"background-color":"#9aa626"});
@@ -379,7 +407,5 @@ function AjusteBorde(seccion, capa1, capa2){
       //ActualizarBorde('.cls-1', BordeSeccion1(), 100);
       
       //document.getElementById(capa1).style.width = document.getElementById("redondo").offsetWidth + "px";
-      
-      console.log(document.getElementById("redondo").offsetWidth);
-      console.log("Ancho");
+
 }

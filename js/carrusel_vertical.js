@@ -569,6 +569,7 @@ $("#impacto").on({
 		}
   }, 
   		click: function(){
+			AjusteBorde("delfincito", "Capa_1", "Capa_2");
     $("#delfincito").attr("src", "images/menu/d3.jpg");
     $("#impacto").css({"background-color":"#04c4c5"});
     $("#impacto").css({"border-color":"#a7c8f2"});
@@ -612,6 +613,7 @@ $("#graficas").on({
 		}
   }, 
   		click: function(){
+			AjusteBorde("tortica", "Capa_1", "Capa_2");
     $("#delfincito").attr("src", "images/menu/d2.jpg");
     $("#impacto").css({"background-color":"#01628a"});
     $("#impacto").css({"border-color":"#faa121"});
@@ -658,6 +660,7 @@ $("#alternativas").on({
 		}
   }, 
   		click: function(){
+			AjusteBorde("recicla", "Capa_1", "Capa_2");
     $("#delfincito").attr("src", "images/menu/d3.jpg");
     $("#impacto").css({"background-color":"#04c4c5"});
     $("#impacto").css({"border-color":"#a7c8f2"});
@@ -700,6 +703,7 @@ $("#ayudar").on({
 		}
   }, 
   		click: function(){
+			AjusteBorde("ayudar", "Capa_1", "Capa_2");
     $("#delfincito").attr("src", "images/menu/d1.jpg");
 
     $("#impacto").css({"background-color":"#9aa626"});
@@ -752,6 +756,7 @@ $("#quees").on({
 		}
   }, 
   		click: function(){
+			AjusteBorde("patito", "Capa_1", "Capa_2");
     $("#delfincito").attr("src", "images/menu/d1.jpg");
     $("#impacto").css({"background-color":"#9aa626"});
     $("#impacto").css({"border-color":"#faa121"});

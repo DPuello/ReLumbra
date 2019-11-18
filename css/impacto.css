@@ -14,24 +14,35 @@
     #Impacto .TituloImpacto h2 {
       color: #027368;
       padding: 1%;
-      font-size: 6em; }
+      font-size: 600%; }
+      @media (min-width: 768px) {
+        #Impacto .TituloImpacto h2 {
+          font-size: 300%; } }
+      @media (min-width: 1000px) {
+        #Impacto .TituloImpacto h2 {
+          font-size: 600%; } }
     #Impacto .TituloImpacto img {
       height: 9em;
       margin-left: 5em;
       transform: translateY(1em); }
+      @media (min-width: 768px) {
+        #Impacto .TituloImpacto img {
+          height: 4em; } }
+      @media (min-width: 1000px) {
+        #Impacto .TituloImpacto img {
+          height: 9em; } }
   #Impacto p {
     width: 70%; }
   #Impacto .contenido-Impacto {
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: 3;
+    grid-template-rows: 1fr 1fr 1fr;
     width: 50%;
     height: 60%;
     margin: auto; }
     #Impacto .contenido-Impacto p {
       flex-basis: 40%;
-      align-self: center;
-      font-size: 150%; }
+      align-self: center; }
     #Impacto .contenido-Impacto #polucion, #Impacto .contenido-Impacto #suelo, #Impacto .contenido-Impacto #oceano {
       display: flex;
       margin: 1%; }
@@ -75,15 +86,26 @@
   background: #57cada;
   background: linear-gradient(90deg, #57cada 0%, #40a6d4 85%, #3c423d 100%); }
   #Cadena p {
-    width: 400px; }
+    width: 50%; }
+  #Cadena #tortuga {
+    position: absolute;
+    top: 15%;
+    left: 5%; }
+  #Cadena #micro {
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    height: 15em; }
   #Cadena #delfin {
     position: absolute;
+    height: 30%;
+    width: 13%;
     top: 50%;
     left: 5%; }
   #Cadena #marino {
     padding: 1% 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
     height: 90vh; }
     #Cadena #marino h5 {
       grid-row: 2/3;
@@ -92,29 +114,45 @@
     #Cadena #marino .ballenaT {
       text-align: right;
       justify-self: end;
-      align-self: end; }
-    #Cadena #marino .ballenaI img {
-      width: 45%; }
+      align-self: center; }
+      #Cadena #marino .ballenaT p {
+        margin: 0;
+        text-align: right;
+        margin-left: auto; }
+    #Cadena #marino .ballenaI {
+      height: 100%;
+      padding: 0; }
+      #Cadena #marino .ballenaI canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%; }
     #Cadena #marino .ave {
       grid-row: 1/2;
       grid-column: 3/4;
-      align-self: end; }
+      position: relative;
+      height: 100%;
+      align-self: end;
+      justify-self: end; }
       #Cadena #marino .ave p {
         float: left;
         text-align: right; }
       #Cadena #marino .ave canvas {
-        height: 100px;
-        width: 100px; }
+        height: 100%;
+        width: 30%; }
       #Cadena #marino .ave img {
         clear: both;
         width: 15%; }
     #Cadena #marino .caballo {
       align-self: center;
       justify-self: center;
-      text-align: center; }
+      text-align: center;
+      height: 100%; }
+      #Cadena #marino .caballo p {
+        width: 50%; }
       #Cadena #marino .caballo canvas {
         float: left;
-        height: 100px; }
+        height: 100%;
+        width: 30%; }
     #Cadena #marino .plancton {
       grid-row: 3/4;
       grid-column: 2/3;
@@ -128,8 +166,8 @@
     #Cadena #marino .ostra {
       grid-row: 3/4;
       grid-column: 3/4; }
-      #Cadena #marino .ostra img {
-        width: 14%; }
+      #Cadena #marino .ostra canvas {
+        height: 70%; }
 
 #Comida {
   overflow-y: hidden;
@@ -154,10 +192,6 @@
   position: absolute;
   top: 50%;
   left: 0; }
-
-.models3d {
-  transform: scale(1.5);
-  background: green; }
 
 #tortuga3d {
   width: 20vw;

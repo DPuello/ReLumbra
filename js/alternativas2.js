@@ -634,3 +634,8 @@ $(function(){
 
 	//------------------------------------
 });
+
+$("#cepillo").on("mouseover",function(){
+	$(this).addClass( "movIzq" );
+	//$("#cepillo").css("display","none");
+});

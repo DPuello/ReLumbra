@@ -266,7 +266,6 @@ position: absolute;
 #banana3d, #bolsa3d, #bolsa3d2, #botella3d, #lata3d{
 	width: 8em;
   height: 8em;
-  background: black;
 }
 #caneca3d, #caneca3d2{
 	width: 16em;
