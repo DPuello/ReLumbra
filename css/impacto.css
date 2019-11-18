@@ -2,7 +2,7 @@
   background: #ffe7cb;
   position: relative; }
   #Impacto .TituloImpacto {
-    margin-top: 6%;
+    margin-top: 5%;
     margin-bottom: 1%;
     width: 50%;
     margin-left: auto;
@@ -14,23 +14,25 @@
     #Impacto .TituloImpacto h2 {
       color: #027368;
       padding: 1%;
-      font-size: 600%; }
+      font-size: 100%; }
       @media (min-width: 768px) {
         #Impacto .TituloImpacto h2 {
           font-size: 300%; } }
-      @media (min-width: 1000px) {
+      @media (min-width: 1400px) {
         #Impacto .TituloImpacto h2 {
-          font-size: 600%; } }
+          font-size: 400%; } }
     #Impacto .TituloImpacto img {
-      height: 9em;
+      height: 7em;
       margin-left: 5em;
       transform: translateY(1em); }
       @media (min-width: 768px) {
         #Impacto .TituloImpacto img {
-          height: 4em; } }
-      @media (min-width: 1000px) {
+          margin-left: 3em;
+          height: 5em; } }
+      @media (min-width: 1400px) {
         #Impacto .TituloImpacto img {
-          height: 9em; } }
+          margin-left: 5em;
+          height: 7em; } }
   #Impacto p {
     width: 70%; }
   #Impacto .contenido-Impacto {
@@ -63,7 +65,13 @@
     #Impacto .contenido-Impacto .textImg_Izq, #Impacto .contenido-Impacto .textImg_Der {
       position: relative;
       overflow: hidden;
-      width: 25em; }
+      width: 35%; }
+      @media (min-width: 768px) {
+        #Impacto .contenido-Impacto .textImg_Izq, #Impacto .contenido-Impacto .textImg_Der {
+          width: 30%; } }
+      @media (min-width: 1400px) {
+        #Impacto .contenido-Impacto .textImg_Izq, #Impacto .contenido-Impacto .textImg_Der {
+          width: 35%; } }
       #Impacto .contenido-Impacto .textImg_Izq h4, #Impacto .contenido-Impacto .textImg_Der h4 {
         position: absolute;
         bottom: 0;
@@ -74,8 +82,15 @@
         background-color: rgba(12, 88, 107, 0.6);
         width: 100%;
         text-align: center; }
+        @media (min-width: 768px) {
+          #Impacto .contenido-Impacto .textImg_Izq h4, #Impacto .contenido-Impacto .textImg_Der h4 {
+            font-size: 200%; } }
+        @media (min-width: 1400px) {
+          #Impacto .contenido-Impacto .textImg_Izq h4, #Impacto .contenido-Impacto .textImg_Der h4 {
+            font-size: 320%; } }
     #Impacto .contenido-Impacto img {
-      width: 100%;
+      min-width: 100%;
+      height: 100%;
       position: absolute;
       bottom: 0; }
 
@@ -96,6 +111,8 @@
     bottom: 20%;
     left: 15%;
     height: 15em; }
+    #Cadena #micro img {
+      height: 100%; }
   #Cadena #delfin {
     position: absolute;
     height: 30%;
@@ -170,12 +187,14 @@
         height: 70%; }
 
 #Comida {
-  overflow-y: hidden;
+  display: table;
   background: #3c423d; }
   #Comida .comidas {
     text-align: center;
     padding: 5vh 10%;
-    color: #fff; }
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle; }
     #Comida .comidas .arriba {
       max-height: 30vh; }
 

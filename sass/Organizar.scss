@@ -14,18 +14,23 @@ body{
 
 //      WAVES
 .orilla{
-    height: 100vh;
+    //height: 100vh;
     //position: absolute;
+    width: 120vh;
     //left: 0;
+    
     //bottom: 0;
     //right: 0;
     //top: 0;
     
     //transform: translateY(-100vh) translateX(50vw);
-    transform: skew(15deg, -15deg);
-    .waves{
-      
-        transform: rotate(-90deg) translateX(20vw) translateY(43vw);
+    
+    //transform-origin: left top;
+    transform: rotate(-15deg) translateX(70vw) translateY(-50vh);
+    .Mar{
+      transform: rotate(-90deg);
+      top: 0;
+      width: 120vh;
         
     }
     .Agua{
@@ -34,7 +39,7 @@ body{
     margin-bottom:-7px; /*Fix for safari gap*/
     min-height:100px;
       background: rgb(87,202,218);
-      transform: rotate(-90deg) translateX(40vw) translateY(69vw);
+      //transform: rotate(-90deg) translateX(40vw) translateY(69vw);
     }
     
 }
@@ -47,6 +52,15 @@ body{
     min-height:100px;
     use{
         fill: rgba($color: rgb(87,202,218), $alpha: .4);
+    }
+    use:nth-child(1){
+      fill: rgba($color: rgb(2, 176, 199), $alpha: .4);
+    }
+    use:nth-child(2){
+      fill: rgba($color: rgb(107, 238, 255), $alpha: .4);
+    }
+    use:nth-child(3){
+      fill: rgba($color: rgb(87, 218, 163), $alpha: .4);
     }
     use:nth-child(4){
         fill: rgba($color: rgb(87,202,218), $alpha: 1);
@@ -185,3 +199,4 @@ body{
   .cls-3{
     fill:#faa121;
     transition: fill 1s;}
+

@@ -114,7 +114,7 @@ $(function () { // Seccion Impacto
       $(".cls-1").css({"fill":"#027368"});
       $(".cls-2").css({"fill":"#027368"});
       $(".cls-3").css({"fill":"#027368"});
-      //AjusteBorde("delfincito", "Capa_1", "Capa_2");
+      if(link == true)AjusteBorde("delfincito", "Capa_1", "Capa_2");
       $("#delfincito").attr("src", "images/menu/d3.jpg");
     $("#impacto").css({"background-color":"#04c4c5"});
     $("#impacto").css({"border-color":"#a7c8f2"});
@@ -199,7 +199,7 @@ $(function () { // Seccion Impacto
       $(".cls-1").css({"fill":"#027368"});
       $(".cls-2").css({"fill":"#027368"});
       $(".cls-3").css({"fill":"#027368"});
-      //AjusteBorde("recicla", "Capa_1", "Capa_2");
+      if(link == true)AjusteBorde("recicla", "Capa_1", "Capa_2");
       $("#delfincito").attr("src", "images/menu/d3.jpg");
     $("#impacto").css({"background-color":"#04c4c5"});
     $("#impacto").css({"border-color":"#a7c8f2"});
@@ -232,7 +232,7 @@ $(function () { // Seccion Impacto
         $(".cls-1").css({"fill":"#02628c"});
       $(".cls-2").css({"fill":"#02628c"});
       $(".cls-3").css({"fill":"#02628c"});
-        //AjusteBorde("tortica", "Capa_1", "Capa_2");
+      if(link == true)AjusteBorde("tortica", "Capa_1", "Capa_2");
         $("#delfincito").attr("src", "images/menu/d2.jpg");
     $("#impacto").css({"background-color":"#01628a"});
     $("#impacto").css({"border-color":"#faa121"});
